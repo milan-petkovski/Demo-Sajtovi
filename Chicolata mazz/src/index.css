@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chicota Mazz Restaurant Design System 
+Warm, inviting colors inspired by the golden logo and restaurant ambiance.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 45% 97%;
+    --foreground: 25 25% 15%;
+
+    --card: 43 50% 95%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 43 50% 95%;
+    --popover-foreground: 25 25% 15%;
+
+    --primary: 45 85% 60%;
+    --primary-foreground: 25 25% 15%;
+
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 25 25% 15%;
+
+    --muted: 40 25% 90%;
+    --muted-foreground: 25 20% 45%;
+
+    --accent: 35 70% 75%;
+    --accent-foreground: 25 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 45 85% 60%;
+
+    /* Restaurant-specific design tokens */
+    --golden: 45 85% 60%;
+    --golden-light: 48 90% 70%;
+    --golden-dark: 42 80% 50%;
+    
+    --coffee: 25 40% 25%;
+    --coffee-light: 30 35% 35%;
+    
+    --cream: 42 45% 97%;
+    --warm-white: 40 30% 98%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--golden-light)), hsl(var(--golden-dark)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--warm-white)), hsl(var(--cream)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--golden)), hsl(var(--accent)));
+
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--golden) / 0.3);
+    --shadow-elegant: 0 4px 20px -4px hsl(var(--coffee) / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 25% 8%;
+    --foreground: 42 45% 95%;
+
+    --card: 25 30% 10%;
+    --card-foreground: 42 45% 95%;
+
+    --popover: 25 30% 10%;
+    --popover-foreground: 42 45% 95%;
+
+    --primary: 45 85% 55%;
+    --primary-foreground: 25 25% 8%;
+
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 42 45% 95%;
+
+    --muted: 25 20% 15%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 35 70% 70%;
+    --accent-foreground: 25 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 45 85% 55%;
+
+    /* Dark mode restaurant tokens */
+    --golden: 45 85% 55%;
+    --golden-light: 48 90% 65%;
+    --golden-dark: 42 80% 45%;
+    
+    --coffee: 25 15% 85%;
+    --coffee-light: 30 20% 75%;
+    
+    --cream: 25 25% 8%;
+    --warm-white: 25 20% 10%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--golden-dark)), hsl(var(--golden)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--warm-white)), hsl(var(--cream)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--golden-dark)), hsl(var(--accent)));
+
+    --shadow-warm: 0 10px 30px -10px hsl(var(--golden) / 0.4);
+    --shadow-elegant: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

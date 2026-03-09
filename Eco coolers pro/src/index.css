@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Eco Coolers Design System */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Emerald Green - Eco branding */
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Metallic Slate - Stainless steel */
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted surfaces */
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - subtle steel */
+    --accent: 210 14% 89%;
+    --accent-foreground: 220 20% 15%;
+
+    /* Sale/Action Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Sale badge */
+    --sale: 0 84% 55%;
+    --sale-foreground: 0 0% 100%;
+
+    /* Success/In Stock */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.5rem;
+
+    /* Custom gradients */
+    --gradient-steel: linear-gradient(135deg, hsl(210 14% 93%) 0%, hsl(210 14% 83%) 100%);
+    --gradient-eco: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(160 60% 30%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(220, 20%, 15%, 0.7) 0%, hsla(220, 20%, 15%, 0.85) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsla(220, 20%, 15%, 0.08);
+    --shadow-card-hover: 0 8px 30px -6px hsla(220, 20%, 15%, 0.15);
+    --shadow-button: 0 4px 14px -3px hsla(160, 84%, 39%, 0.4);
+
+    /* Sidebar defaults */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 18% 13%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 160 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 35%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 18% 18%;
+    --muted-foreground: 215 16% 60%;
+
+    --accent: 220 18% 20%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --sale: 0 84% 55%;
+    --sale-foreground: 0 0% 100%;
+
+    --success: 142 60% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 18% 20%;
+    --input: 220 18% 20%;
+    --ring: 160 70% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .gradient-steel {
+    background: var(--gradient-steel);
+  }
+
+  .gradient-eco {
+    background: var(--gradient-eco);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

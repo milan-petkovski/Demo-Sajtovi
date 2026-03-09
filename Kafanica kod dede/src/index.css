@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Kafanica color palette - warm and inviting */
+    --background: 35 15% 96%;
+    --foreground: 15 25% 15%;
+
+    --card: 35 20% 98%;
+    --card-foreground: 15 25% 15%;
+
+    --popover: 35 20% 98%;
+    --popover-foreground: 15 25% 15%;
+
+    /* Warm wood brown primary - from logo */
+    --primary: 25 45% 25%;
+    --primary-foreground: 35 20% 98%;
+
+    /* Warm beige secondary */
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 15 25% 15%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 15 15% 45%;
+
+    /* Accent warm beige */
+    --accent: 28 35% 75%;
+    --accent-foreground: 15 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 20% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 25 45% 25%;
+
+    /* Custom gradients and effects */
+    --gradient-hero: linear-gradient(135deg, hsl(25 45% 25%), hsl(30 40% 30%));
+    --gradient-warm: linear-gradient(180deg, hsl(35 25% 85%), hsl(28 35% 75%));
+    --shadow-warm: 0 10px 30px -10px hsl(25 45% 25% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(15 25% 15% / 0.15);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with kafana warmth */
+    --background: 15 15% 8%;
+    --foreground: 35 15% 90%;
+
+    --card: 15 15% 10%;
+    --card-foreground: 35 15% 90%;
+
+    --popover: 15 15% 10%;
+    --popover-foreground: 35 15% 90%;
+
+    --primary: 25 55% 45%;
+    --primary-foreground: 15 15% 8%;
+
+    --secondary: 15 15% 15%;
+    --secondary-foreground: 35 15% 90%;
+
+    --muted: 15 15% 15%;
+    --muted-foreground: 35 10% 60%;
+
+    --accent: 28 25% 25%;
+    --accent-foreground: 35 15% 90%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 35 15% 90%;
+
+    --border: 15 15% 15%;
+    --input: 15 15% 15%;
+    --ring: 25 55% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(25 55% 45%), hsl(30 50% 40%));
+    --gradient-warm: linear-gradient(180deg, hsl(15 15% 15%), hsl(28 20% 18%));
+    --shadow-warm: 0 10px 30px -10px hsl(0 75% 55% / 0.4);
+    --shadow-soft: 0 4px 20px -4px hsl(0 75% 55% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

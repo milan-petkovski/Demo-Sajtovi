@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Elegant restaurant color palette */
+    --background: 15 8% 8%;
+    --foreground: 45 15% 92%;
+
+    --card: 15 10% 12%;
+    --card-foreground: 45 15% 92%;
+
+    --popover: 15 10% 12%;
+    --popover-foreground: 45 15% 92%;
+
+    --primary: 45 85% 65%;
+    --primary-foreground: 15 8% 8%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 45 15% 92%;
+
+    --muted: 20 15% 15%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 45 85% 65%;
+    --accent-foreground: 15 8% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 15% 92%;
+
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 45 85% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom restaurant colors */
+    --gold: 45 85% 65%;
+    --gold-light: 45 90% 75%;
+    --gold-dark: 45 75% 55%;
+    --warm-dark: 15 8% 8%;
+    --warm-medium: 20 15% 15%;
+    --warm-light: 25 20% 18%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 65%) 0%, hsl(38 85% 60%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(15 8% 8%) 0%, hsl(20 15% 15%) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(15 8% 8% / 0.8) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 10px 30px -10px hsl(45 85% 65% / 0.3);
+    --shadow-elegant: 0 20px 40px -10px hsl(15 8% 8% / 0.5);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
+    /* Dark mode uses same elegant palette */
+    --background: 15 8% 8%;
+    --foreground: 45 15% 92%;
+    --card: 15 10% 12%;
+    --card-foreground: 45 15% 92%;
+    --popover: 15 10% 12%;
+    --popover-foreground: 45 15% 92%;
+    --primary: 45 85% 65%;
+    --primary-foreground: 15 8% 8%;
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 45 15% 92%;
+    --muted: 20 15% 15%;
+    --muted-foreground: 45 10% 65%;
+    --accent: 45 85% 65%;
+    --accent-foreground: 15 8% 8%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 15% 92%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 45 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+    background: var(--gradient-dark);
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/40;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-center text-white px-4;
+  }
+
+  .section-padding {
+    @apply px-4 md:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .elegant-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-lg;
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .btn-gold {
+    background: var(--gradient-gold);
+    @apply text-background font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-3 rounded-full transition-all duration-300 hover:bg-primary hover:text-background;
+  }
+}
