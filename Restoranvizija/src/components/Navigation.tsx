@@ -14,7 +14,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/95 backdrop-blur-md border-b border-border h-16 md:h-20">
+    <nav className="fixed top-0 left-0 right-0 z-100 bg-background/95 backdrop-blur-md border-b border-border h-16 md:h-20">
       <div className="container-custom h-full flex items-center justify-between">
         {/* Logo Container */}
         <div className="flex items-center h-full py-2">
