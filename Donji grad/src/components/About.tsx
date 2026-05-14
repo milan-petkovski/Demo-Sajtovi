@@ -54,7 +54,7 @@ const About = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <Card key={feature.title} className="bg-card/80 backdrop-blur-sm border-border animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6 text-center">
+                <CardContent className="bg-card p-4 md:p-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
                     <feature.icon className="h-8 w-8 text-accent" />
                   </div>
@@ -70,7 +70,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-16 bg-restaurant-warm-beige rounded-2xl p-8 animate-fade-in">
+        <div className="bg-card p-4 md:p-8">
           <div className="text-center">
             <h3 className="font-serif text-2xl font-bold text-primary mb-4">
               Naši Specijalni Događaji
@@ -101,3 +101,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -173,7 +173,7 @@ const Menu = () => {
                 <div className="lg:col-span-2 space-y-4">
                   {category.items.map((item, index) => (
                     <Card key={index} className="bg-card/50 border-border hover:bg-card transition-colors">
-                      <CardContent className="p-6">
+                      <CardContent className="bg-card p-4 md:p-6">
                         <div className="flex justify-between items-start mb-2">
                           <h4 className="text-xl font-semibold text-foreground">
                             {item.name}
@@ -200,3 +200,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

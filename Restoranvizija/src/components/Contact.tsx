@@ -126,7 +126,7 @@ const Contact = () => {
             <Card className="elegant-card h-full">
               <CardContent className="p-0 h-full min-h-[500px]">
                 <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center p-8">
+                  <div className="bg-card p-4 md:p-8">
                     <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-bold mb-2">Mapa lokacije</h3>
                     <p className="text-muted-foreground mb-4">
@@ -155,7 +155,7 @@ const Contact = () => {
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="elegant-card inline-block">
-            <div className="p-8">
+            <div className="bg-card p-4 md:p-8">
               <h3 className="text-xl font-bold mb-4">Kako do nas?</h3>
               <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
                 <div>
@@ -180,3 +180,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

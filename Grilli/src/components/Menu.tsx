@@ -34,7 +34,7 @@ const Menu = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {menuItems.map((category, idx) => (
-            <div key={idx} className="bg-card p-6 rounded-lg border border-border">
+            <div key={idx} className="bg-card p-4 md:p-6">
               <h3 className="text-2xl font-semibold mb-6 text-primary">{category.category}</h3>
               <div className="space-y-4">
                 {category.items.map((item, itemIdx) => (
@@ -56,3 +56,5 @@ const Menu = () => {
 };
 
 export default Menu;
+
+

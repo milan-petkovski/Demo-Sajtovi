@@ -92,7 +92,7 @@ const MonthlyOffers = () => {
                   {offer.price}
                 </div>
               </div>
-              <div className="p-6">
+              <div className="bg-card p-4 md:p-6">
                 <h3 className="text-xl font-bold text-foreground mb-1">{offer.title}</h3>
                 <p className="text-primary font-semibold text-sm mb-2">{offer.subtitle}</p>
                 <p className="text-muted-foreground text-sm mb-1">{offer.dates}</p>
@@ -115,3 +115,5 @@ const MonthlyOffers = () => {
 };
 
 export default MonthlyOffers;
+
+

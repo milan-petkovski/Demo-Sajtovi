@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -88,10 +89,17 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    position: relative;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -118,7 +126,7 @@ All colors MUST be HSL.
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4;
   }
 
   .gold-gradient {
@@ -143,3 +151,14 @@ All colors MUST be HSL.
     @apply border-2 border-primary text-primary bg-transparent px-8 py-3 rounded-full transition-all duration-300 hover:bg-primary hover:text-background;
   }
 }
+
+
+
+/* Premium Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.3); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.5); }
+
+html { scroll-behavior: smooth; }
+

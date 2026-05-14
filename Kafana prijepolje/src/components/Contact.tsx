@@ -24,7 +24,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             <Card className="shadow-card hover:shadow-cyan transition-all border-2 border-transparent hover:border-cyan">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-cyan p-3 rounded-lg">
                     <MapPin size={24} className="text-white" />
@@ -51,7 +51,7 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-card hover:shadow-orange transition-all border-2 border-transparent hover:border-orange">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-orange p-3 rounded-lg">
                     <Phone size={24} className="text-white" />
@@ -72,7 +72,7 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-card hover:shadow-cyan transition-all border-2 border-transparent hover:border-cyan">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-gradient-colorful p-3 rounded-lg">
                     <Clock size={24} className="text-white" />
@@ -111,3 +111,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

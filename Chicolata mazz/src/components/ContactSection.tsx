@@ -19,7 +19,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Location */}
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <div className="flex items-center mb-4">
                   <MapPin className="w-6 h-6 text-golden mr-3" />
                   <h3 className="text-xl font-semibold text-coffee">Lokacija</h3>
@@ -34,7 +34,7 @@ const ContactSection = () => {
               </div>
 
               {/* Phone */}
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <div className="flex items-center mb-4">
                   <Phone className="w-6 h-6 text-golden mr-3" />
                   <h3 className="text-xl font-semibold text-coffee">Telefon</h3>
@@ -49,7 +49,7 @@ const ContactSection = () => {
               </div>
 
               {/* Hours */}
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <div className="flex items-center mb-4">
                   <Clock className="w-6 h-6 text-golden mr-3" />
                   <h3 className="text-xl font-semibold text-coffee">Radno vreme</h3>
@@ -61,7 +61,7 @@ const ContactSection = () => {
               </div>
 
               {/* Social */}
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <div className="flex items-center mb-4">
                   <Instagram className="w-6 h-6 text-golden mr-3" />
                   <h3 className="text-xl font-semibold text-coffee">Društvene mreže</h3>
@@ -81,7 +81,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-card p-6 rounded-xl shadow-elegant">
+            <div className="bg-card p-4 md:p-6">
               <h3 className="text-xl font-semibold text-coffee mb-4">Kako do nas</h3>
               <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
                 <div className="text-center text-muted-foreground">
@@ -95,7 +95,7 @@ const ContactSection = () => {
 
           {/* QR Code Section */}
           <div className="space-y-6">
-            <div className="bg-card p-6 rounded-xl shadow-elegant text-center">
+            <div className="bg-card p-4 md:p-6">
               <div className="flex items-center justify-center mb-4">
                 <QrCode className="w-6 h-6 text-golden mr-2" />
                 <h3 className="text-xl font-semibold text-coffee">Digitalni Meni</h3>
@@ -122,7 +122,7 @@ const ContactSection = () => {
             </div>
 
             {/* Reservation */}
-            <div className="bg-gradient-sunset p-6 rounded-xl shadow-warm text-coffee text-center">
+            <div className="bg-card p-4 md:p-6">
               <h3 className="text-xl font-semibold mb-4">Rezervacija stola</h3>
               <p className="mb-6">
                 Rezervišite vaš sto i osigurajte mesto u našem restoranu
@@ -139,3 +139,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+

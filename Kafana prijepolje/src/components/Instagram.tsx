@@ -27,7 +27,7 @@ const Instagram = () => {
 
         {/* Instagram Embed Placeholder */}
         <div className="max-w-6xl mx-auto">
-          <div className="bg-card rounded-lg p-8 shadow-card text-center">
+          <div className="bg-card p-4 md:p-8">
             <InstagramIcon size={64} className="mx-auto mb-4 text-primary" />
             <p className="text-muted-foreground mb-4">
               Pratite naš Instagram profil za najsvežije fotografije i informacije o našim specijalitetima i događajima
@@ -48,3 +48,5 @@ const Instagram = () => {
 };
 
 export default Instagram;
+
+

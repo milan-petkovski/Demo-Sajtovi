@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -133,3 +134,14 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Premium Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.3); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.5); }
+
+html { scroll-behavior: smooth; }
+

@@ -14,7 +14,7 @@ export const PersonalProject = () => {
       </div>
 
       <div className="container relative">
-        <div className="bg-gradient-rose p-8 md:p-16 lg:p-20 shadow-elegant relative overflow-hidden">
+        <div className="bg-card p-4 md:p-8">
           <div className="absolute inset-0 grain opacity-60" />
           {/* Lebdeća mermerna mrlja */}
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-cream/40 blur-3xl" />
@@ -84,3 +84,5 @@ const Stat = ({ n, l }: { n: string; l: string }) => (
     </p>
   </div>
 );
+
+

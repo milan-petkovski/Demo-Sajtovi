@@ -18,7 +18,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="space-y-8">
             <Card className="shadow-soft border-border/50">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="font-serif text-xl font-semibold mb-4 flex items-center">
                   <span className="mr-3 text-primary text-2xl">📍</span>
                   Adresa
@@ -31,7 +31,7 @@ const Contact = () => {
             </Card>
             
             <Card className="shadow-soft border-border/50">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="font-serif text-xl font-semibold mb-4 flex items-center">
                   <span className="mr-3 text-primary text-2xl">🕒</span>
                   Radno vreme
@@ -54,7 +54,7 @@ const Contact = () => {
             </Card>
             
             <Card className="shadow-soft border-border/50">
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="font-serif text-xl font-semibold mb-4 flex items-center">
                   <span className="mr-3 text-primary text-2xl">📞</span>
                   Kontakt informacije
@@ -87,7 +87,7 @@ const Contact = () => {
         
         <div className="mt-16 text-center">
           <Card className="inline-block bg-gradient-warm shadow-warm border-none">
-            <CardContent className="p-8">
+            <CardContent className="bg-card p-4 md:p-8">
               <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
                 Pratite nas na društvenim mrežama
               </h3>
@@ -111,3 +111,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

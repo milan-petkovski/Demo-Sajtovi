@@ -52,7 +52,7 @@ const Contact = () => {
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {contactInfo.map((info, index) => (
               <Card key={info.title} className="bg-card/80 backdrop-blur-sm border-border animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
+                <CardContent className="bg-card p-4 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 flex-shrink-0">
                       <info.icon className="h-6 w-6 text-accent" />
@@ -71,7 +71,7 @@ const Contact = () => {
           {/* QR Menu */}
           <div className="animate-slide-up" style={{ animationDelay: "0.4s" }}>
             <Card className="bg-card/80 backdrop-blur-sm border-border">
-              <CardContent className="p-6 text-center">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="font-serif text-xl font-semibold text-primary mb-4">
                   Digitalni Meni
                 </h3>
@@ -132,7 +132,7 @@ const Contact = () => {
           </div>
           
           <Card className="bg-accent/10 border-accent/20 max-w-2xl mx-auto">
-            <CardContent className="p-6">
+            <CardContent className="bg-card p-4 md:p-6">
               <h4 className="font-serif text-lg font-semibold text-primary mb-2">
                 Rezervišite Vaš Sto
               </h4>
@@ -158,3 +158,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

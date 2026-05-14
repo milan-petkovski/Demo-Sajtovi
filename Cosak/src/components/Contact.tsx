@@ -105,7 +105,7 @@ const Contact = () => {
           </div>
 
           <div className="animate-scale-in">
-            <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-2xl shadow-soft border border-border/50">
+            <form onSubmit={handleSubmit} className="bg-card p-4 md:p-8">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Ime i prezime
@@ -162,3 +162,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

@@ -44,19 +44,19 @@ const Gallery = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 mt-8 max-w-6xl mx-auto">
-          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 text-center shadow-soft">
+          <div className="bg-card p-4 md:p-6">
             <div className="text-3xl mb-3">🎵</div>
             <h4 className="font-serif font-semibold text-foreground mb-2">Živa muzika</h4>
             <p className="text-sm text-muted-foreground">Petak i subota od 20h</p>
           </div>
           
-          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 text-center shadow-soft">
+          <div className="bg-card p-4 md:p-6">
             <div className="text-3xl mb-3">🍷</div>
             <h4 className="font-serif font-semibold text-foreground mb-2">Domaća rakija</h4>
             <p className="text-sm text-muted-foreground">Iz vlastitih berba</p>
           </div>
           
-          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 text-center shadow-soft">
+          <div className="bg-card p-4 md:p-6">
             <div className="text-3xl mb-3">👥</div>
             <h4 className="font-serif font-semibold text-foreground mb-2">Privatni eventi</h4>
             <p className="text-sm text-muted-foreground">Za posebne prilike</p>
@@ -68,3 +68,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

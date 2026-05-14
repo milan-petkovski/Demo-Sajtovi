@@ -37,7 +37,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {values.map((value, index) => (
-            <Card key={index} className="p-8 text-center bg-gradient-card shadow-card border-0 hover:shadow-lg transition-all duration-300">
+            <Card key={index} className="bg-card p-4 md:p-8">
               <div className="flex justify-center mb-4">
                 {value.icon}
               </div>
@@ -64,3 +64,4 @@ const About = () => {
 };
 
 export default About;
+

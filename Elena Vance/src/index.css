@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+
 
 /* Elena Vance — Pastel Classical Design System
    All colors HSL. Defined here once, used everywhere via tokens. */
@@ -176,3 +177,14 @@
     100% { background-position: 200% center; }
   }
 }
+
+
+
+/* Premium Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.3); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.5); }
+
+html { scroll-behavior: smooth; }
+

@@ -116,7 +116,7 @@ const Gallery = () => {
         {/* Call to Action */}
         <div className="text-center mt-12 animate-fade-in">
           <Card className="bg-restaurant-warm-beige border-restaurant-gold/20 max-w-2xl mx-auto">
-            <div className="p-8">
+            <div className="bg-card p-4 md:p-8">
               <h3 className="font-serif text-2xl font-bold text-primary mb-4">
                 Posetite Nas
               </h3>
@@ -141,3 +141,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

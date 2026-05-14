@@ -52,3 +52,4 @@ const Hero = ({ onReserveClick }: HeroProps) => {
 };
 
 export default Hero;
+

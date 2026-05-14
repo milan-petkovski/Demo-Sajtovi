@@ -48,7 +48,7 @@ const Menu = () => {
               className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border-border/50 animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-8 text-center">
+              <CardContent className="bg-card p-4 md:p-8">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon className="w-8 h-8" />
                 </div>
@@ -68,3 +68,5 @@ const Menu = () => {
 };
 
 export default Menu;
+
+

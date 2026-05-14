@@ -118,7 +118,7 @@ const Menu = () => {
                   />
                 </div>
               )}
-              <div className="p-6">
+              <div className="bg-card p-4 md:p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-semibold text-natural-green">
                     {item.name}
@@ -161,3 +161,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

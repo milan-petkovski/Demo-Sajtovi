@@ -86,7 +86,7 @@ const Contact = () => {
           {/* Contact Info and Hours */}
           <div className="space-y-8">
             {/* Working Hours */}
-            <Card className="p-6 bg-gradient-card shadow-card border-0">
+            <Card className="bg-card p-4 md:p-6">
               <div className="flex items-center mb-4">
                 <Clock className="h-6 w-6 text-natural-green mr-3" />
                 <h3 className="text-xl font-semibold text-natural-green">Radno vreme</h3>
@@ -138,7 +138,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-8 bg-gradient-card shadow-card border-0">
+          <Card className="bg-card p-4 md:p-8">
             <h3 className="text-2xl font-semibold text-natural-green mb-6">Pošaljite nam poruku</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -211,7 +211,7 @@ const Contact = () => {
         </div>
 
         {/* Map Placeholder */}
-        <Card className="p-8 bg-gradient-card shadow-card border-0 text-center">
+        <Card className="bg-card p-4 md:p-8">
           <h3 className="text-2xl font-semibold text-natural-green mb-4">Naša lokacija</h3>
           <div className="bg-warm-beige rounded-lg p-12 mb-4">
             <MapPin className="h-12 w-12 text-natural-green mx-auto mb-4" />
@@ -234,3 +234,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

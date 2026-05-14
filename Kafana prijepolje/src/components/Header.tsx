@@ -124,3 +124,4 @@ const Header = ({ onReserveClick }: HeaderProps) => {
 };
 
 export default Header;
+

@@ -51,7 +51,7 @@ const Menu = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-serif font-semibold text-foreground">
                     {item.name}
@@ -86,3 +86,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

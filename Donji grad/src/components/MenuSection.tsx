@@ -49,7 +49,7 @@ const MenuSection = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="font-serif text-2xl font-semibold text-primary mb-6">
                   {category.title}
                 </h3>
@@ -90,3 +90,4 @@ const MenuSection = () => {
 };
 
 export default MenuSection;
+

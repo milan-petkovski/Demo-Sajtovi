@@ -31,3 +31,4 @@ const FadeIn = ({ children, delay = 0, direction = "up", className = "" }: FadeI
 };
 
 export default FadeIn;
+

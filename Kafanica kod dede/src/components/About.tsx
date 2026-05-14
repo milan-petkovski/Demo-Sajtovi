@@ -31,7 +31,7 @@ const About = () => {
             </div>
             
             <Card className="bg-gradient-warm border-none shadow-soft">
-              <CardContent className="p-8">
+              <CardContent className="bg-card p-4 md:p-8">
                 <blockquote className="text-lg italic text-foreground mb-4">
                   "Kod nas se ne dolazi samo da se pojede, već da se oseti toplina 
                   domaćeg doma i autentičnost srpske tradicije."
@@ -47,3 +47,4 @@ const About = () => {
 };
 
 export default About;
+

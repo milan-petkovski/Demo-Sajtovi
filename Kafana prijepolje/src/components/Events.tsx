@@ -38,7 +38,7 @@ const Events = () => {
               className="overflow-hidden hover:shadow-orange transition-all hover:-translate-y-2 animate-scale-in border-2 border-transparent hover:border-orange"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-8">
+              <CardContent className="bg-card p-4 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="bg-gradient-cyan p-3 rounded-lg">
                     {index === 0 ? (
@@ -72,7 +72,7 @@ const Events = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-8 flex flex-col justify-center">
+              <CardContent className="bg-card p-4 md:p-8">
                 <h3 className="text-3xl font-display font-bold text-foreground mb-4">
                   Subota - Muzika uživo
                 </h3>
@@ -100,3 +100,5 @@ const Events = () => {
 };
 
 export default Events;
+
+

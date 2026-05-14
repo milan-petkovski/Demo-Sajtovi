@@ -29,7 +29,7 @@ const AboutSection = () => {
                 da vam pruži nezaboravno kulinarska iskustvo.
               </p>
 
-              <div className="bg-gradient-warm p-6 rounded-xl border-l-4 border-golden">
+              <div className="bg-card p-4 md:p-6">
                 <h4 className="font-semibold text-coffee mb-2 text-lg">Naša Filozofija</h4>
                 <p className="text-coffee-light italic">
                   "Verujemo da je hrana jezik ljubavi. Svaki obrok je prilika da podelimo 
@@ -39,7 +39,7 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-4">
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <h4 className="font-semibold text-coffee mb-2 flex items-center">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3"></span>
                   Svež Pristup
@@ -49,7 +49,7 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <h4 className="font-semibold text-coffee mb-2 flex items-center">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3"></span>
                   Tradicionalni Recepti
@@ -59,7 +59,7 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-xl shadow-elegant">
+              <div className="bg-card p-4 md:p-6">
                 <h4 className="font-semibold text-coffee mb-2 flex items-center">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3"></span>
                   Topla Atmosfera
@@ -72,7 +72,7 @@ const AboutSection = () => {
           </div>
 
           <div className="text-center mt-16">
-            <div className="bg-gradient-hero p-8 rounded-2xl shadow-warm text-coffee">
+            <div className="bg-card p-4 md:p-8">
               <h3 className="text-2xl font-serif font-semibold mb-4">
                 Zahvalni smo vam što ste deo naše priče
               </h3>
@@ -102,3 +102,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

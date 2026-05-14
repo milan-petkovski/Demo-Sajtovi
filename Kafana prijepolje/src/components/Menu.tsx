@@ -52,7 +52,7 @@ const Menu = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="bg-card p-4 md:p-6">
                 <h3 className="text-xl font-display font-semibold text-foreground mb-2">
                   {item.title}
                 </h3>
@@ -78,3 +78,5 @@ const Menu = () => {
 };
 
 export default Menu;
+
+

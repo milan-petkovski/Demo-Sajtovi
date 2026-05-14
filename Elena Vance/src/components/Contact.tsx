@@ -50,7 +50,7 @@ export const Contact = () => {
           <div className="lg:col-span-5">
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="bg-cream/95 backdrop-blur p-8 md:p-10 shadow-elegant text-ink space-y-5"
+              className="bg-card p-4 md:p-8"
             >
               <p className="eyebrow">Pošalji poruku</p>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -135,3 +135,5 @@ const Field = ({ label, children }: { label: string; children: React.ReactNode }
     {children}
   </label>
 );
+
+

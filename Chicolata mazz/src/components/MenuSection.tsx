@@ -71,7 +71,7 @@ const MenuSection = () => {
 
         <div className="space-y-16">
           {menuItems.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-card rounded-2xl p-8 shadow-elegant">
+            <div key={categoryIndex} className="bg-card p-4 md:p-8">
               <h3 className="text-3xl font-serif font-semibold text-coffee mb-8 text-center border-b border-golden/20 pb-4">
                 {category.category}
               </h3>
@@ -90,7 +90,7 @@ const MenuSection = () => {
                       />
                     </div>
                     
-                    <div className="p-6">
+                    <div className="bg-card p-4 md:p-6">
                       <div className="flex justify-between items-start mb-3">
                         <h4 className="text-xl font-semibold text-coffee group-hover:text-golden transition-colors">
                           {item.name}
@@ -129,3 +129,4 @@ const MenuSection = () => {
 };
 
 export default MenuSection;
+
