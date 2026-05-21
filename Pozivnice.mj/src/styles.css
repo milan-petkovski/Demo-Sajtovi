@@ -1,0 +1,136 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-cocoa: var(--cocoa);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-script: "Cormorant Garamond", serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --cocoa: #2B1E13;
+  --beige: #F4EFEA;
+  --cream: #FFFDFB;
+  --gold: #C9A24C;
+
+  --background: #FFFDFB;
+  --foreground: #2B1E13;
+  --card: #FFFDFB;
+  --card-foreground: #2B1E13;
+  --popover: #FFFDFB;
+  --popover-foreground: #2B1E13;
+  --primary: #2B1E13;
+  --primary-foreground: #FFFDFB;
+  --secondary: #F4EFEA;
+  --secondary-foreground: #2B1E13;
+  --muted: #F4EFEA;
+  --muted-foreground: #6B5A47;
+  --accent: #C9A24C;
+  --accent-foreground: #2B1E13;
+  --border: rgba(43, 30, 19, 0.12);
+  --input: rgba(43, 30, 19, 0.15);
+  --ring: #C9A24C;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 253, 251, 0.65);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    border: 1px solid rgba(43, 30, 19, 0.08);
+  }
+  .glass-dark {
+    background: rgba(43, 30, 19, 0.55);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    border: 1px solid rgba(201, 162, 76, 0.25);
+  }
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #C9A24C 0%, #E7C97A 50%, #A67F2E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-luxe {
+    box-shadow: 0 30px 60px -30px rgba(43, 30, 19, 0.35), 0 8px 24px -12px rgba(43, 30, 19, 0.15);
+  }
+  .ring-gold {
+    box-shadow: inset 0 0 0 1px rgba(201, 162, 76, 0.5);
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.in {
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 76, 0.35), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
