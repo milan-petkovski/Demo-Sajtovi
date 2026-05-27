@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="sr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Igraonica Uživancija Voždovac | Dečija igraonica, Rođendaonica & Caffe - Beograd</title>
+  <meta name="description" content="Igraonica Uživancija na Voždovcu - najbolja dečija igraonica, čuvaonica, rođendaonica i caffe u Beogradu. Zabava bez granica za decu! Rezervacije: 060/123-4567">
+  <meta name="keywords" content="igraonica Voždovac, dečija igraonica Beograd, rođendaonica, čuvaonica, igraonica za decu, dečiji rođendan, Uživancija, caffe igraonica">
+  <meta name="author" content="Igraonica Uživancija">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Igraonica Uživancija Voždovac - Zabava bez granica!">
+  <meta property="og:description" content="Dečija igraonica, čuvaonica, rođendaonica i caffe na Voždovcu. Mesto gde svaki detalj stvara uspomene!">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="apple-touch-icon" href="images/logo.jpg">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Background Shapes -->
+  <div class="floating-shapes" aria-hidden="true">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <!-- Confetti Container (JS animated) -->
+  <div class="confetti-container" id="confetti-container" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <img src="images/logo.jpg" alt="Uživancija logo" width="50" height="50">
+        <span class="nav-logo-text">Uživancija</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#pocetna" class="active">🏠 Početna</a>
+        <a href="#o-nama">🌈 O nama</a>
+        <a href="#galerija">📸 Galerija</a>
+        <a href="#rodjendani">🎂 Rođendani</a>
+        <a href="#jelovnik">🍕 Jelovnik</a>
+        <a href="#kontakt">📍 Kontakt</a>
+        <a href="tel:0601234567" class="nav-cta">📞 Pozovi nas!</a>
+      </div>
+
+      <div class="hamburger" id="hamburger" aria-label="Otvori meni" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!--                 HERO SECTION                 -->
+  <!-- ============================================ -->
+  <section class="hero" id="pocetna">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="emoji">🎉</span>
+        Dečija igraonica na Voždovcu
+      </div>
+
+      <div class="hero-emojis">☕ 🫧 🎨 🎈</div>
+
+      <h1 class="hero-title">
+        <span class="line1">Dobrodošli u</span>
+        <span class="line2">Uživanciju!</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Mesto gde svaki detalj stvara uspomene. Zabava bez granica za vaše mališane — igraj, uživaj, ponavljaj! 💖
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="tel:0601234567" class="btn btn-primary" id="hero-cta-call">
+          <span class="btn-icon">📞</span>
+          Rezerviši termin
+        </a>
+        <a href="#rodjendani" class="btn btn-secondary" id="hero-cta-birthday">
+          <span class="btn-icon">🎂</span>
+          Pogledaj pakete
+        </a>
+      </div>
+
+      <div class="hero-features">
+        <div class="hero-feature">
+          <span class="feature-emoji">☕</span>
+          <span class="feature-text">Caffe</span>
+        </div>
+        <div class="hero-feature">
+          <span class="feature-emoji">🫧</span>
+          <span class="feature-text">Igraonica</span>
+        </div>
+        <div class="hero-feature">
+          <span class="feature-emoji">🎨</span>
+          <span class="feature-text">Čuvaonica</span>
+        </div>
+        <div class="hero-feature">
+          <span class="feature-emoji">🎈</span>
+          <span class="feature-text">Rođendaonica</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#FFFFFF" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80Z"/>
+    </svg>
+  </div>
+
+  <!-- ============================================ -->
+  <!--               O NAMA / SERVICES              -->
+  <!-- ============================================ -->
+  <section class="section section-white" id="o-nama">
+    <div class="section-header reveal">
+      <span class="section-emoji">🌈</span>
+      <h2 class="section-title">Šta nudimo <span class="highlight">mališanima?</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Sve što je potrebno za savršen dan pun zabave, smeha i nezaboravnih uspomena!</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1" id="service-igraonica">
+        <div class="service-icon">🫧</div>
+        <h3>Igraonica</h3>
+        <p>Prostrani tobogani, tuneli, bazeni sa lopticama i mnogo zabavnih sadržaja za decu svih uzrasta. Zabava bez granica!</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2" id="service-rodjendan">
+        <div class="service-icon">🎈</div>
+        <h3>Rođendaonica</h3>
+        <p>Organizujemo najlepše dečije rođendane! Vi slavite, mi se brinemo za sve ostalo — od dekoracije do animacije.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3" id="service-cuvaonica">
+        <div class="service-icon">🎨</div>
+        <h3>Čuvaonica</h3>
+        <p>Kreativne radionice, crtanje, farbanje i edukativne igre. Deca se igraju bezbrižno dok vi uživate.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-4" id="service-caffe">
+        <div class="service-icon">☕</div>
+        <h3>Caffe za roditelje</h3>
+        <p>Prijatna i domaća atmosfera sa pogledom na igraonicu. Opustite se uz kafu dok se deca igraju!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--             PARENT RELAXATION AREA           -->
+  <!-- ============================================ -->
+  <section class="section section-cream" id="roditelji">
+    <div class="parent-showcase">
+      <div class="parent-image reveal">
+        <img src="images/695726162_18070713926666641_7186329146439555909_n.jpg" alt="Caffe prostor za roditelje u Uživanciji" loading="lazy">
+      </div>
+      <div class="parent-text reveal reveal-delay-2">
+        <h3>Roditelji, opustite se! ☕</h3>
+        <p>Dok se vaša deca bezbrižno igraju u našoj igraonici, vi možete da uživate u prijatnom caffe prostoru sa direktnim pogledom na zonu za igru. Počastite se — mi brinemo za sve ostalo! 💛</p>
+        <div class="parent-perks">
+          <div class="parent-perk">
+            <span class="perk-emoji">☕</span>
+            <span>Topli i hladni napici</span>
+          </div>
+          <div class="parent-perk">
+            <span class="perk-emoji">👀</span>
+            <span>Direktan pogled na igraonicu</span>
+          </div>
+          <div class="parent-perk">
+            <span class="perk-emoji">🛋️</span>
+            <span>Udoban prostor za opuštanje</span>
+          </div>
+          <div class="parent-perk">
+            <span class="perk-emoji">🤝</span>
+            <span>Prijatna i domaća atmosfera</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                   GALERIJA                   -->
+  <!-- ============================================ -->
+  <section class="section section-white" id="galerija">
+    <div class="section-header reveal">
+      <span class="section-emoji">📸</span>
+      <h2 class="section-title">Pogledajte <span class="highlight">atmosferu!</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Zavirite u naš veseli svet pun igre, smeha i nezaboravnih trenutaka</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" id="gallery-1">
+        <img src="images/700971057_18070903340666641_6644733963021133515_n.jpg" alt="Uživancija - zabava za decu" loading="lazy">
+        <div class="gallery-overlay">
+          <span>🎉 Vreme je za Uživanciju!</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" id="gallery-2">
+        <img src="images/609531556_18054519254666641_2681004073571464936_n.jpg" alt="Zabava bez granica" loading="lazy">
+        <div class="gallery-overlay">
+          <span>🫧 Zabava bez granica</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" id="gallery-3">
+        <img src="images/671227291_18067598321666641_6783574180521834995_n.jpg" alt="Higijena prostora za igru" loading="lazy">
+        <div class="gallery-overlay">
+          <span>✨ Higijena na prvom mestu</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3" id="gallery-4">
+        <img src="images/656841595_18064224650666641_231504401103125587_n.jpg" alt="Dečiji rođendan" loading="lazy">
+        <div class="gallery-overlay">
+          <span>🎂 Sreća ima ukus torte</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-4" id="gallery-5">
+        <img src="images/707678683_18072198878666641_7097850609772468375_n.jpg" alt="Uživancija pre i posle renoviranja" loading="lazy">
+        <div class="gallery-overlay">
+          <span>🌿 Renoviran prostor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--              BIRTHDAY PACKAGES               -->
+  <!-- ============================================ -->
+  <section class="section section-cream dotted-bg" id="rodjendani">
+    <div class="section-header reveal">
+      <span class="section-emoji">🎂</span>
+      <h2 class="section-title">Rođendanski <span class="highlight">paketi</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Najbolji rođendani ikada! Vi slavite, mi se brinemo za sve ostalo 🎈</p>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Package 1 -->
+      <div class="package-card reveal reveal-delay-1" id="package-1">
+        <div class="package-header">
+          <span class="package-emoji">🎈</span>
+          <h3 class="package-name">Paket 20/20</h3>
+          <p class="package-capacity">Do 20 dece + 20 odraslih</p>
+        </div>
+        <div class="package-price-area">
+          <p class="package-old-price">450€</p>
+          <p class="package-price">400<span>€</span></p>
+        </div>
+        <ul class="package-features">
+          <li><span class="check">✓</span> Ekskluzivna upotreba igraonice</li>
+          <li><span class="check">✓</span> Animacija i zabava</li>
+          <li><span class="check">✓</span> Dekoracija prostora</li>
+          <li><span class="check">✓</span> Kids paket hrana</li>
+          <li><span class="check">✓</span> Sok za decu</li>
+        </ul>
+        <div class="package-cta">
+          <a href="tel:0601234567" class="btn btn-secondary" id="cta-package-1">📞 Rezerviši</a>
+        </div>
+      </div>
+
+      <!-- Package 2 (Featured) -->
+      <div class="package-card featured reveal reveal-delay-2" id="package-2">
+        <div class="package-badge">⭐ NAJPOPULARNIJI</div>
+        <div class="package-header">
+          <span class="package-emoji">🎉</span>
+          <h3 class="package-name">Paket 30/20</h3>
+          <p class="package-capacity">Do 30 dece + 20 odraslih</p>
+        </div>
+        <div class="package-price-area">
+          <p class="package-old-price">580€</p>
+          <p class="package-price">530<span>€</span></p>
+        </div>
+        <ul class="package-features">
+          <li><span class="check">✓</span> Ekskluzivna upotreba igraonice</li>
+          <li><span class="check">✓</span> Profesionalna animacija</li>
+          <li><span class="check">✓</span> Kompletna dekoracija</li>
+          <li><span class="check">✓</span> Kids paket hrana za decu</li>
+          <li><span class="check">✓</span> Piće za decu i odrasle</li>
+          <li><span class="check">✓</span> Face painting</li>
+        </ul>
+        <div class="package-cta">
+          <a href="tel:0601234567" class="btn btn-primary" id="cta-package-2">📞 Rezerviši</a>
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card reveal reveal-delay-3" id="package-3">
+        <div class="package-header">
+          <span class="package-emoji">👑</span>
+          <h3 class="package-name">Paket 40/30</h3>
+          <p class="package-capacity">Do 40 dece + 30 odraslih</p>
+        </div>
+        <div class="package-price-area">
+          <p class="package-old-price">750€</p>
+          <p class="package-price">700<span>€</span></p>
+        </div>
+        <ul class="package-features">
+          <li><span class="check">✓</span> Ekskluzivna upotreba celog prostora</li>
+          <li><span class="check">✓</span> VIP animacija i program</li>
+          <li><span class="check">✓</span> Premium dekoracija</li>
+          <li><span class="check">✓</span> Kompletna hrana i piće</li>
+          <li><span class="check">✓</span> Face painting & baloni</li>
+          <li><span class="check">✓</span> Foto uspomene</li>
+        </ul>
+        <div class="package-cta">
+          <a href="tel:0601234567" class="btn btn-secondary" id="cta-package-3">📞 Rezerviši</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                KIDS MENU / FOOD              -->
+  <!-- ============================================ -->
+  <section class="section section-white" id="jelovnik">
+    <div class="section-header reveal">
+      <span class="section-emoji">🍕</span>
+      <h2 class="section-title">Kids <span class="highlight">Paket</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Ukusna hrana koju deca obožavaju — jer sreća ima ukus dobre hrane! 😋</p>
+    </div>
+
+    <div class="menu-showcase">
+      <div class="menu-item reveal reveal-delay-1" id="menu-pizza">
+        <span class="menu-item-emoji">🍕</span>
+        <h3>Pizza</h3>
+      </div>
+      <div class="menu-item reveal reveal-delay-2" id="menu-nuggets">
+        <span class="menu-item-emoji">🍗</span>
+        <h3>Pileći nagesti</h3>
+      </div>
+      <div class="menu-item reveal reveal-delay-3" id="menu-fries">
+        <span class="menu-item-emoji">🍟</span>
+        <h3>Pomfrit</h3>
+      </div>
+      <div class="menu-item reveal reveal-delay-4" id="menu-sticks">
+        <span class="menu-item-emoji">🍢</span>
+        <h3>Pileći štapići</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                WHY CHOOSE US                 -->
+  <!-- ============================================ -->
+  <section class="section section-colored" id="zasto-mi">
+    <div class="section-header reveal">
+      <span class="section-emoji">💖</span>
+      <h2 class="section-title">Zašto <span class="highlight">Uživancija?</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Jer nam je svako dete najvažniji gost!</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card reveal reveal-delay-1" id="benefit-1">
+        <span class="benefit-emoji">🧹</span>
+        <div>
+          <h3>Higijena na prvom mestu</h3>
+          <p>Redovno čišćenje i dezinfekcija celokupnog prostora za bezbrižnu igru vaše dece.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card reveal reveal-delay-2" id="benefit-2">
+        <span class="benefit-emoji">🎨</span>
+        <div>
+          <h3>Kreativan ambijent</h3>
+          <p>Džungla murali, šarene stolice i veseo dizajn koji podstiče maštu vaših mališana.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card reveal reveal-delay-3" id="benefit-3">
+        <span class="benefit-emoji">👶</span>
+        <div>
+          <h3>Za sve uzraste</h3>
+          <p>Sadržaji prilagođeni deci od najmanjih do školskog uzrasta — svako ima svoju zabavu!</p>
+        </div>
+      </div>
+
+      <div class="benefit-card reveal reveal-delay-4" id="benefit-4">
+        <span class="benefit-emoji">☕</span>
+        <div>
+          <h3>Prostor za roditelje</h3>
+          <p>Prijatan caffe deo sa pogledom na igraonicu — opustite se dok se deca igraju.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card reveal reveal-delay-1" id="benefit-5">
+        <span class="benefit-emoji">🎉</span>
+        <div>
+          <h3>Animacija i zabava</h3>
+          <p>Profesionalni animatori, face painting, baloni i neograničena igra za svako dete.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card reveal reveal-delay-2" id="benefit-6">
+        <span class="benefit-emoji">💰</span>
+        <div>
+          <h3>Pristupačne cene</h3>
+          <p>Kvalitetna zabava po povoljnim cenama — jer svaki mališan zaslužuje najbolje!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                CTA BANNER                    -->
+  <!-- ============================================ -->
+  <section class="section section-white">
+    <div class="cta-banner reveal" id="cta-banner">
+      <h2>🎈 Spremni za nezaboravnu zabavu?</h2>
+      <p>Rezervišite termin za rođendan ili dovedite mališane na igru — čekamo vas sa osmehom!</p>
+      <a href="tel:0601234567" class="btn" id="cta-banner-btn">
+        <span class="btn-icon">📞</span>
+        Pozovite: 060/123-4567
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                 INSTAGRAM                    -->
+  <!-- ============================================ -->
+  <section class="instagram-section" id="instagram">
+    <div class="instagram-content reveal">
+      <span class="section-emoji">📱</span>
+      <h2>Pratite nas na Instagramu!</h2>
+      <p>Pogledajte najnovije slike i dešavanja u Uživanciji — svaki dan je nova avantura! 🌟</p>
+      <a href="https://www.instagram.com/igraonica_uzivancija_vozdovac/" target="_blank" rel="noopener noreferrer" class="instagram-handle" id="instagram-link">
+        <span class="ig-icon">📷</span>
+        @igraonica_uzivancija_vozdovac
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--              KONTAKT / CONTACT               -->
+  <!-- ============================================ -->
+  <section class="section section-cream" id="kontakt">
+    <div class="section-header reveal">
+      <span class="section-emoji">📍</span>
+      <h2 class="section-title">Kontakt & <span class="highlight">Lokacija</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Dođite do nas ili nas pozovite — radujemo se vašem dolasku!</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <h3>📋 Informacije</h3>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <h4>Rezervacije</h4>
+            <p><a href="tel:0601234567" class="phone-highlight">060/123-4567</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div class="contact-item-text">
+            <h4>Radno vreme</h4>
+            <p>Svakog dana: <strong>15:00 — 21:00</strong></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <h4>Adresa</h4>
+            <p>Voždovac, Beograd</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📷</div>
+          <div class="contact-item-text">
+            <h4>Instagram</h4>
+            <p><a href="https://www.instagram.com/igraonica_uzivancija_vozdovac/" target="_blank" rel="noopener noreferrer">@igraonica_uzivancija_vozdovac</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map reveal reveal-delay-2" id="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22653.35!2d20.47!3d44.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70707a5c5c5b%3A0x7e4c5d5e5f5a5b5c!2sVo%C5%BEdovac%2C%20Belgrade!5e0!3m2!1ssr!2srs!4v1700000000000!5m2!1ssr!2srs" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokacija Igraonica Uživancija - Voždovac, Beograd">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Working Hours Ribbon -->
+  <div class="hours-ribbon">
+    <span>🕐 Radno vreme: 15:00 — 21:00</span>
+    <span class="separator"></span>
+    <span>📞 Rezervacije: 060/123-4567</span>
+    <span class="separator"></span>
+    <span>📍 Voždovac, Beograd</span>
+  </div>
+
+  <!-- ============================================ -->
+  <!--                   FOOTER                     -->
+  <!-- ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="nav-logo-text">Uživancija</span>
+        <p>Dečija igraonica, čuvaonica, rođendaonica i caffe na Voždovcu. Mesto gde svaki detalj stvara uspomene — igraj, uživaj, ponavljaj! 💖</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/igraonica_uzivancija_vozdovac/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" id="footer-instagram">📷</a>
+          <a href="tel:0601234567" aria-label="Pozovite nas" id="footer-phone">📞</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigacija</h4>
+        <a href="#pocetna">🏠 Početna</a>
+        <a href="#o-nama">🌈 O nama</a>
+        <a href="#galerija">📸 Galerija</a>
+        <a href="#rodjendani">🎂 Rođendani</a>
+        <a href="#jelovnik">🍕 Jelovnik</a>
+        <a href="#kontakt">📍 Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Usluge</h4>
+        <a href="#o-nama">🫧 Igraonica</a>
+        <a href="#rodjendani">🎈 Rođendaonica</a>
+        <a href="#o-nama">🎨 Čuvaonica</a>
+        <a href="#o-nama">☕ Caffe</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Igraonica Uživancija — Sva prava zadržana</p>
+      <p>📍 Voždovac, Beograd | 📞 <a href="tel:0601234567">060/123-4567</a></p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Vrati se na vrh">↑</button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Zatvori">✕</button>
+    <img src="" alt="Uvećana slika" id="lightbox-img">
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
