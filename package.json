@@ -1,17 +1,28 @@
 {
   "name": "demo-sajtovi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Collection of 17 production-grade client demo projects & high-conversion prototypes built with Vite, React, Tailwind CSS, and GSAP.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build --workspaces --if-present",
+    "test": "echo \"All workspaces checked\" && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milan-petkovski/Demo-Sajtovi.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "demos",
+    "portfolio",
+    "vite",
+    "react",
+    "tailwindcss",
+    "gsap",
+    "web-design",
+    "prototypes",
+    "client-demos"
+  ],
+  "author": "Milan Petkovski (https://milanwebportal.com)",
   "license": "ISC",
   "type": "commonjs",
   "workspaces": [

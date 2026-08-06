@@ -1,6 +1,15 @@
-# 💎 Premium Client Demos & High-Conversion Prototypes
+# Premium Client Demos & High-Conversion Prototypes
 
-A high-performance collection of **13 production-grade demo projects** engineered to bridge the gap between initial client concepts and full-scale digital realities. These aren't just "demos"—they are high-conversion, Awwwards-caliber prototypes designed to secure high-ticket client wins by showcasing the absolute limit of modern web performance and aesthetics.
+<p>
+  <a href="https://github.com/milan-petkovski/Demo-Sajtovi/actions/workflows/ci.yml"><img src="https://github.com/milan-petkovski/Demo-Sajtovi/actions/workflows/ci.yml/badge.svg" alt="CI Status" /></a>
+  <img src="https://img.shields.io/badge/Projects-17_Demos-emerald" alt="17 Projects" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-ISC-blue.svg" alt="License: ISC" /></a>
+  <img src="https://img.shields.io/badge/Vite-8.x-646CFF?logo=vite&logoColor=white" alt="Vite 8" />
+  <img src="https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
+</p>
+
+A high-performance collection of **17 production-grade demo projects & prototypes** engineered to bridge the gap between initial client concepts and full-scale digital realities. These aren't just "demos"—they are high-conversion, Awwwards-caliber prototypes designed to secure high-ticket client wins by showcasing the absolute limit of modern web performance and aesthetics.
 
 > **"If you can't wow them with a demo, you won't win the contract."**  
 > This monorepo is the engine behind that "WOW" factor.
@@ -9,9 +18,9 @@ A high-performance collection of **13 production-grade demo projects** engineere
 
 To win over modern clients, speed isn't optional—it's a requirement. This workspace is optimized with a **Developer-First / Client-Focused** architecture:
 
-- **The Engine:** [Vite 8.0.13](https://vite.dev/) powered by **Rolldown & Oxc**. Builds are nearly instantaneous, and client previews are buttery smooth.
-- **The Core:** [React 19](https://react.dev/) using the latest concurrent features for zero-lag UI transitions.
-- **The Visuals:** [Tailwind CSS 4.3.0](https://tailwindcss.com/) for ultra-lightweight, CSS-first styling that scales.
+- **The Engine:** [Vite 8](https://vite.dev/) powered by **Rolldown & Oxc**. Builds are nearly instantaneous, and client previews are buttery smooth.
+- **The Core:** [React 19](https://react.dev/) using the latest concurrent features for zero-lag UI transitions, alongside pure Vanilla modern JS modules.
+- **The Visuals:** [Tailwind CSS 4](https://tailwindcss.com/) for ultra-lightweight, CSS-first styling that scales.
 - **The Soul:** [GSAP 3.15+](https://greensock.com/gsap/) for those "premium-feel" animations that clients associate with top-tier brands.
 
 ## 📂 Strategic Portfolio Showcase
@@ -33,21 +42,21 @@ Each project here was built with a specific client goal in mind: proving that a 
 | **Kafanica Kod Dede** | Rustic / Traditional | Custom illustrative elements for unique brand identity. |
 | **Kararavan International** | Logistics / Travel | Complex data routing handled with elegant, simple UI. |
 | **Pravi Spoj** | Modern Networking | High-friction form optimization using Zod & TanStack. |
+| **Pozivnice.mj** | Event & Wedding Stationery | Interactive RSVP flows & luxury digital invitations. |
+| **Igraonica Uzivancija** | Kids Playcenter & Venue | Vibrant, family-friendly layout & reservation inquiries. |
+| **Midorijama House** | Architecture & Hospitality | Zen minimalist aesthetic, high-res visual gallery. |
+| **The Cups Cafeteria** | Specialty Coffee Roaster | Artisanal brand storytelling & dynamic coffee menus. |
 
 ## 🚀 Performance Engineering (For the Nerds)
 
 Behind the marketing shine is a robust developer setup:
-- **Oxc Transformation:** We swapped Babel/SWC for Oxc to achieve sub-second transformation times.
+- **Oxc Transformation:** Sub-second transformation times across modern Vite workspaces.
 - **Zero-Config Tailwind 4:** Leveraging the new CSS-first engine for minimal bundle sizes.
-- **Unified Workspace:** All 13 projects share a single `node_modules` root for disk efficiency and dependency sync.
+- **Unified Workspace:** Monorepo architecture for disk efficiency and dependency sync.
 
 ## 🛠️ Developer Workflow
 
 1. **Get Started:**
-   ```bash
-   npm install
-   ```
-
    ```bash
    npm install
    ```
@@ -58,7 +67,7 @@ Behind the marketing shine is a robust developer setup:
    npm run dev
    ```
 
-3. **Build All:**
+3. **Build All Workspaces:**
    ```bash
    npm run build # from root
    ```
