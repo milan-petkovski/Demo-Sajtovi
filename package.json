@@ -40,7 +40,7 @@
     "detect-node-es": "^1.1.0",
     "rollup": "^4.60.3",
     "vite": "^8.0.13",
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "postcss": "latest",
     "autoprefixer": "latest",
     "typescript": "^6.0.3"
