@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="sr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Aleksa Barber & Hair Studio | Ekskluzivni Muški Salon & Berbernica</title>
+  <meta name="description" content="Aleksa Barber & Hair Studio - vrhunsko muško šišanje, moderni fade, precizno brijanje britvom i nega brade u luksuznom tamnom ambijentu. Zakažite svoj termin.">
+  <meta name="keywords" content="frizerski salon, barber studio, muško šišanje, fade, nega brade, brijanje britvom, Aleksa Radišić, berbernica Beograd">
+  <meta name="author" content="Aleksa Barber & Hair Studio">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aleksa Barber & Hair Studio | Vrhunski Muški Stil">
+  <meta property="og:description" content="Ekskluzivno muško šišanje, fade i stilizovanje brade. Doživite nivo usluge gde je svaki detalj u milimetar precizan.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2'%3E%3Ccircle cx='6' cy='6' r='3'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Cline x1='20' y1='4' x2='8.12' y2='15.88'/%3E%3Cline x1='14.47' y1='14.48' x2='20' y2='20'/%3E%3Cline x1='8.12' y1='8.12' x2='12' y2='12'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Syne + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-middle" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="navbar">
+    <div class="container nav-container">
+      <a href="#pocetna" class="logo" id="logoLink">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">ALEKSA</span>
+          <span class="logo-subtitle">BARBER &amp; STUDIO</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#pocetna" class="nav-link active">Početna</a>
+        <a href="#usluge" class="nav-link">Usluge &amp; Cene</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#o-nama" class="nav-link">O salonu</a>
+        <a href="#utisci" class="nav-link">Utisci</a>
+        <a href="#kontakt" class="nav-link">Lokacija</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="tel:+381601234567" class="btn btn-outline nav-btn-call" id="navCallBtn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Pozovi</span>
+        </a>
+        <a href="#zakazivanje" class="btn btn-gold nav-btn-book" id="navBookBtn">
+          <span>Zakaži termin</span>
+        </a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Meni">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <span class="logo-title">ALEKSA BARBER</span>
+      <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Zatvori meni">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-list">
+      <a href="#pocetna" class="m-link">Početna</a>
+      <a href="#usluge" class="m-link">Usluge &amp; Cene</a>
+      <a href="#portfolio" class="m-link">Portfolio radova</a>
+      <a href="#o-nama" class="m-link">O salonu</a>
+      <a href="#utisci" class="m-link">Utisci klijenata</a>
+      <a href="#kontakt" class="m-link">Lokacija i kontakt</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="#zakazivanje" class="btn btn-gold btn-block m-book-btn">Zakaži termin</a>
+      <a href="tel:+381601234567" class="btn btn-outline btn-block m-call-btn">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        060 / 123 - 4567
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Hero Section -->
+  <section class="hero-section" id="pocetna">
+    <div class="hero-bg-media" style="background-image: url('images/hero.jpg');"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span class="hero-tag-text">PREMIUM MEN'S GROOMING &amp; BARBER EXPERIENCE</span>
+        </div>
+
+        <h1 class="hero-headline">
+          PRECIZNOST U <span class="gold-gradient-text">MILIMETAR.</span><br>
+          STIL KOJI DEFINIŠE.
+        </h1>
+
+        <p class="hero-description">
+          Spoj tradicionalne berberske veštine i najnovijih trendova muškog šišanja. 
+          Kreiramo prepoznatljiv izgled prilagođen anatomiji tvog lica, uz vrhunsku negu brade i kose u ambijentu stvorenom za opuštanje.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#zakazivanje" class="btn btn-gold btn-lg hero-cta-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Zakaži termin online</span>
+          </a>
+
+          <a href="tel:+381601234567" class="btn btn-glass btn-lg hero-phone-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Direktan poziv</span>
+          </a>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">5.0</span>
+            <div class="stat-rating">
+              <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="stat-label">Ocena preko 250+ klijenata</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Posvećenost po zakazanom terminu</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">TOP</span>
+            <span class="stat-label">Profesionalna kozmetika &amp; higijena</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Highlight Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bez čekanja u redu</h3>
+          <p class="feature-desc">Tvoj termin je rezervisan samo za tebe. Dolaziš tačno na vreme i ulaziš direktno na stolicu.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Maksimalna higijena</h3>
+          <p class="feature-desc">Sterilizacija alata medicinskog nivoa nakon svakog klijenta i jednokratne higijenske trake.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Konsultacija oblika</h3>
+          <p class="feature-desc">Nismo tu samo da ošišamo, već da analiziramo tvoj oblik glave i gustinu kose za idealan izgled.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Pricing Section -->
+  <section class="services-section" id="usluge">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle">CENOVNIK USLUGA</div>
+        <h2 class="section-title">PRECIZNO KREIRANO ZA TVOJ STIL</h2>
+        <p class="section-desc">Izaberi uslugu koja ti odgovara. Bez skrivenih troškova — u svako šišanje je uključeno pranje i završni stajling.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Skin Fade &amp; Taper</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                40 min
+              </span>
+            </div>
+            <div class="service-price">1.200 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Hirurški precizan prelaz od nule (foil shaver), oblikovanje gornjeg dela, pranje kose i završno stilizovanje mat glinom ili pomadom.</p>
+          <button class="btn btn-service select-service-btn" data-service="Skin Fade &amp; Taper (1.200 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+        <!-- Service Card 2: POPULAR COMBO -->
+        <div class="service-card popular-card">
+          <div class="card-badge">NAJTRAŽENIJE</div>
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Aleksa Signature Combo</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                60 min
+              </span>
+            </div>
+            <div class="service-price">1.800 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Kompletan tretman: precizno šišanje po želji + brijanje ili oblikovanje brade britvom uz tretman vrućim peškirom i masažu vlasišta.</p>
+          <button class="btn btn-gold select-service-btn" data-service="Aleksa Signature Combo (1.800 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Sređivanje &amp; Nega Brade</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                30 min
+              </span>
+            </div>
+            <div class="service-price">800 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Oblikovanje geometrije brade makazama i mašinicom, definisanje oštrih linija britvom, parenje lica i balzam za hidriranje.</p>
+          <button class="btn btn-service select-service-btn" data-service="Sređivanje Brade (800 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Klasično Muško Šišanje</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                35 min
+              </span>
+            </div>
+            <div class="service-price">1.000 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Tradicionalno šišanje makazama i mašinicom prilagođeno poslovnom ili klasičnom stilu. Pranje, masaža i oblikovanje.</p>
+          <button class="btn btn-service select-service-btn" data-service="Klasično Muško Šišanje (1.000 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Tradicionalno Brijanje Britvom</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                35 min
+              </span>
+            </div>
+            <div class="service-price">900 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Stari berberski ritual: toplo ulje, dvostruki vruć peškir, pena od jazavčeve dlake, brijanje oštrom britvom i hladan losion.</p>
+          <button class="btn btn-service select-service-btn" data-service="Brijanje Britvom (900 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-title-group">
+              <h3 class="service-name">Kamuflaža Sedih &amp; Toniranje</h3>
+              <span class="service-duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                25 min
+              </span>
+            </div>
+            <div class="service-price">1.000 <span class="currency">RSD</span></div>
+          </div>
+          <p class="service-desc">Prirodno ujednačavanje tona brade ili kose. Bez neprirodnog sjaja farbe — diskretan i 5 godina mlađi izgled u samo nekoliko minuta.</p>
+          <button class="btn btn-service select-service-btn" data-service="Kamuflaža Sedih (1.000 RSD)">
+            Izaberi ovu uslugu
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Portfolio Showcase -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle">GALERIJA RADOVA</div>
+        <h2 class="section-title">STIL KOJI GOVORI SAM ZA SEBE</h2>
+        <p class="section-desc">Pogledajte neke od naših svakodnevnih radova. Svaki rez je izveden sa maksimalnom pažnjom.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item item-large">
+          <img src="images/fade.jpg" alt="Muški Skin Fade šišanje" loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">SKIN FADE</span>
+            <h4 class="portfolio-item-title">Savršen prelaz &amp; oštra brada</h4>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/styling.jpg" alt="Majstorsko stilizovanje i šišanje" loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">TEHNIKA</span>
+            <h4 class="portfolio-item-title">Makaze i tekstura</h4>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/tools.jpg" alt="Profesionalni berberski pribor" loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">ALATI</span>
+            <h4 class="portfolio-item-title">Vrhunski čelik &amp; nega</h4>
+          </div>
+        </div>
+
+        <div class="portfolio-item item-wide">
+          <img src="images/hero.jpg" alt="Ambijent salona Aleksa" loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">STUDIO</span>
+            <h4 class="portfolio-item-title">Mesto gde stil susreće relaksaciju</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Form / Appointment Request -->
+  <section class="booking-section" id="zakazivanje">
+    <div class="container">
+      <div class="booking-wrapper">
+        <div class="booking-info">
+          <div class="section-subtitle">BRZO ZAKAZIVANJE</div>
+          <h2 class="booking-title">ZAKAŽI TERMIN BEZ ČEKANJA NA ODGOVOR</h2>
+          <p class="booking-lead">
+            Izaberi željenu uslugu, dan i okvirno vreme. Klikom na dugme možeš direktno poslati pripremljenu poruku na WhatsApp ili nas pozvati za instant potvrdu.
+          </p>
+
+          <div class="booking-perks">
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Termin je zagarantovan i ne preklapa se</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Besplatno otkazivanje ili pomeranje do 2h ranije</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Mogućnost plaćanja gotovinom ili karticom</span>
+            </div>
+          </div>
+
+          <div class="direct-contact-card">
+            <div class="d-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="d-text">
+              <span class="d-label">Ili jednostavno pozovite:</span>
+              <a href="tel:+381601234567" class="d-phone">060 / 123 - 4567</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form-card">
+          <h3 class="form-title">Unesi podatke za termin</h3>
+          
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="bookingService">Usluga</label>
+              <select id="bookingService" class="form-control" required>
+                <option value="" disabled selected>Izaberi uslugu...</option>
+                <option value="Skin Fade &amp; Taper (1.200 RSD)">Skin Fade &amp; Taper — 1.200 RSD</option>
+                <option value="Aleksa Signature Combo (1.800 RSD)">Aleksa Signature Combo — 1.800 RSD</option>
+                <option value="Klasično Muško Šišanje (1.000 RSD)">Klasično Muško Šišanje — 1.000 RSD</option>
+                <option value="Sređivanje &amp; Nega Brade (800 RSD)">Sređivanje &amp; Nega Brade — 800 RSD</option>
+                <option value="Tradicionalno Brijanje Britvom (900 RSD)">Tradicionalno Brijanje Britvom — 900 RSD</option>
+                <option value="Kamuflaža Sedih (1.000 RSD)">Kamuflaža Sedih — 1.000 RSD</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingDate">Željeni datum</label>
+                <input type="date" id="bookingDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingTime">Željeno doba dana</label>
+                <select id="bookingTime" class="form-control" required>
+                  <option value="" disabled selected>Izaberi period...</option>
+                  <option value="Jutarnji termin (09:00 - 12:00)">Prepodne (09:00 - 12:00)</option>
+                  <option value="Podnevni termin (12:00 - 16:00)">Sredina dana (12:00 - 16:00)</option>
+                  <option value="Večernji termin (16:00 - 20:00)">Popodne / Veče (16:00 - 20:00)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Tvoje ime</label>
+                <input type="text" id="clientName" class="form-control" placeholder="npr. Marko Petrović" required>
+              </div>
+
+              <div class="form-group">
+                <label for="clientPhone">Broj telefona</label>
+                <input type="tel" id="clientPhone" class="form-control" placeholder="06x / xxx - xxxx" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientNotes">Dodatna napomena (opciono)</label>
+              <textarea id="clientNotes" class="form-control" rows="2" placeholder="Ako imaš posebnu želju ili pitanje..."></textarea>
+            </div>
+
+            <div class="form-submit-actions">
+              <button type="button" id="sendWhatsappBtn" class="btn btn-whatsapp btn-block">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Pošalji zahtev na WhatsApp</span>
+              </button>
+
+              <button type="submit" id="directConfirmBtn" class="btn btn-gold btn-block">
+                <span>Potvrdi termin na sajtu</span>
+              </button>
+            </div>
+            
+            <div id="bookingSuccessNotice" class="booking-notice hidden">
+              Termin je uspešno zabeležen! Uskoro ćete dobiti SMS potvrdu od Alekse.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="utisci">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle">ISKUSTVA KLIJENATA</div>
+        <h2 class="section-title">ŠTA KAŽU ONI KOJI NAM VERUJU</h2>
+        <p class="section-desc">Svaki klijent iz salona izlazi sa punim samopouzdanjem. Pročitajte njihove utiske.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Aleksa je verovatno jedini barber u gradu koji zaista sluša šta želiš, ali i zna da predloži šta ti najbolje stoji. Fade je svaki put kao nacrtan lenjirom!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NP</div>
+            <div class="author-info">
+              <span class="author-name">Nikola Petrović</span>
+              <span class="author-role">Stalni klijent (2+ godine)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Signature Combo paket je pravo uživanje nakon napornog dana. Vruć peškir, nega brade i šišanje bez ikakve žurbe. Higijena u salonu je na najvišem nivou."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MJ</div>
+            <div class="author-info">
+              <span class="author-name">Miloš Jovanović</span>
+              <span class="author-role">Preduzetnik</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#d4af37"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Sjajna atmosfera, vrhunska muzika i vrhunski majstor. Otkad sam prvi put došao kod Alekse, više ne menjam salon. Sve preporuke za svakog muškarca koji drži do sebe."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ST</div>
+            <div class="author-info">
+              <span class="author-name">Stefan Todorović</span>
+              <span class="author-role">Softverski inženjer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours Section (Google Maps Integration) -->
+  <section class="location-section" id="kontakt">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info-card">
+          <div class="section-subtitle">GDE SE NALAZIMO</div>
+          <h2 class="section-title">LOKACIJA I RADNO VREME</h2>
+          
+          <div class="contact-detail-group">
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="c-text">
+                <span class="c-label">Adresa:</span>
+                <span class="c-value">Bulevar Kralja Aleksandra, Beograd</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="c-text">
+                <span class="c-label">Radno vreme:</span>
+                <span class="c-value">Ponedeljak – Petak: 09:00 – 20:00</span>
+                <span class="c-value">Subota: 09:00 – 16:00</span>
+                <span class="c-value text-muted">Nedelja: Neradan dan</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="c-text">
+                <span class="c-label">Kontakt telefon:</span>
+                <a href="tel:+381601234567" class="c-value font-bold text-gold">060 / 123 - 4567</a>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="c-text">
+                <span class="c-label">Email za upite:</span>
+                <a href="mailto:aleksaradisicje@gmail.com" class="c-value">aleksaradisicje@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map-wrapper">
+          <iframe 
+            title="Google Mapa - Aleksa Barber Studio"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45290.87114620573!2d20.4489216!3d44.801648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!5e0!3m2!1sen!2srs!4v1700000000000!5m2!1sen!2srs" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-brand">
+        <div class="logo">
+          <div class="logo-icon-wrap">
+            <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <span class="logo-title">ALEKSA BARBER</span>
+        </div>
+        <p class="footer-about">
+          Ekskluzivni frizerski i berberski salon posvećen muškarcima koji znaju šta žele. Preciznost, profesionalizam i higijena bez kompromisa.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">BRZI LINKOVI</h4>
+        <ul class="footer-links">
+          <li><a href="#pocetna">Početna</a></li>
+          <li><a href="#usluge">Cenovnik i usluge</a></li>
+          <li><a href="#portfolio">Galerija radova</a></li>
+          <li><a href="#zakazivanje">Zakaži termin</a></li>
+          <li><a href="#kontakt">Lokacija i mapa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">KONTAKT</h4>
+        <ul class="footer-links">
+          <li>Telefon: <a href="tel:+381601234567">060 / 123 - 4567</a></li>
+          <li>Email: <a href="mailto:aleksaradisicje@gmail.com">aleksaradisicje@gmail.com</a></li>
+          <li>Beograd, Srbija</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; 2026 Aleksa Barber &amp; Hair Studio. Sva prava zadržana.</p>
+        <p class="credit">Dizajn i izrada: <a href="https://milanwebportal.com" target="_blank" rel="noopener">Milan Web Portal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Bar (Bottom sticky) -->
+  <div class="floating-mobile-bar" id="mobileBottomBar">
+    <a href="tel:+381601234567" class="float-btn float-call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Pozovi</span>
+    </a>
+    <a href="#zakazivanje" class="float-btn float-book">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Zakaži termin</span>
+    </a>
+    <a href="https://wa.me/381601234567" target="_blank" rel="noopener" class="float-btn float-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
