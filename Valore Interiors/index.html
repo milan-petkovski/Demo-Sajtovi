@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>VALORÉ Interiors | Vrhunski nameštaj po meri i enterijeri</title>
+  <meta name="description" content="VALORÉ Interiors - Precizna izrada i montaža luksuznog nameštaja po meri, modernih kuhinja, ugradnih garderobera i unikatnih enterijera širom Srbije.">
+  
+  <!-- Google Fonts: Cormorant Garamond (editorial luxury) + Plus Jakarta Sans (clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Ultra-sleek inline) -->
+  <aside class="top-bar">
+    <div class="container top-bar-content">
+      <span class="top-bar-badge">Prijem projekata</span>
+      <span class="top-bar-text">Rezervišite termin za jesen / zimu 2026. &bull; <a href="#kontakt" class="top-bar-link">Besplatne konsultacije na lokaciji &rarr;</a></span>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="VALORÉ Interiors Početna">
+        <img src="logo.png" alt="VALORÉ Interiors" class="brand-img" width="150" height="42">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Glavna navigacija">
+        <a href="#projekti" class="nav-link">Portfolio</a>
+        <a href="#usluge" class="nav-link">Usluge</a>
+        <a href="#proces" class="nav-link">Kako radimo</a>
+        <a href="#o-nama" class="nav-link">O nama</a>
+        <a href="#recenzije" class="nav-link">Iskustva (9.8/10)</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="tel:+381600000000" class="btn-call" aria-label="Pozovite nas">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span class="call-text">Poziv</span>
+        </a>
+        <a href="#kontakt" class="btn-primary">
+          <span>Zatraži procenu</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Otvori navigaciju" aria-expanded="false">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <img src="logo.png" alt="VALORÉ Interiors" class="drawer-logo" width="130" height="36">
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Zatvori meni">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#projekti" class="drawer-link">Portfolio radova</a>
+      <a href="#usluge" class="drawer-link">Usluge &amp; Proizvodi</a>
+      <a href="#proces" class="drawer-link">Proces rada</a>
+      <a href="#o-nama" class="drawer-link">O radionici</a>
+      <a href="#recenzije" class="drawer-link">Utisci klijenata</a>
+      <a href="#kontakt" class="drawer-link highlight">Zatražite ponudu</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="tel:+381600000000" class="drawer-call-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Direktan poziv: 060 / 000-0000</span>
+      </a>
+      <p class="drawer-location">Radionica: Požarevac &bull; Rad na teritoriji cele Srbije</p>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg-wrapper">
+      <img src="hero.jpg" alt="Luksuzni enterijer po meri VALORÉ" class="hero-bg-img" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Bespoke Furniture &amp; Interior Architecture</span>
+      </div>
+      <h1 class="hero-title">
+        Vaš prostor.<br>
+        <em>Beskompromisna</em> estetika nameštaja po meri.
+      </h1>
+      <p class="hero-subtitle">
+        Spajamo vrhunsko majstorsko zanatstvo od punog drveta i pločastih materijala sa čistim italijanskim minimalizmom. Precizno, dugovečno i prilagođeno vašem ritmu života.
+      </p>
+      
+      <div class="hero-cta-group">
+        <a href="#kontakt" class="btn-hero-primary">
+          <span>Zakažite merenje i konsultacije</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#projekti" class="btn-hero-secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Pogledajte portfolio</span>
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">9.8<small>/10</small></span>
+          <span class="stat-label">Ocena zadovoljstva (Daibau)</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Po meri vašeg prostora</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">Cela Srbija</span>
+          <span class="stat-label">Prevoz i profesionalna montaža</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Portfolio Grid (Tabs) -->
+  <section class="section portfolio-section" id="projekti">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Odabrani radovi</span>
+        <h2 class="section-title">Inspiracija pretočena u milimetar tačnosti</h2>
+        <p class="section-description">
+          Svaki komad nameštaja projektujemo i izrađujemo namenski za Vaš stambeni ili poslovni prostor. Pogledajte neke od naših skorijih realizacija.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">Svi projekti</button>
+        <button class="tab-btn" data-filter="kuhinje" role="tab" aria-selected="false">Kuhinje po meri</button>
+        <button class="tab-btn" data-filter="garderoberi" role="tab" aria-selected="false">Ugradni plakari</button>
+        <button class="tab-btn" data-filter="dnevne" role="tab" aria-selected="false">Dnevne i spavaće sobe</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Kitchen -->
+        <article class="project-card" data-category="kuhinje">
+          <div class="project-img-box">
+            <img src="kitchen.jpg" alt="Moderna kuhinja sa mermernim ostrvom VALORÉ" loading="lazy">
+            <span class="project-badge">Kuhinja po meri</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-loc">Dedinje, Beograd</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-name">Vila Calacatta &amp; Orah</h3>
+            <p class="project-desc">Kombinacija mat crnog medijapana sa prirodnim orahovim furnirom, kaskadnim mermernim ostrvom i integrisanim Blum okovima sa doživotnom garancijom.</p>
+            <div class="project-tags">
+              <span>Prirodni furnir</span>
+              <span>Skriveni okovi</span>
+              <span>LED rasveta</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Wardrobe -->
+        <article class="project-card" data-category="garderoberi">
+          <div class="project-img-box">
+            <img src="wardrobe.jpg" alt="Ugradni walk-in garderober VALORÉ" loading="lazy">
+            <span class="project-badge">Walk-in garderober</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-loc">Vračar, Beograd</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-name">Apartman Noir Dressing Room</h3>
+            <p class="project-desc">Walk-in garderober sa toniranim staklenim frontovima u aluminijumskim profilima, integrisanom vertikalnom senzorskom rasvetom i plišanim fiokama.</p>
+            <div class="project-tags">
+              <span>Tonirano staklo</span>
+              <span>Smart senzori</span>
+              <span>Puno drvo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Bedroom & Living -->
+        <article class="project-card" data-category="dnevne">
+          <div class="project-img-box">
+            <img src="bedroom.jpg" alt="Spavaća soba sa akustičnim drvenim panelima VALORÉ" loading="lazy">
+            <span class="project-badge">Spavaća soba</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-loc">Novi Sad</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-name">Master Suite sa akustičnim lamelama</h3>
+            <p class="project-desc">Zidna obloga od reljefnih drvenih hrastovih lamela sa skrivenim noćnim konzolama i ambijentalnim indirektnim osvetljenjem.</p>
+            <div class="project-tags">
+              <span>Hrastove lamele</span>
+              <span>Konzolni elementi</span>
+              <span>Zidne obloge</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Craftsmanship -->
+        <article class="project-card" data-category="dnevne">
+          <div class="project-img-box">
+            <img src="craft.jpg" alt="Ručna izrada unikatnog nameštaja VALORÉ" loading="lazy">
+            <span class="project-badge">Unikatni komadi</span>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-loc">Požarevac radionica</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-name">Stolarska tradicija &amp; preciznost</h3>
+            <p class="project-desc">Svaka ivica, kant i spoj prolaze strogu kontrolu kvaliteta u našoj sopstvenoj radionici pre izlaska na montažu.</p>
+            <div class="project-tags">
+              <span>Puno drvo</span>
+              <span>CNC sečenje</span>
+              <span>Ručna dorada</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Services Section -->
+  <section class="section services-section" id="usluge">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Kompletne usluge</span>
+        <h2 class="section-title">Od skice do savršeno postavljenog enterijera</h2>
+        <p class="section-description centered">
+          Nudimo kompletnu uslugu po principu „ključ u ruke“ — bez potrebe da tražite posebne majstore za sečenje, kantovanje, montažu ili podove.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Kuhinje po meri</h3>
+          <p class="service-text">Ergonomski osmišljene kuhinje sa najkvalitetnijim medijapanom (MDF), kvarcnim ili mermernim pločama, kao i tihozatvarajućim okovima (Blum, Grass).</p>
+          <ul class="service-features">
+            <li>Optimalno iskorišćenje svakog centimetra</li>
+            <li>3D vizuelizacija pre početka izrade</li>
+            <li>Otpornost na vlagu i habanje</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="12" y1="3" x2="12" y2="21"></line>
+              <line x1="7" y1="12" x2="7.01" y2="12"></line>
+              <line x1="17" y1="12" x2="17.01" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Ugradni plakari i garderoberi</h3>
+          <p class="service-text">Plakari od poda do plafona sa kliznim ili krilnim vratima, unutrašnjim organizatorima, policama za obuću, nakit i integrisanom rasvetom.</p>
+          <ul class="service-features">
+            <li>Frontovi od toniranog stakla ili ogledala</li>
+            <li>Maksimalan skladišni prostor</li>
+            <li>Pregradni zidovi i garderobne sobe</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="service-title">Dnevne i spavaće sobe</h3>
+          <p class="service-text">TV komode, plutajuće police, unikatni trpezarijski stolovi od masiva, noćni ormarići i tapacirana uzglavlja kreveta izrađena po vašim merama.</p>
+          <ul class="service-features">
+            <li>Unikatan dizajn usklađen sa celim domom</li>
+            <li>Masiv (orah, hrast, jasen) ili furnir</li>
+            <li>Skriveni kanali za kablove i uređaje</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Parketi i zidne drvene obloge</h3>
+          <p class="service-text">Vrhunska ugradnja višeslojnog parketa, laminata, kao i modernih akustičnih zidnih drvenih lamela koje enterijeru daju prestižan izgled.</p>
+          <ul class="service-features">
+            <li>Precizno nivelisanje podloge</li>
+            <li>Besprijekorna završna obrada</li>
+            <li>Topla i akustički izolovana atmosfera</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section process-section" id="proces">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Jednostavan proces</span>
+        <h2 class="section-title">Kako pretvaramo vašu ideju u stvarnost</h2>
+        <p class="section-description centered">
+          Transparentan proces u 4 koraka bez stresa, neočekivanih troškova i kašnjenja.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Besplatne konsultacije i uzimanje mera</h3>
+          <p class="step-text">Dolazimo na Vašu lokaciju ili prolazimo kroz Vaš arhitektonski projekat. Slušamo Vaše želje i predlažemo najbolje materijale.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3 class="step-title">3D vizuelizacija i precizna ponuda</h3>
+          <p class="step-text">Dobijate jasan uvid kako će nameštaj izgledati u prostoru, sa fiksnom specifikacijom cene i ugovorenim rokom isporuke.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Proizvodnja u našoj radionici</h3>
+          <p class="step-text">Sečenje, obrada i završna priprema vrše se na profesionalnim mašinama uz rigoroznu kontrolu svakog detalja.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Dostava i čista montaža</h3>
+          <p class="step-text">Naš uigrani tim montira elemente, testira sve mehanizme i ostavlja prostor čist i spreman za uživanje.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Craftsmanship Spotlight -->
+  <section class="section about-section" id="o-nama">
+    <div class="container about-container">
+      <div class="about-image-column">
+        <img src="craft.jpg" alt="VALORÉ majstorska radionica" class="about-main-img" loading="lazy">
+        <div class="about-stat-card">
+          <span class="about-stat-val">BBB</span>
+          <span class="about-stat-desc">Zvanična bonitetna ocena kompanije</span>
+        </div>
+      </div>
+
+      <div class="about-text-column">
+        <span class="section-tag">O brendu VALORÉ</span>
+        <h2 class="section-title">Strast prema drvetu. Oko za perfekciju.</h2>
+        <p class="about-lead">
+          VALORÉ Interiors je nastao sa jasnim ciljem — da podigne standard izrade nameštaja u Srbiji na nivo gde svaki detalj ima svoju svrhu i eleganciju.
+        </p>
+        <p class="about-body">
+          Bilo da uređujete novogradnju, renovirate porodični stan ili opremate poslovni prostor, pristupamo svakom zadatku kao da ga radimo za sebe. Koristimo proverene svetske brendove okova (Blum, Hettich) i materijale koji godinama zadržavaju prvobitni sjaj.
+        </p>
+        
+        <div class="about-checklist">
+          <div class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Fiksna cena i garantovan rok bez iznenađenja</span>
+          </div>
+          <div class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Montaža na teritoriji cele Srbije i regiona</span>
+          </div>
+          <div class="check-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Garancija na konstrukciju i sve mehanizme</span>
+          </div>
+        </div>
+
+        <div class="about-signature">
+          <div>
+            <strong>Stefan Ivanović</strong>
+            <span>Osnivač &amp; VALORÉ Interiors tim</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews (Daibau 9.8 Verified) -->
+  <section class="section reviews-section" id="recenzije">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="rating-badge-top">
+          <div class="stars">
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span>Verifikovana ocena 9.8 / 10 na Daibau platformi</span>
+        </div>
+        <h2 class="section-title">Reči onih koji već uživaju u svom novom prostoru</h2>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <div class="review-card">
+          <p class="review-quote">„Saradnja sa Stefanom i VALORÉ timom je bila besprekorna od prvog crteža do poslednjeg šrafa. Kuhinja je ispala još lepša nego na 3D modelu. Sve preporuke za tačnost i preciznost!“</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">NM</div>
+            <div class="reviewer-info">
+              <strong>Nikola M.</strong>
+              <span>Kuhinja po meri &bull; Beograd</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">„Radili su nam kompletan garderober i spavaću sobu. Posebno me oduševilo što su prostor nakon montaže ostavili potpuno usisan i čist. Pravi profesionalci kakvi se retko nalaze danas.“</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">JS</div>
+            <div class="reviewer-info">
+              <strong>Jelena S.</strong>
+              <span>Ugradni plakari &bull; Novi Sad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">„Odličan odnos cene i kvaliteta materijala. Pomogli su mi savetima kako da najbolje iskoristim manji prostor. Nameštaj deluje masivno i izuzetno luksuzno.“</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">MP</div>
+            <div class="reviewer-info">
+              <strong>Marko P.</strong>
+              <span>Dnevna soba &bull; Požarevac</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Fast Quote & Consultation Form -->
+  <section class="section contact-section" id="kontakt">
+    <div class="container contact-container">
+      
+      <div class="contact-info-panel">
+        <span class="section-tag">Zakažite termin</span>
+        <h2 class="contact-panel-title">Spremni ste da započnete svoj projekat?</h2>
+        <p class="contact-panel-text">
+          Pošaljite nam osnovne mere, skicu ili opis onoga što želite. Javićemo Vam se u roku od nekoliko sati sa okvirnom procenom ili terminom za sastanak.
+        </p>
+
+        <div class="contact-methods">
+          <a href="tel:+381600000000" class="contact-method-item">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="method-label">Telefon / WhatsApp</span>
+              <strong class="method-value">060 / 000 - 0000</strong>
+            </div>
+          </a>
+
+          <a href="mailto:stefanivanovic241@gmail.com" class="contact-method-item">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="method-label">Direktan email</span>
+              <strong class="method-value">stefanivanovic241@gmail.com</strong>
+            </div>
+          </a>
+
+          <div class="contact-method-item">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <span class="method-label">Sedište i proizvodnja</span>
+              <strong class="method-value">Partizanska 12, Požarevac</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Card -->
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45465.34045585501!2d21.156828555776953!3d44.62125740441094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4750e393b48325a7%3A0x6b4f738096f9a0b7!2zUG_FvmFyZXZhYw!5e0!3m2!1ssr!2srs!4v1725875000000!5m2!1ssr!2srs" 
+            width="100%" 
+            height="180" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="VALORÉ Interiors lokacija na mapi">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <div class="contact-form-panel">
+        <div class="form-header">
+          <h3 class="form-title">Brzi upit za ponudu</h3>
+          <p class="form-subtitle">Izaberite šta vam je potrebno i javljamo se sa tačnom procenom.</p>
+        </div>
+
+        <form id="quoteForm" class="quote-form">
+          <div class="form-group">
+            <label for="clientName">Vaše ime i prezime *</label>
+            <input type="text" id="clientName" name="clientName" required placeholder="npr. Marko Jovanović">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientPhone">Broj telefona *</label>
+              <input type="tel" id="clientPhone" name="clientPhone" required placeholder="06X / XXX - XXXX">
+            </div>
+            <div class="form-group">
+              <label for="clientCity">Lokacija / Grad *</label>
+              <input type="text" id="clientCity" name="clientCity" required placeholder="npr. Beograd, Požarevac...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Vrsta projekta (izaberite):</label>
+            <div class="service-selector-chips">
+              <label class="chip"><input type="checkbox" name="services" value="Kuhinja po meri" checked><span>Kuhinja</span></label>
+              <label class="chip"><input type="checkbox" name="services" value="Ugradni plakar"><span>Ugradni plakar</span></label>
+              <label class="chip"><input type="checkbox" name="services" value="Dnevna / Spavaća soba"><span>Dnevna / Spavaća</span></label>
+              <label class="chip"><input type="checkbox" name="services" value="Kompletan enterijer"><span>Ceo stan / kuća</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientMessage">Kratak opis (dimenzije, specifične želje ili rok)</label>
+            <textarea id="clientMessage" name="clientMessage" rows="3" placeholder="Primer: Treba nam kuhinja od oko 3.5 metra u novogradnji, mat crni medijapan..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Pošalji upit za procenu</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <p class="form-privacy">Poštujemo vašu privatnost. Podaci se koriste isključivo za pripremu ponude.</p>
+          <div id="formFeedback" class="form-feedback"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sticky Bottom Quick Contact Bar (Mobile First Conversion Booster) -->
+  <aside class="mobile-sticky-bar" aria-label="Brza kontakt traka">
+    <a href="tel:+381600000000" class="sticky-btn call-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Pozovi odmah</span>
+    </a>
+    <a href="https://wa.me/381600000000?text=Pozdrav,%20zainteresovan%20sam%20za%20izradu%20namestaja%20po%20meri" target="_blank" rel="noopener" class="sticky-btn whatsapp-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 2C6.511 2 2.023 6.48 2.023 11.99c0 1.98.583 3.86 1.688 5.46L2 22l4.729-1.63a9.96 9.96 0 0 0 5.302 1.51h.005c5.518 0 10.007-4.48 10.007-9.99 0-2.67-1.04-5.18-2.93-7.07A9.94 9.94 0 0 0 12.031 2zm0 18.15c-1.65 0-3.26-.44-4.67-1.28l-.33-.2-3.46 1.19 1.2-3.37-.22-.35a8.16 8.16 0 0 1-1.25-4.35c0-4.52 3.68-8.2 8.21-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.2-8.21 8.2zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.78.97-.15.17-.29.19-.54.07-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.47-1.37-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.18.21-.57.21-1.07.15-1.18-.06-.12-.23-.19-.48-.31z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#kontakt" class="sticky-btn quote-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
+      </svg>
+      <span>Zatraži procenu</span>
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-col">
+        <img src="logo.png" alt="VALORÉ Interiors" class="footer-logo" width="140" height="38">
+        <p class="footer-bio">
+          VALORÉ Interiors d.o.o. &bull; Specijalizovana radionica za projektovanje, izradu i ugradnju luksuznog nameštaja po meri i podnih obloga.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <span class="footer-heading">Navigacija</span>
+        <a href="#projekti">Portfolio radova</a>
+        <a href="#usluge">Kuhinje i plakari</a>
+        <a href="#proces">Proces izrade</a>
+        <a href="#recenzije">Utisci kupaca</a>
+      </div>
+
+      <div class="footer-contact-col">
+        <span class="footer-heading">Kontakt</span>
+        <p>Partizanska 12, Požarevac</p>
+        <p>Rad sa klijentima širom Srbije</p>
+        <p>Email: stefanivanovic241@gmail.com</p>
+        <p class="footer-availability"><span class="online-pulse"></span> Prijem novih upita aktivan</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 VALORÉ Interiors d.o.o. Sva prava zadržana.</p>
+      <p class="demo-tag">Koncept i realizacija: <a href="https://milanwebportal.com" target="_blank" rel="noopener">Milan Web Portal</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
