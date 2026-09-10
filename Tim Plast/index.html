@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>TIM PLAST | Vrhunska PVC i ALU Stolarija po meri</title>
+  <meta name="description" content="TIM PLAST - Precizna proizvodnja i ugradnja premium PVC i ALU prozora, sigurnosnih ulaznih vrata, roletni i komarnika. 10 godina garancije i besplatno merenje na lokaciji.">
+  
+  <!-- Modern Industrial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Sleek Single-Line) -->
+  <aside class="top-bar">
+    <div class="container top-bar-content">
+      <span class="top-bar-badge">Proleće/Jesen 2026 Akcija</span>
+      <span class="top-bar-text">Besplatno merenje i 10 godina pisane garancije na profile &bull; <a href="#kalkulator" class="top-bar-link">Izračunajte okvirnu cenu odmah &rarr;</a></span>
+    </div>
+  </aside>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="TIM PLAST Početna">
+        <div class="logo-mark">
+          <span class="logo-accent">TIM</span>
+          <span class="logo-main">PLAST</span>
+        </div>
+        <span class="logo-sub">PVC &amp; ALU SISTEMI</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Glavna navigacija">
+        <a href="#proizvodi" class="nav-link">Proizvodi</a>
+        <a href="#kalkulator" class="nav-link highlight">Brzi Kalkulator Mera</a>
+        <a href="#prednosti" class="nav-link">Nemački Profili</a>
+        <a href="#projekti" class="nav-link">Galerija ugradnji</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <a href="tel:+381600000000" class="btn-phone" aria-label="Pozovite za merenje">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Poziv</span>
+        </a>
+        <a href="#kalkulator" class="btn-header-cta">
+          <span>Konfigurator mera</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Otvori navigaciju" aria-expanded="false">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="logo-mark">
+        <span class="logo-accent">TIM</span>
+        <span class="logo-main">PLAST</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Zatvori meni">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#proizvodi" class="drawer-link">Proizvodni asortiman</a>
+      <a href="#kalkulator" class="drawer-link highlight">Online konfigurator mera &rarr;</a>
+      <a href="#prednosti" class="drawer-link">Kvalitet profila i stakala</a>
+      <a href="#projekti" class="drawer-link">Reference i radovi</a>
+      <a href="#kontakt" class="drawer-link">Zakažite besplatno merenje</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="tel:+381600000000" class="drawer-call-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>060 / 000 - 0000</span>
+      </a>
+      <p class="drawer-subtext">Direktna fabrička cena bez posrednika &bull; Cela Srbija</p>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-media-wrapper">
+      <img src="hero.jpg" alt="TIM PLAST moderna vila sa panoramskim prozorima" class="hero-img" loading="eager">
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-pill">Nemački standard &bull; Direktno iz proizvodnje</span>
+      </div>
+      <h1 class="hero-headline">
+        Vrhunska PVC &amp; ALU stolarija.<br>
+        <span class="text-gradient">Toplotna izolacija.</span> Trajnost decenijama.
+      </h1>
+      <p class="hero-lead">
+        Proizvodimo i ugrađujemo prozore i vrata po meri vašeg doma. 6 i 7-komorni nemački profili sa troslojnim niskoemisionim staklima koji smanjuju račune za grejanje i buku do 85%.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#kalkulator" class="btn-hero-calc">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+            <line x1="8" y1="10" x2="8.01" y2="10"></line>
+            <line x1="12" y1="10" x2="12.01" y2="10"></line>
+            <line x1="16" y1="10" x2="16.01" y2="10"></line>
+            <line x1="8" y1="14" x2="8.01" y2="14"></line>
+            <line x1="12" y1="14" x2="12.01" y2="14"></line>
+            <line x1="8" y1="18" x2="8.01" y2="18"></line>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          <span>Konfigurišite mere i pošaljite upit</span>
+        </a>
+        <a href="tel:+381600000000" class="btn-hero-call">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Zakažite merenje na adresi</span>
+        </a>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="hero-trust-row">
+        <div class="trust-badge">
+          <strong>10 Godina</strong>
+          <span>Pisane garancije</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-badge">
+          <strong>A+ Klasa</strong>
+          <span>Energetska efikasnost</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-badge">
+          <strong>0 din</strong>
+          <span>Merenje i savet na terenu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOMATED FAST LEAD ESTIMATOR (THE AUTOMATION FEATURE HE ASKED FOR!) -->
+  <section class="section calc-section" id="kalkulator">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="badge-tag">Sistem za brze upite</span>
+        <h2 class="section-title">Izračunajte okvirnu cenu za 60 sekundi</h2>
+        <p class="section-desc centered">
+          Izaberite elemente, unesite približne dimenzije i automatski pošaljite zahtev našim inženjerima za tačan proračun.
+        </p>
+      </div>
+
+      <div class="calc-card">
+        <form id="stolarijaConfigurator" class="configurator-form">
+          
+          <!-- Step 1: Element Type Selection -->
+          <div class="calc-step-box">
+            <span class="calc-step-label">1. Izaberite vrstu stolarije</span>
+            <div class="element-type-grid">
+              
+              <label class="type-radio-card">
+                <input type="radio" name="element_type" value="Jednokrilni prozor" checked>
+                <div class="card-inner">
+                  <div class="icon-frame">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="4" y="3" width="16" height="18" rx="1"></rect>
+                      <line x1="12" y1="3" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <strong>Jednokrilni prozor</strong>
+                  <small>Za sobe, kupatila i kuhinje</small>
+                </div>
+              </label>
+
+              <label class="type-radio-card">
+                <input type="radio" name="element_type" value="Dvokrilni prozor">
+                <div class="card-inner">
+                  <div class="icon-frame">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="18" height="18" rx="1"></rect>
+                      <line x1="12" y1="3" x2="12" y2="21"></line>
+                      <line x1="3" y1="12" x2="21" y2="12"></line>
+                    </svg>
+                  </div>
+                  <strong>Dvokrilni prozor</strong>
+                  <small>Veće dimenzije sa prečkom</small>
+                </div>
+              </label>
+
+              <label class="type-radio-card">
+                <input type="radio" name="element_type" value="Balkonska vrata">
+                <div class="card-inner">
+                  <div class="icon-frame">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="5" y="2" width="14" height="20" rx="1"></rect>
+                      <line x1="5" y1="14" x2="19" y2="14"></line>
+                      <circle cx="8" cy="11" r="1"></circle>
+                    </svg>
+                  </div>
+                  <strong>Balkonska vrata</strong>
+                  <small>Izlaz na terasu / dvorište</small>
+                </div>
+              </label>
+
+              <label class="type-radio-card">
+                <input type="radio" name="element_type" value="Sigurnosna ulazna vrata">
+                <div class="card-inner">
+                  <div class="icon-frame">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="4" y="2" width="16" height="20" rx="1"></rect>
+                      <circle cx="16" cy="12" r="1.5"></circle>
+                      <line x1="4" y1="20" x2="20" y2="20"></line>
+                    </svg>
+                  </div>
+                  <strong>Ulazna vrata</strong>
+                  <small>Sigurnosna, termoizolovana</small>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Step 2: Dimensions & Quantity -->
+          <div class="calc-step-box">
+            <span class="calc-step-label">2. Dimenzije i količina</span>
+            <div class="dimensions-grid">
+              
+              <div class="form-input-group">
+                <label for="calcWidth">Širina (cm)</label>
+                <input type="number" id="calcWidth" name="width" min="40" max="400" value="120" placeholder="npr. 120">
+                <span class="input-helper">Približna širina u cm</span>
+              </div>
+
+              <div class="form-input-group">
+                <label for="calcHeight">Visina (cm)</label>
+                <input type="number" id="calcHeight" name="height" min="40" max="300" value="140" placeholder="npr. 140">
+                <span class="input-helper">Približna visina u cm</span>
+              </div>
+
+              <div class="form-input-group">
+                <label for="calcQuantity">Broj komada</label>
+                <input type="number" id="calcQuantity" name="quantity" min="1" max="100" value="1">
+                <span class="input-helper">Koliko ovakvih pozicija?</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Step 3: Profile & Glass System -->
+          <div class="calc-step-box">
+            <span class="calc-step-label">3. Paket opreme i stakla</span>
+            <div class="options-checkbox-grid">
+              
+              <label class="check-box-card">
+                <input type="radio" name="profile_grade" value="ECO 6-komorni (Dvoslojno)" checked>
+                <div class="check-inner">
+                  <strong>Standard 6-komorni</strong>
+                  <span>Dvoslojno niskoemisiono 4S staklo punjeno argonom</span>
+                </div>
+              </label>
+
+              <label class="check-box-card">
+                <input type="radio" name="profile_grade" value="PREMIUM 7-komorni (Troslojno)">
+                <div class="check-inner">
+                  <strong>Premium 7-komorni sistem</strong>
+                  <span>Troslojno staklo sa termoprekidom za maksimalnu uštedu</span>
+                </div>
+              </label>
+
+              <label class="check-box-card">
+                <input type="checkbox" name="add_shutters" id="addShutters" value="Alu roletne">
+                <div class="check-inner">
+                  <strong>+ Aluminijumske termo roletne</strong>
+                  <span>Ispunjene poliuretanskom penom za zvučnu izolaciju</span>
+                </div>
+              </label>
+
+              <label class="check-box-card">
+                <input type="checkbox" name="add_screens" id="addScreens" value="Rolo komarnik">
+                <div class="check-inner">
+                  <strong>+ Rolo komarnik</strong>
+                  <span>Zaštita od insekata sa integrisanom mrežicom</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Realtime Estimate Bar & Action Form -->
+          <div class="calc-summary-panel">
+            <div class="summary-left">
+              <span class="summary-tag">Automatska procena</span>
+              <div class="price-display">
+                <span class="price-val" id="estimatedPrice">~ 185 - 225 €</span>
+                <span class="price-note">Okvirna cena sa PDV-om i osnovnom ugradnjom</span>
+              </div>
+            </div>
+
+            <div class="summary-right">
+              <button type="button" class="btn-open-modal" id="openEstimateModal">
+                <span>Zatražite zvaničnu ponudu na osnovu ovih mera</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories Section -->
+  <section class="section products-section" id="proizvodi">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-tag">Naš asortiman</span>
+        <h2 class="section-title">Energetski efikasna stolarija za svaki objekat</h2>
+        <p class="section-desc">
+          Od porodičnih kuća i stanova u novogradnji do velikih poslovnih objekata. Sve izrađujemo po tačnoj meri i u boji po vašem izboru (bela, antracit, zlatni hrast, orah).
+        </p>
+      </div>
+
+      <div class="products-grid">
+        
+        <!-- Product 1 -->
+        <article class="prod-card">
+          <div class="prod-img-wrap">
+            <img src="hero.jpg" alt="PVC prozori TIM PLAST" loading="lazy">
+            <span class="prod-badge">Najtraženije</span>
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">PVC Prozori i Portali</h3>
+            <p class="prod-text">Nemački profili A-klase (Salamander, Rehau ili Aluplast standard) sa čeličnim ojačanjima u krilu i štoku. Zaboravite na promaju, kondenzaciju i spoljašnju buku.</p>
+            <ul class="prod-bullets">
+              <li>6 i 7 komora sa srednjim dihtungom</li>
+              <li>Winkhaus okovi sa protivprovalnim tačkama</li>
+              <li>Niskoemisiono ClimaGuard staklo</li>
+            </ul>
+            <a href="#kalkulator" class="prod-link">Konfiguriši prozor &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="prod-card">
+          <div class="prod-img-wrap">
+            <img src="doors.jpg" alt="ALU i PVC ulazna vrata TIM PLAST" loading="lazy">
+            <span class="prod-badge">Sigurnost</span>
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Ulazna i Sobna Vrata</h3>
+            <p class="prod-text">Monolitni dekorativni paneli visoke gustine sa višestepenim bravama i termo-prekidom. Bezbednost, masivnost i moderan izgled koji ostavlja utisak na ulazu.</p>
+            <ul class="prod-bullets">
+              <li>Mogućnost smart brave (otisak prsta / šifra)</li>
+              <li>Aluminijumski prag sa termičkim prekidom</li>
+              <li>Preko 40 modela ukrasnih INOX panela</li>
+            </ul>
+            <a href="#kalkulator" class="prod-link">Izaberi model vrata &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="prod-card">
+          <div class="prod-img-wrap">
+            <img src="shutters.jpg" alt="Roletne i komarnici TIM PLAST" loading="lazy">
+            <span class="prod-badge">Zaštita</span>
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Roletne, Komarnici &amp; Žaluzine</h3>
+            <p class="prod-text">Spoljašnje i unutrašnje aluminijumske roletne punjene ekološkom poliuretanskom penom za 100% zamračenje i dodatnu uštedu energije tokom leta i zime.</p>
+            <ul class="prod-bullets">
+              <li>Ručno podizanje na gurtru ili motorni pogon na taster</li>
+              <li>Plisirani i rolo komarnici otporni na vetar</li>
+              <li>Podprozorske unutrašnje i spoljne okapnice</li>
+            </ul>
+            <a href="#kalkulator" class="prod-link">Dodaj roletne u upit &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Advantages & Production Process -->
+  <section class="section tech-section" id="prednosti">
+    <div class="container tech-container">
+      <div class="tech-media-col">
+        <img src="factory.jpg" alt="TIM PLAST moderna fabrička linija CNC" class="factory-img" loading="lazy">
+        <div class="factory-floating-card">
+          <span class="card-num">0%</span>
+          <span class="card-caption">Odstupanja zahvaljujući laserskom CNC sečenju profila</span>
+        </div>
+      </div>
+
+      <div class="tech-content-col">
+        <span class="badge-tag">Fabrički kvalitet</span>
+        <h2 class="section-title">Zašto TIM PLAST stolarija traje generacijama?</h2>
+        <p class="tech-lead">
+          Ne pravimo kompromise na materijalima. Svaki prozor i vrata sklapaju se na kompjuterski vođenim mašinama gde je preciznost zagarantovana u delić milimetra.
+        </p>
+
+        <div class="tech-points">
+          <div class="point-item">
+            <div class="point-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <strong>Pocinkovano čelično ojačanje</strong>
+              <p>Unutar svakog PVC profila ugrađujemo čelično ojačanje debljine do 2mm koje sprečava krivljenje profila na jakom suncu ili mrazu.</p>
+            </div>
+          </div>
+
+          <div class="point-item">
+            <div class="point-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <div>
+              <strong>Originalni EPDM zaptivači</strong>
+              <p>Vulkanizovana guma koja ne puca i ne gubi elastičnost nakon nekoliko sezona, pružajući savršeno naleganje krila na štok.</p>
+            </div>
+          </div>
+
+          <div class="point-item">
+            <div class="point-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Sertifikat o poreklu i energetska deklaracija</strong>
+              <p>Sva stolarija poseduje zvanične sertifikate energetske efikasnosti pogodne za konkurisanje za državne subvencije (eko-kredite).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fast Direct Contact & Measurement Scheduling -->
+  <section class="section contact-section" id="kontakt">
+    <div class="container contact-container">
+      
+      <div class="contact-card-info">
+        <span class="badge-tag">Direktan kontakt</span>
+        <h2 class="section-title">Zakažite besplatan izlazak na merenje</h2>
+        <p class="contact-desc">
+          Naš majstor dolazi na Vašu adresu, uzima tačne mere u milimetar, donosi uzorke profila i boja, i na licu mesta Vam daje finalnu i neobavezujuću ponudu.
+        </p>
+
+        <div class="contact-details-box">
+          <a href="tel:+381600000000" class="direct-contact-btn phone">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <div>
+              <span class="label">Telefon za hitne upite</span>
+              <strong>060 / 000 - 0000</strong>
+            </div>
+          </a>
+
+          <a href="mailto:markojancic.mj@gmail.com" class="direct-contact-btn mail">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <span class="label">Email za nacrte i projekte</span>
+              <strong>markojancic.mj@gmail.com</strong>
+            </div>
+          </a>
+
+          <div class="coverage-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Pokrivamo Beograd, Novi Sad i celu teritoriju Srbije sa sopstvenim prevozom i montažerima</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Measurement Request Form -->
+      <div class="contact-card-form">
+        <h3 class="form-h3">Pošaljite brzi zahtev</h3>
+        <p class="form-p">Ostavite kontakt i javićemo se u roku od 30 minuta.</p>
+
+        <form id="directContactForm" class="direct-form">
+          <div class="form-field">
+            <label for="nameInput">Ime i Prezime *</label>
+            <input type="text" id="nameInput" required placeholder="npr. Dragan Petrović">
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="phoneInput">Telefon *</label>
+              <input type="tel" id="phoneInput" required placeholder="06X / XXX - XXXX">
+            </div>
+            <div class="form-field">
+              <label for="cityInput">Mesto / Grad *</label>
+              <input type="text" id="cityInput" required placeholder="npr. Beograd">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="msgInput">Okvirne mere ili napomena</label>
+            <textarea id="msgInput" rows="3" placeholder="Primer: 3 prozora za stan, zamena stare drvene stolarije, potrebna i demontaža..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-send-inquiry" id="sendInquiryBtn">
+            <span>Pošalji zahtev za ponudu</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <div id="directFormFeedback" class="form-feedback-alert"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Modal For Finalizing Calculator Submission -->
+  <div class="calc-modal" id="estimateModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeEstimateModal" aria-label="Zatvori">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <span class="badge-tag">Vaša konfiguracija</span>
+        <h3 class="modal-title">Završite slanje specifikacije</h3>
+        <p class="modal-subtitle">Vaše izabrane mere i oprema su sačuvani u upitu:</p>
+      </div>
+
+      <div class="modal-summary-box" id="modalConfigSummary">
+        <!-- Dynamic Summary Populated by JavaScript -->
+      </div>
+
+      <form id="modalFinalForm" class="modal-form">
+        <div class="form-field">
+          <label for="modalClientName">Vaše Ime i Prezime *</label>
+          <input type="text" id="modalClientName" required placeholder="Vaše ime">
+        </div>
+        <div class="form-field">
+          <label for="modalClientPhone">Broj telefona (za WhatsApp / Poziv) *</label>
+          <input type="tel" id="modalClientPhone" required placeholder="06X / XXX - XXXX">
+        </div>
+        <div class="form-field">
+          <label for="modalClientLocation">Lokacija ugradnje *</label>
+          <input type="text" id="modalClientLocation" required placeholder="Grad ili opština">
+        </div>
+
+        <button type="submit" class="btn-send-inquiry" id="modalSubmitBtn">
+          <span>Prosledi konfiguraciju TIM PLAST inženjerima &rarr;</span>
+        </button>
+        <div id="modalFeedback" class="form-feedback-alert"></div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- Mobile Sticky Quick Contact Bar (Mobile First Conversion Engine) -->
+  <aside class="mobile-bottom-bar" aria-label="Brzi mobilni kontakt">
+    <a href="tel:+381600000000" class="mobile-action-btn phone-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Pozovi odmah</span>
+    </a>
+    <a href="https://wa.me/381600000000?text=Pozdrav,%20potrebna%20mi%20je%20ponuda%20za%20stolariju" target="_blank" rel="noopener" class="mobile-action-btn wa-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 2C6.511 2 2.023 6.48 2.023 11.99c0 1.98.583 3.86 1.688 5.46L2 22l4.729-1.63a9.96 9.96 0 0 0 5.302 1.51h.005c5.518 0 10.007-4.48 10.007-9.99 0-2.67-1.04-5.18-2.93-7.07A9.94 9.94 0 0 0 12.031 2zm0 18.15c-1.65 0-3.26-.44-4.67-1.28l-.33-.2-3.46 1.19 1.2-3.37-.22-.35a8.16 8.16 0 0 1-1.25-4.35c0-4.52 3.68-8.2 8.21-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.2-8.21 8.2zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.78.97-.15.17-.29.19-.54.07-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.47-1.37-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.18.21-.57.21-1.07.15-1.18-.06-.12-.23-.19-.48-.31z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#kalkulator" class="mobile-action-btn calc-action">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+        <line x1="8" y1="6" x2="16" y2="6"></line>
+        <line x1="16" y1="14" x2="16" y2="18"></line>
+      </svg>
+      <span>Kalkulator mera</span>
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-main">
+        <div class="logo-mark">
+          <span class="logo-accent">TIM</span>
+          <span class="logo-main">PLAST</span>
+        </div>
+        <p class="footer-text">
+          TIM PLAST d.o.o. &bull; Specijalizovana fabrika za proizvodnju i ugradnju visokoefikasne PVC i aluminijumske stolarije, roletni i ulaznih sistema.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-col-title">Proizvodi</span>
+        <a href="#proizvodi">PVC Prozori</a>
+        <a href="#proizvodi">ALU Portali</a>
+        <a href="#proizvodi">Ulazna vrata</a>
+        <a href="#proizvodi">Termo roletne</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-col-title">Informacije</span>
+        <a href="#prednosti">Nemački profili</a>
+        <a href="#kalkulator">Online kalkulator</a>
+        <a href="#kontakt">Zakažite merenje</a>
+        <p class="footer-status"><span class="pulse-green"></span> Proizvodnja aktivna</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TIM PLAST d.o.o. Sva prava zadržana.</p>
+      <p class="credit">Koncept i realizacija: <a href="https://milanwebportal.com" target="_blank" rel="noopener">Milan Web Portal</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
