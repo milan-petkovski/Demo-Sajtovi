@@ -49,7 +49,7 @@ Each project here was built with a specific client goal in mind: proving that a 
 | **Frizerski salon**         | Luxury Men's Grooming      | Dark aesthetic, transparent pricing & instant WhatsApp booking. |
 | **Slatka Mala Kafanica**    | Traditional Serbian Tavern | Warm rustic charm, interactive menu & table reservations.       |
 | **Valore Interiors**        | Bespoke Interior & Joinery | High-end dark minimalism, category portfolio & mobile leads.    |
-| **Tim Plast**               | PVC & ALU Fenestration     | Real-time dimension estimator, specs modal & B2B automation.   |
+| **Tim Plast**               | PEHD Tanks & Reservoirs    | Interactive tank & septic volume configurator, WhatsApp & email leads. |
 
 ## 🚀 Performance Engineering (For the Nerds)
 
