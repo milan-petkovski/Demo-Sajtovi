@@ -2,14 +2,14 @@
 
 <p>
   <a href="https://github.com/milan-petkovski/Demo-Sajtovi/actions/workflows/ci.yml"><img src="https://github.com/milan-petkovski/Demo-Sajtovi/actions/workflows/ci.yml/badge.svg" alt="CI Status" /></a>
-  <img src="https://img.shields.io/badge/Projects-22_Demos-emerald" alt="22 Projects" />
+  <img src="https://img.shields.io/badge/Projects-23_Demos-emerald" alt="23 Projects" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-ISC-blue.svg" alt="License: ISC" /></a>
   <img src="https://img.shields.io/badge/Vite-8.x-646CFF?logo=vite&logoColor=white" alt="Vite 8" />
   <img src="https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black" alt="React 19" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
 </p>
 
-A high-performance collection of **21 production-grade demo projects & prototypes** engineered to bridge the gap between initial client concepts and full-scale digital realities. These aren't just "demos"—they are high-conversion, Awwwards-caliber prototypes designed to secure high-ticket client wins by showcasing the absolute limit of modern web performance and aesthetics.
+A high-performance collection of **23 production-grade demo projects & prototypes** engineered to bridge the gap between initial client concepts and full-scale digital realities. These aren't just "demos"—they are high-conversion, Awwwards-caliber prototypes designed to secure high-ticket client wins by showcasing the absolute limit of modern web performance and aesthetics.
 
 > **"If you can't wow them with a demo, you won't win the contract."**  
 > This monorepo is the engine behind that "WOW" factor.
@@ -51,6 +51,7 @@ Each project here was built with a specific client goal in mind: proving that a 
 | **Valore Interiors**        | Bespoke Interior & Joinery | High-end dark minimalism, category portfolio & mobile leads.    |
 | **Tim Plast**               | PEHD Tanks & Reservoirs    | Interactive tank & septic volume configurator, WhatsApp & email leads. |
 | **MB Shop**                 | Boutique Gift & Kids Shop  | Clean Kindershop-style catalog, Eugen chocolates, instant WhatsApp order. |
+| **Ora Books**               | Publishing & Bookbinding   | Editorial elegance, live publishing cost calculator, sample excerpts & author consultation booking. |
 
 ## 🚀 Performance Engineering (For the Nerds)
 

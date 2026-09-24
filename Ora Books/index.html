@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>ORA BOOKS | Izdavačka Kuća — Vi pišete priču, mi je pretvaramo u knjigu</title>
+  <meta name="description" content="Izdavačka kuća ORA BOOKS (osnivač Aleksandar Jocić, Sirig). Celokupna podrška autorima od rukopisa do polica: lektura, dizajn korica, prelom, ISBN i CIP registracija, štampa tvrdog poveza i promocija.">
+  <meta name="keywords" content="ORA BOOKS, izdavačka kuća, izdavanje knjige, Aleksandar Jocić, Između bola i nade, Ruže i stihovi, lektura, štampa knjiga, tvrdi povez, Sirig, Novi Sad">
+  <meta name="author" content="ORA BOOKS (Aleksandar Jocić)">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ORA BOOKS | Vi pišete priču, mi je pretvaramo u knjigu">
+  <meta property="og:description" content="Kompletan izdavački proces na jednom mestu. Zadržite 100% autorskih prava i prihoda. Zakažite besplatne konsultacije i prijavite svoj rukopis.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero.jpg">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION (Simplified & Fully Responsive)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-wrapper" aria-label="ORA BOOKS Početna">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+            <path d="M6 6h10"/>
+            <path d="M6 10h10"/>
+            <path d="M6 14h6"/>
+          </svg>
+        </div>
+        <div class="brand-details">
+          <span class="brand-name">ORA BOOKS</span>
+          <span class="brand-tagline">Izdavačka Kuća</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Glavna navigacija">
+        <a href="#izdanja" class="nav-link">Izdanja</a>
+        <a href="#usluge" class="nav-link">Usluge</a>
+        <a href="#kalkulator" class="nav-link">Kalkulator</a>
+        <a href="#poređenje" class="nav-link">Zašto ORA</a>
+        <a href="#osnivac" class="nav-link">O Nama</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Header CTA & Mobile Toggle Button -->
+      <div class="header-cta-group">
+        <a href="#zakazivanje" class="btn btn-primary btn-sm header-action-btn">
+          <span>Zakažite Sastanak</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Otvori meni" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-In Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobilni meni" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="#" class="brand-wrapper" aria-label="ORA BOOKS Početna">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+            <path d="M6 6h10"/>
+            <path d="M6 10h10"/>
+            <path d="M6 14h6"/>
+          </svg>
+        </div>
+        <div class="brand-details">
+          <span class="brand-name">ORA BOOKS</span>
+          <span class="brand-tagline">Izdavačka Kuća</span>
+        </div>
+      </a>
+      <button class="drawer-close-btn" id="close-mobile-nav" aria-label="Zatvori meni">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="#izdanja" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+        <span>Naša Izdanja</span>
+      </a>
+      <a href="#usluge" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Usluge & Proces</span>
+      </a>
+      <a href="#kalkulator" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
+        <span>Kalkulator & Paketi</span>
+      </a>
+      <a href="#poređenje" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+        <span>Zašto ORA BOOKS</span>
+      </a>
+      <a href="#instagram" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+        <span>Reels & Video</span>
+      </a>
+      <a href="#osnivac" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        <span>O Nama & Osnivač</span>
+      </a>
+      <a href="#faq" class="drawer-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+        <span>Česta Pitanja (FAQ)</span>
+      </a>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="#zakazivanje" class="btn btn-gold drawer-cta-btn">
+        <span>Zakažite Konsultacije</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <div class="drawer-contact-strip">
+        <a href="tel:+381601234567" class="drawer-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>060 / 123-4567</span>
+        </a>
+        <a href="mailto:orabooks98@gmail.com" class="drawer-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>orabooks98@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+              <span>Izdavačka Kuća Nove Generacije</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Vi pišete priču, mi je <span class="text-gradient-gold">pretvaramo u knjigu.</span>
+            </h1>
+
+            <p class="hero-subhead">
+              Pretvorite vaše misli, pesme, memoare ili stručna znanja u vrhunski odštampano remek-delo sa tvrdim povezom, CIP zapisom i ISBN brojem. Sve na jednom mestu — od lekture i unikatnog dizajna korica, do distribucije i promocije.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#zakazivanje" class="btn btn-gold">
+                <span>Zakažite Besplatne Konsultacije</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#izdanja" class="btn btn-outline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span>Prelistajte Izdanja</span>
+              </a>
+            </div>
+
+            <!-- Trust Badges Strip -->
+            <div class="hero-trust-grid">
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="trust-text">
+                  <strong>100% Autorska Prava</strong>
+                  <span>Sva prava i sav prihod od prodaje ostaju trajno vama.</span>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <div class="trust-text">
+                  <strong>CIP & ISBN Registracija</strong>
+                  <span>Zvaničan status u Narodnoj biblioteci Srbije sa barkodom.</span>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+                </div>
+                <div class="trust-text">
+                  <strong>Tvrdi Povez & Zlatotisak</strong>
+                  <span>Ekskluzivni papiri, šiveni povez i dizajn po svetskim standardima.</span>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="trust-text">
+                  <strong>Realizacija za 3-5 Nedelja</strong>
+                  <span>Brz i predvidiv rok bez višemesečnog čekanja i neizvesnosti.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media-wrapper">
+            <div class="hero-image-card">
+              <img src="hero.jpg" alt="ORA BOOKS književni kutak sa knjigama tvrdog poveza i perom" width="800" height="500" loading="eager">
+            </div>
+
+            <!-- Floating Badge: Quote -->
+            <div class="floating-quote-badge">
+              <p>„Knjiga nije samo tekst na papiru. To je vaše životno delo koje zaslužuje večnost.“</p>
+              <span>— Aleksandar Jocić, osnivač</span>
+            </div>
+
+            <!-- Floating Badge: Stat -->
+            <div class="floating-stat-badge">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="stat-info">
+                <strong>100% Podrška</strong>
+                <span>Urednik uz vas 1 na 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZA KOGA STVARAMO (Audience Segment Cards)
+         ========================================================================== -->
+    <section class="audience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Kome Pomažemo
+          </span>
+          <h2 class="section-title">Znanje, emocija ili stih — svaka priča zaslužuje da postane knjiga</h2>
+          <p class="section-desc">Bez obzira na to da li prvi put pišete ili već imate gotov rukopis u fioci, ORA BOOKS vam pruža jasnu mapu puta i punu mentorsku podršku.</p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3>Novi Autori & Debitanti</h3>
+            <p>Nemate iskustva sa štampom i registracionim procedurama? Mi vas vodimo korak po korak: od čišćenja teksta do prve promocije, bez lutanja i stresa.</p>
+            <div class="audience-benefit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Besplatna početna procena rukopisa</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Pesnici & Zbirke Poezije</h3>
+            <p>Poezija zahteva poseban estetski senzibilitet. Radimo vrhunski tipografski prelom, odabir kvalitetnog papira i omogućavamo učešće u zbornicima poput „Ruže i stihovi“.</p>
+            <div class="audience-benefit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Specijalizovani formati za liriku</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3>Autobiografije & Memoari</h3>
+            <p>Životna iskustva, porodične hronike i lične ispovesti. Pretvaramo vaša sećanja u trajan spomenik ukoričen u luksuzan tvrdi povez koji traje decenijama.</p>
+            <div class="audience-benefit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Očuvanje porodičnog nasleđa</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Edukatori & Stručnjaci</h3>
+            <p>Objavljivanjem knjige potvrđujete svoj autoritet u industriji. Pripremamo stručne priručnike, vodiče i motivacione naslove spremne za plasman u knjižare i online prodaju.</p>
+            <div class="audience-benefit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Maksimalan kredibilitet na tržištu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         KNJIŽARA & NAŠA IZDANJA (Interactive Books Showcase)
+         ========================================================================== -->
+    <section class="books-section" id="izdanja">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+            Knjižara & Katalog
+          </span>
+          <h2 class="section-title">Izdanja koja inspirišu i ostavljaju trag</h2>
+          <p class="section-desc">Pogledajte naša najnovija štampana izdanja, pročitajte besplatne odlomke i poručite primerak direktno na vašu kućnu adresu.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-category="all">Sva Izdanja (3)</button>
+          <button class="filter-btn" data-category="autobiography">Autobiografija & Ispovest</button>
+          <button class="filter-btn" data-category="poetry">Poezija</button>
+          <button class="filter-btn" data-category="anthology">Zbornici & Konkursi</button>
+        </div>
+
+        <div class="books-grid">
+          <!-- Book 1: Između Bola i Nade -->
+          <article class="book-card" data-category="autobiography">
+            <div class="book-cover-area">
+              <span class="book-badge-tag badge-featured">Bestseller &bull; Preporuka</span>
+              <div class="book-3d-visual">
+                <img src="book-izmedju-bola-i-nade.jpg" alt="Knjiga Između Bola i Nade - Aleksandar Jocić" width="220" height="330" loading="lazy">
+              </div>
+            </div>
+            <div class="book-details">
+              <span class="book-author-meta">Aleksandar Jocić</span>
+              <h3 class="book-title">Između Bola i Nade</h3>
+              <p class="book-synopsis">
+                Duboko potresna i istinita autobiografska ispovest o borbi, snazi duha i pronalaženju nove nade nakon preživljene teške saobraćajne nesreće. Knjiga koja vraća veru u život i podseća nas na prave vrednosti.
+              </p>
+              <div class="book-specs-list">
+                <span class="spec-pill">128 Strana</span>
+                <span class="spec-pill">Tvrd Povez</span>
+                <span class="spec-pill">Format: 14 &times; 20 cm</span>
+                <span class="spec-pill">ISBN Registrovano</span>
+              </div>
+              <div class="book-purchase-row">
+                <div class="book-price-block">
+                  <span class="price-label">Cena primerka</span>
+                  <span class="price-amount">1.200 RSD</span>
+                </div>
+                <div class="book-actions-group">
+                  <button class="btn btn-outline btn-sm open-excerpt-btn" data-book-id="izmedju-bola">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    <span>Odlomak</span>
+                  </button>
+                  <button class="btn btn-gold btn-sm open-order-btn" data-book-title="Između Bola i Nade" data-book-price="1200">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span>Naruči</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2: Ruže i Stihovi 2026 -->
+          <article class="book-card" data-category="anthology">
+            <div class="book-cover-area">
+              <span class="book-badge-tag badge-anthology">Književni Zbornik</span>
+              <div class="book-3d-visual">
+                <img src="book-ruze-i-stihovi.jpg" alt="Zbornik poezije Ruže i Stihovi 2026 ORA BOOKS" width="220" height="330" loading="lazy">
+              </div>
+            </div>
+            <div class="book-details">
+              <span class="book-author-meta">ORA BOOKS Zbornik</span>
+              <h3 class="book-title">Ruže i Stihovi 2026</h3>
+              <p class="book-synopsis">
+                Godišnja antologija najlepših pesama i kratkih priča autora sa prostora celog regiona. Izabrana dela pristigla na zvanični konkurs, oplemenjena luksuznim dizajnom, reljefnim cvetnim detaljima i zlatotiskom.
+              </p>
+              <div class="book-specs-list">
+                <span class="spec-pill">210 Strana</span>
+                <span class="spec-pill">Tvrd Povez sa Zlatotiskom</span>
+                <span class="spec-pill">Krem Ofset Papir 90g</span>
+                <span class="spec-pill">Kolekcionarsko Izdanje</span>
+              </div>
+              <div class="book-purchase-row">
+                <div class="book-price-block">
+                  <span class="price-label">Cena primerka</span>
+                  <span class="price-amount">1.500 RSD</span>
+                </div>
+                <div class="book-actions-group">
+                  <button class="btn btn-outline btn-sm open-excerpt-btn" data-book-id="ruze-i-stihovi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    <span>Odlomak</span>
+                  </button>
+                  <button class="btn btn-gold btn-sm open-order-btn" data-book-title="Ruže i Stihovi 2026" data-book-price="1500">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span>Naruči</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3: Srce na Papiru -->
+          <article class="book-card" data-category="poetry">
+            <div class="book-cover-area">
+              <span class="book-badge-tag badge-poetry">Autorska Poezija</span>
+              <div class="book-3d-visual">
+                <img src="book-srce-na-papiru.jpg" alt="Knjiga Srce na Papiru - Aleksandar Jocić" width="220" height="330" loading="lazy">
+              </div>
+            </div>
+            <div class="book-details">
+              <span class="book-author-meta">Aleksandar Jocić</span>
+              <h3 class="book-title">Srce na Papiru</h3>
+              <p class="book-synopsis">
+                Intimna lirska zbirka poezije prožeta melodijom, čistom emocijom i trenucima tišine. Stihovi koji se ne čitaju samo očima, već se osećaju dušom. Specijalno platneno izdanje sa satenskom trakom za obeležavanje.
+              </p>
+              <div class="book-specs-list">
+                <span class="spec-pill">96 Strana</span>
+                <span class="spec-pill">Šiveni Tvrdi Povez</span>
+                <span class="spec-pill">Zlatotisak na Platnu</span>
+                <span class="spec-pill">Satenska Trakica</span>
+              </div>
+              <div class="book-purchase-row">
+                <div class="book-price-block">
+                  <span class="price-label">Cena primerka</span>
+                  <span class="price-amount">990 RSD</span>
+                </div>
+                <div class="book-actions-group">
+                  <button class="btn btn-outline btn-sm open-excerpt-btn" data-book-id="srce-na-papiru">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    <span>Odlomak</span>
+                  </button>
+                  <button class="btn btn-gold btn-sm open-order-btn" data-book-title="Srce na Papiru" data-book-price="990">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span>Naruči</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         USLUGE & PROCES IZDAVANJA (Step-by-Step Publishing Journey)
+         ========================================================================== -->
+    <section class="services-section" id="usluge">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background-color: rgba(212, 175, 55, 0.15); border-color: rgba(212, 175, 55, 0.35);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Put od Rukopisa do Knjige
+          </span>
+          <h2 class="section-title">Sveobuhvatna izdavačka podrška pod jednim krovom</h2>
+          <p class="section-desc">Bez posrednika i skrivene administracije. Svaki segment realizujemo pažljivo, sa ljubavlju prema pisanoj reči i poštovanjem vašeg autorskog identiteta.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Step 1 -->
+          <div class="service-card">
+            <span class="service-step-num">01</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4-14 14H4v-4L18 2z"/></svg>
+            </div>
+            <h3>Urednički Rad & Lektura</h3>
+            <p>Temeljna pravopisna, gramatička i stilska korektura teksta uz potpuno očuvanje vašeg originalnog tona i autorove poruke.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Otklanjanje tipfelera i nespretnih rečenica</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Preporuke za ritam i kompoziciju poglavlja</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="service-card">
+            <span class="service-step-num">02</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            </div>
+            <h3>DTP Prelom & Tipografija</h3>
+            <p>Profesionalno formatiranje unutrašnjosti knjige po najstrožim svetskim knjižarskim standardima. Margine, inicijali i skladan slog.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Prilagođeno i latinici i ćirilici</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Tipografija koja odmara oči čitaoca</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="service-card">
+            <span class="service-step-num">03</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C21.438 6.22 17.18 2 12 2Z"/></svg>
+            </div>
+            <h3>Unikatan Dizajn Korica</h3>
+            <p>Korica je prvo što čitalac primeti na polici. Kreiramo autentičan, upečatljiv vizuelni identitet prilagođen vašem književnom žanru.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 3D fotorealistični vizuelni mockupi</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Priprema za parcijalni lak i zlatotisak</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="service-card">
+            <span class="service-step-num">04</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h6"/></svg>
+            </div>
+            <h3>ISBN Broj & CIP Zapis</h3>
+            <p>Kompletna legalna registracija u Narodnoj biblioteci Srbije. Vaša knjiga dobija međunarodni ISBN kod, CIP zapis i EAN-13 barkod.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zvaničan status priznatog izdanja</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Predaja obaveznih primeraka biblioteci</span>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="service-card">
+            <span class="service-step-num">05</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/><path d="M6 9V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/></svg>
+            </div>
+            <h3>Vrhunska Štampa & Povez</h3>
+            <p>Digitalna štampa za manje tiraže i ofset štampa za veće. Odabir visokokvalitetnih papira, mat/sjaj plastifikacija i tvrdi šiveni povez.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Luksuzni voluminozni papiri prijatni na dodir</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Besprekorna trajnost bez ispadanja listova</span>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="service-card">
+            <span class="service-step-num">06</span>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect width="14" height="14" x="1" y="5" rx="2"/></svg>
+            </div>
+            <h3>Video Promocija & Plasman</h3>
+            <p>Pomažemo vam da knjiga dođe do svojih čitalaca. Kreiramo promotivne Reels video zapise, grafike za društvene mreže i organizujemo promocije.</p>
+            <div class="service-features-list">
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Instagram i TikTok promotivni paketi</span>
+              <span class="service-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Književne večeri, tribine i sajmovi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Craftsmanship Spotlight Banner -->
+        <div class="craftsmanship-banner">
+          <div class="craft-banner-content">
+            <span class="section-tag" style="background: rgba(212, 175, 55, 0.2); color: var(--gold-300); border-color: rgba(212, 175, 55, 0.4);">
+              Zanatska Predanost
+            </span>
+            <h3>Zašto je naš kvalitet štampe u vrhu regionalnog izdavaštva?</h3>
+            <p>
+              Svaka knjiga koja izađe iz radionice ORA BOOKS prolazi strogu kontrolu kvaliteta. Ne koristimo jeftine lepкове koji pucaju posle jednog čitanja. Koristimo šivenje koncem, čvrstu lepenku od 2.5 mm, vrhunski voluminozni švedski papir i detalje zlatotiska koji knjizi daju večnu vrednost.
+            </p>
+            <a href="#zakazivanje" class="btn btn-gold btn-sm">
+              <span>Zatražite Besplatan Uzorak Štampe</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="craft-banner-media">
+            <img src="craftsmanship.jpg" alt="Ručno koričenje knjige u radionici ORA BOOKS" width="600" height="400" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERAKTIVNI KALKULATOR & PAKETI (Dynamic Estimator & Plans)
+         ========================================================================== -->
+    <section class="pricing-section" id="kalkulator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+            Kalkulator Izdavanja
+          </span>
+          <h2 class="section-title">Transparentne cene bez neprijatnih iznenađenja</h2>
+          <p class="section-desc">Podesite parametre svog rukopisa i odmah saznajte okvirnu investiciju za izdavanje vaše knjige u dinar.</p>
+        </div>
+
+        <!-- Live Estimator Box -->
+        <div class="estimator-box">
+          <div class="estimator-header">
+            <h3>Konfigurišite svoju knjigu u realnom vremenu</h3>
+            <p>Pomerajte slajdere i birajte opcije da biste prilagodili tiraž i nivo opreme prema svom budžetu.</p>
+          </div>
+
+          <div class="estimator-grid">
+            <div class="estimator-controls">
+              <!-- Page Count Slider -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span class="control-label">Broj strana knjige (A5 format):</span>
+                  <span class="control-value-badge" id="badge-page-count">120 strana</span>
+                </div>
+                <input type="range" class="range-slider" id="slider-pages" min="50" max="350" step="10" value="120">
+              </div>
+
+              <!-- Print Run Copies Slider -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span class="control-label">Željeni tiraž (broj primeraka):</span>
+                  <span class="control-value-badge" id="badge-copies-count">100 primeraka</span>
+                </div>
+                <input type="range" class="range-slider" id="slider-copies" min="50" max="500" step="50" value="100">
+              </div>
+
+              <!-- Cover Type Selector -->
+              <div class="control-group">
+                <span class="control-label">Tip poveza korica:</span>
+                <div class="option-chips-grid">
+                  <button type="button" class="option-chip" data-cover="soft">
+                    <span>Meki Broširani Povez (300g plastificiran)</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+                  </button>
+                  <button type="button" class="option-chip selected" data-cover="hard">
+                    <span>Luksuzni Tvrdi Povez (Lepenka 2.5mm)</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Additional Addons -->
+              <div class="control-group">
+                <span class="control-label">Uključene usluge i dodaci:</span>
+                <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                  <label class="addon-row">
+                    <div class="addon-left">
+                      <input type="checkbox" class="addon-checkbox" id="addon-isbn" checked>
+                      <span>ISBN Registracija, CIP zapis NBS & Barkod</span>
+                    </div>
+                    <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-600);">Uključeno</span>
+                  </label>
+
+                  <label class="addon-row">
+                    <div class="addon-left">
+                      <input type="checkbox" class="addon-checkbox" id="addon-proofreading" checked>
+                      <span>Lektura i stilska korektura teksta</span>
+                    </div>
+                    <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-600);">+ Preporučeno</span>
+                  </label>
+
+                  <label class="addon-row">
+                    <div class="addon-left">
+                      <input type="checkbox" class="addon-checkbox" id="addon-foil">
+                      <span>Zlatotisak ili Parcijalni UV reljefni lak na korici</span>
+                    </div>
+                    <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-600);">+ Luksuz</span>
+                  </label>
+
+                  <label class="addon-row">
+                    <div class="addon-left">
+                      <input type="checkbox" class="addon-checkbox" id="addon-video">
+                      <span>Video Reels paket za Instagram i TikTok promociju</span>
+                    </div>
+                    <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-600);">+ Plasman</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Estimator Live Summary Card -->
+            <div class="estimator-summary-card">
+              <h4 class="summary-title font-serif">Specifikacija Vašeg Izdanja</h4>
+              <div class="summary-details-list">
+                <div class="summary-detail-row">
+                  <span>Obim i format:</span>
+                  <strong id="summary-pages-val">120 strana (A5)</strong>
+                </div>
+                <div class="summary-detail-row">
+                  <span>Tiraž primeraka:</span>
+                  <strong id="summary-copies-val">100 knjiga</strong>
+                </div>
+                <div class="summary-detail-row">
+                  <span>Izabrani povez:</span>
+                  <strong id="summary-cover-val">Tvrd povez</strong>
+                </div>
+                <div class="summary-detail-row">
+                  <span>ISBN & CIP zapis:</span>
+                  <strong id="summary-isbn-val">Da (Zvanično)</strong>
+                </div>
+                <div class="summary-detail-row">
+                  <span>Autorska prava:</span>
+                  <strong style="color: #22c55e;">100% vaša zarada</strong>
+                </div>
+              </div>
+
+              <div class="summary-price-total">
+                <span class="total-label">Okvirna ukupna investicija</span>
+                <div class="total-amount" id="summary-total-val">42.000 RSD</div>
+                <div class="per-copy-rate" id="summary-per-copy-val">(cca 420 RSD po primerku)</div>
+              </div>
+
+              <button class="btn btn-gold" id="btn-request-calc-quote" style="width: 100%;">
+                <span>Pošaljite mi ovu ponudu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Fixed Structured Packages -->
+        <div class="packages-grid">
+          <!-- Package 1: START -->
+          <div class="package-card">
+            <h4>Start Paket</h4>
+            <p class="package-desc">Idealan za autore debitante i manji probni tiraž koji se lako proda porodici i prijateljima.</p>
+            <div class="package-price-wrap">
+              <span class="price">29.000 <span style="font-size: 1.2rem; font-weight: 600;">RSD</span></span>
+              <span class="period">/ 50 primeraka</span>
+            </div>
+            <div class="package-features-list">
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 50 primeraka (Meki povez, mat plastifikacija)</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> DTP prelom unutrašnjih strana (do 100 str)</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Idejno rešenje korica</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> ISBN broj & CIP zapis NBS</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% autorska prava ostaju vama</div>
+            </div>
+            <a href="#zakazivanje" class="btn btn-outline" style="width: 100%;">Izaberite Start</a>
+          </div>
+
+          <!-- Package 2: STANDARD (PREPORUKA) -->
+          <div class="package-card highlighted">
+            <span class="package-ribbon">Najtraženiji Paket</span>
+            <h4 style="color: var(--white);">Standard Autor</h4>
+            <p class="package-desc">Najbolji odnos cene i kvaliteta za ozbiljne autore koji žele da se knjiga nađe u knjižarama.</p>
+            <div class="package-price-wrap">
+              <span class="price" style="color: var(--gold-300);">54.000 <span style="font-size: 1.2rem; font-weight: 600;">RSD</span></span>
+              <span class="period">/ 100 primeraka (Tvrd Povez)</span>
+            </div>
+            <div class="package-features-list">
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100 primeraka u LUKSUZNOM TVRDOM POVEZU</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Kompletna lektura i korektura teksta</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Autorski dizajn korice + 3D renderi</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> CIP, ISBN & EAN-13 barkod za knjižare</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Prikaz u ORA BOOKS online knjižari</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 1 promotivni Instagram video reel</div>
+            </div>
+            <a href="#zakazivanje" class="btn btn-gold" style="width: 100%;">Izaberite Standard</a>
+          </div>
+
+          <!-- Package 3: PREMIJUM -->
+          <div class="package-card">
+            <h4>Premijum Kolekcija</h4>
+            <p class="package-desc">Za kapitalna dela, antologije i autore koji žele punu medijsku promociju i ekskluzivne dorade.</p>
+            <div class="package-price-wrap">
+              <span class="price">89.000 <span style="font-size: 1.2rem; font-weight: 600;">RSD</span></span>
+              <span class="period">/ 200 primeraka + Video Kampanja</span>
+            </div>
+            <div class="package-features-list">
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 200 primeraka tvrdog poveza sa ZLATOTISKOM</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Detaljna lektura, recenzija i lektorska beleška</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Satenska trakica i šiveni knjižni blok</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Paket od 3 Reels video zapisa za mreže</div>
+              <div class="package-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pomoć pri organizaciji književne večeri</div>
+            </div>
+            <a href="#zakazivanje" class="btn btn-outline" style="width: 100%;">Izaberite Premijum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZAŠTO ORA BOOKS U ODNOSU NA TRADICIONALNE IZDAVAČE (Comparison Table)
+         ========================================================================== -->
+    <section class="comparison-section" id="poređenje">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+            Iskrena Poređenja
+          </span>
+          <h2 class="section-title">Zašto autori biraju ORA BOOKS umesto starih izdavačkih sistema?</h2>
+          <p class="section-desc">Poređenje sa velikim tradicionalnim izdavačima (poput Lagune, Prometeja, Delfi) i mukotrpnim samostalnim štampanjem.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 32%;">Kriterijum Saradnje</th>
+                <th class="col-ora" style="width: 26%;">ORA BOOKS</th>
+                <th style="width: 21%;">Veliki Izdavači (Laguna, Prometej...)</th>
+                <th style="width: 21%;">Samostalno bez Izdavača</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vreme do objave</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 3 do 5 nedelja</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> 6 do 18 meseci (ili odbijanje)</span></td>
+                <td>Neizvesno i komplikovano</td>
+              </tr>
+              <tr>
+                <td><strong>Autorska prava i vlasništvo</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% vaše trajno vlasništvo</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Vezani višegodišnjim ugovorom</span></td>
+                <td>Vaša, ali bez pravne zaštite</td>
+              </tr>
+              <tr>
+                <td><strong>Zarada od prodate knjige</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% zarade ide vama</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Samo 5% do 10% honorara</span></td>
+                <td>100%, ali uz visoke troškove</td>
+              </tr>
+              <tr>
+                <td><strong>Kontrola dizajna i korica</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Autor odlučuje o svakom detalju</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Izdavač nameće dizajn</span></td>
+                <td>Morate sami naći dizajnera</td>
+              </tr>
+              <tr>
+                <td><strong>Odnos sa urednikom</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Direktan kontakt 1 na 1 sa osnivačem</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Autor je samo broj u sistemu</span></td>
+                <td>Potpuno sami</td>
+              </tr>
+              <tr>
+                <td><strong>Video i Reels promocija</strong></td>
+                <td class="col-ora"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Uključena moderna video produkcija</span></td>
+                <td><span class="cross-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Samo za par najpoznatijih imena</span></td>
+                <td>Skupa agencijska rešenja</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INSTAGRAM & REELS SHOWCASE (Dynamic Reels & Community)
+         ========================================================================== -->
+    <section class="reels-section" id="instagram">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            Instagram & Video Reels
+          </span>
+          <h2 class="section-title">Zavirite iza kulisa i pogledajte naše priče</h2>
+          <p class="section-desc">Svakodnevno delimo inspirativne momente iz procesa štampe, razgovore sa autorima i odlomke iz naših knjiga.</p>
+        </div>
+
+        <div class="reels-grid">
+          <!-- Reel 1 -->
+          <div class="reel-card open-reel-modal" data-reel-title="Kako izgleda kada prvi put držiš svoju knjigu u rukama?" data-views="34.2k" data-likes="2.4k">
+            <div class="reel-media-wrapper">
+              <img src="hero.jpg" alt="Video Reel: Knjiga u rukama autora" width="300" height="433" loading="lazy">
+              <div class="reel-overlay">
+                <div class="reel-top-row">
+                  <span class="reel-views-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>34.2k</span>
+                  </span>
+                </div>
+                <div class="reel-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="reel-info-bottom">
+                  <h4 class="reel-title">Osećaj kada prvi primerak sa mirisom sveže štampe stigne na tvoj sto...</h4>
+                  <div class="reel-metrics">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 2.4k lajkova</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 184 komentara</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reel 2 -->
+          <div class="reel-card open-reel-modal" data-reel-title="Ispovest: Kako je nastala knjiga 'Između bola i nade'?" data-views="58.9k" data-likes="4.8k">
+            <div class="reel-media-wrapper">
+              <img src="book-izmedju-bola-i-nade.jpg" alt="Video Reel: Aleksandar Jocić o knjizi" width="300" height="433" loading="lazy">
+              <div class="reel-overlay">
+                <div class="reel-top-row">
+                  <span class="reel-views-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>58.9k</span>
+                  </span>
+                </div>
+                <div class="reel-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="reel-info-bottom">
+                  <h4 class="reel-title">„Nisam pisao da bih bio pisac, pisao sam da bih preživeo.“</h4>
+                  <div class="reel-metrics">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 4.8k lajkova</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 340 komentara</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reel 3 -->
+          <div class="reel-card open-reel-modal" data-reel-title="3 najčešće greške koje novi pisci prave pre štampe" data-views="21.4k" data-likes="1.9k">
+            <div class="reel-media-wrapper">
+              <img src="craftsmanship.jpg" alt="Video Reel: Saveti za nove pisce" width="300" height="433" loading="lazy">
+              <div class="reel-overlay">
+                <div class="reel-top-row">
+                  <span class="reel-views-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>21.4k</span>
+                  </span>
+                </div>
+                <div class="reel-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="reel-info-bottom">
+                  <h4 class="reel-title">3 fatalne greške pri pripremi rukopisa koje vas mogu koštati stotine evra</h4>
+                  <div class="reel-metrics">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 1.9k lajkova</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 92 komentara</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reel 4 -->
+          <div class="reel-card open-reel-modal" data-reel-title="Zbornik 'Ruže i stihovi 2026' - Kako da učestvujete?" data-views="19.8k" data-likes="1.6k">
+            <div class="reel-media-wrapper">
+              <img src="book-ruze-i-stihovi.jpg" alt="Video Reel: Konkurs Ruže i Stihovi" width="300" height="433" loading="lazy">
+              <div class="reel-overlay">
+                <div class="reel-top-row">
+                  <span class="reel-views-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span>19.8k</span>
+                  </span>
+                </div>
+                <div class="reel-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="reel-info-bottom">
+                  <h4 class="reel-title">Otvoren konkurs za pesnike! Saznajte kako da vaša pesma uđe u zbornik.</h4>
+                  <div class="reel-metrics">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 1.6k lajkova</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 210 komentara</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram Banner Bar -->
+        <div class="instagram-banner-cta">
+          <div class="ig-cta-left">
+            <div class="ig-icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+            <div class="ig-cta-text">
+              <h4>Pratite @orabooks na Instagramu</h4>
+              <p>Preko 10.000 ljubitelja pisane reči već prati naš rad i učestvuje u nagradnim darivanjima knjiga.</p>
+            </div>
+          </div>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-outline-gold">
+            <span>Zaprati Profil</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         O OSNIVAČU (Aleksandar Jocić & ORA BOOKS Misija)
+         ========================================================================== -->
+    <section class="founder-section" id="osnivac">
+      <div class="container">
+        <div class="founder-grid">
+          <div class="founder-media-box">
+            <div class="founder-image-frame">
+              <img src="craftsmanship.jpg" alt="Aleksandar Jocić - Osnivač ORA BOOKS" width="500" height="625" loading="lazy">
+            </div>
+            <div class="founder-quote-card">
+              <p>„Znam kako je kada imaš priču u sebi, a svi ti zatvaraju vrata. ORA BOOKS je tu da ta vrata otvori zauvek.“</p>
+            </div>
+          </div>
+
+          <div class="founder-content">
+            <span class="section-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+              Priča Iza Izdavačke Kuće
+            </span>
+            <h3>Aleksandar Jocić &bull; Osnivač & Pisac</h3>
+            <p class="founder-lead">
+              Kada je preživeo tešku saobraćajnu nesreću i počeo da beleži svoja osećanja u knjigu „Između bola i nade“, suočio se sa istinom koju doživi 95% autora u Srbiji: velika izdavaštva su zatvorena, spora i nezainteresovana za nove ljude.
+            </p>
+            <p class="founder-bio">
+              Iz te borbe i lične spoznaje rodila se izdavačka kuća <strong>ORA BOOKS</strong> sa sedištem u Sirigu. Naša misija nije da budemo bezlična mašinerija, već saveznik svakog čoveka koji u sebi nosi priču, zbirku pesama, roman ili svedočanstvo. Kod nas svaki autor dobija pažnju, ljudski razgovor, besprekornu opremu knjige i osećaj ponosa kada uzme svoje delo u ruke.
+            </p>
+
+            <div class="founder-badges">
+              <div class="founder-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Registrovana radnja u Sirigu (Srbija)</span>
+              </div>
+              <div class="founder-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+                <span>Preko 500+ odštampanih primeraka</span>
+              </div>
+              <div class="founder-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Organizator konkursa „Ruže i stihovi“</span>
+              </div>
+            </div>
+
+            <a href="#zakazivanje" class="btn btn-primary">
+              <span>Zakažite Razgovor sa Aleksandrom</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZAKAZIVANJE SASTANKA & PRIJAVA RUKOPISA (The Core Lead-Gen Engine)
+         ========================================================================== -->
+    <section class="booking-section" id="zakazivanje">
+      <div class="container">
+        <div class="booking-wrapper">
+          <div class="booking-sidebar">
+            <div>
+              <span class="section-tag" style="background: rgba(212, 175, 55, 0.2); color: var(--gold-300); border-color: rgba(212, 175, 55, 0.4);">
+                Besplatne Konsultacije
+              </span>
+              <h3>Zakažite sastanak ili pošaljite rukopis</h3>
+              <p>Odvojite 15 minuta za direktan razgovor sa urednikom. Proći ćemo kroz vašu ideju, proceniti stanje rukopisa i predložiti tačne korake.</p>
+
+              <div class="sidebar-checkmarks">
+                <div class="sidebar-check-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Potpuna diskrecija i zaštita vaše autorske ideje</span>
+                </div>
+                <div class="sidebar-check-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Telefonski razgovor ili online Google Meet po vašem izboru</span>
+                </div>
+                <div class="sidebar-check-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Bez ikakvih obaveza i bez skrivenih troškova</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-direct-contact">
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--ink-400); letter-spacing: 0.08em;">Direktan Kontakt:</span>
+              <a href="mailto:orabooks98@gmail.com" class="sidebar-contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>orabooks98@gmail.com</span>
+              </a>
+              <a href="tel:+381601234567" class="sidebar-contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>060 / 123-4567 (Poziv & WhatsApp)</span>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--ink-400); margin-top: 0.25rem;">Sirig, Vojvodina, Srbija</span>
+            </div>
+          </div>
+
+          <div class="booking-form-area">
+            <form class="booking-form" id="consultation-form">
+              <!-- Svrha kontakta -->
+              <div class="form-field">
+                <label for="form-purpose" class="form-label">Svrha vašeg upita: *</label>
+                <select id="form-purpose" class="form-select" required>
+                  <option value="izdavanje-knjige" selected>Izdavanje nove knjige (Kompletan paket)</option>
+                  <option value="konkurs-ruze">Prijava rada za konkurs „Ruže i stihovi 2026“</option>
+                  <option value="konsultacije">Besplatne 15-minutne konsultacije sa urednikom</option>
+                  <option value="lektura-prelom">Samo lektura ili samo DTP prelom i dizajn</option>
+                  <option value="narudzbina">Porudžbina veće količine knjiga / Knjižare</option>
+                </select>
+              </div>
+
+              <!-- Ime i Email -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="form-name" class="form-label">Vaše Ime i Prezime: *</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="npr. Petar Petrović" required>
+                </div>
+                <div class="form-field">
+                  <label for="form-email" class="form-label">Vaš Email: *</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="petar@gmail.com" required>
+                </div>
+              </div>
+
+              <!-- Telefon i Grad -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="form-phone" class="form-label">Broj telefona (ili WhatsApp): *</label>
+                  <input type="tel" id="form-phone" class="form-input" placeholder="060 123 4567" required>
+                </div>
+                <div class="form-field">
+                  <label for="form-city" class="form-label">Grad / Država:</label>
+                  <input type="text" id="form-city" class="form-input" placeholder="npr. Novi Sad, Beograd, Beč...">
+                </div>
+              </div>
+
+              <!-- Žanr i Obim -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="form-genre" class="form-label">Književni žanr / Tip dela:</label>
+                  <select id="form-genre" class="form-select">
+                    <option value="roman">Roman / Proza</option>
+                    <option value="poezija">Poezija / Zbirka pesama</option>
+                    <option value="autobiografija">Autobiografija / Memoari</option>
+                    <option value="strucna-knjiga">Stručna literatura / Priručnik</option>
+                    <option value="decija">Knjiga za decu / Bajke</option>
+                    <option value="drugo">Drugo</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-status" class="form-label">Stanje rukopisa:</label>
+                  <select id="form-status" class="form-select">
+                    <option value="gotov">Rukopis je 100% završen</option>
+                    <option value="pri-kraju">Pri kraju je (potrebna završna obrada)</option>
+                    <option value="tek-pocinjem">Tek pišem / imam samo ideju</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Željeni termin poziva -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="form-call-type" class="form-label">Format razgovora:</label>
+                  <select id="form-call-type" class="form-select">
+                    <option value="telefon">Telefonski poziv</option>
+                    <option value="whatsapp">WhatsApp poruka / audio poziv</option>
+                    <option value="google-meet">Google Meet video link</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="form-time-pref" class="form-label">Okviran termin koji vam odgovara:</label>
+                  <select id="form-time-pref" class="form-select">
+                    <option value="prepodne">Prepodne (10h - 13h)</option>
+                    <option value="popodne" selected>Popodne (14h - 18h)</option>
+                    <option value="vece">Veče (18h - 20h)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Kratak opis ili odlomak -->
+              <div class="form-field">
+                <label for="form-message" class="form-label">O čemu govori vaša priča? (Ili pitanja za nas):</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Napišite par rečenica o vašoj knjizi, šta želite da postignete, ili nam pošaljite link ka vašem radu..."></textarea>
+              </div>
+
+              <!-- Drag and drop simulator -->
+              <div class="file-drop-zone" id="file-drop-zone">
+                <div class="drop-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                </div>
+                <p><strong>Kliknite ili prevucite odlomak rukopisa ovde (Word ili PDF)</strong></p>
+                <span>Opciono: Možete priložiti tekst radi brže procene urednika.</span>
+                <input type="file" id="file-input" style="display: none;" accept=".doc,.docx,.pdf,.txt">
+                <div id="file-name-display" style="margin-top: 0.5rem; font-weight: 700; color: var(--gold-600); display: none;"></div>
+              </div>
+
+              <button type="submit" class="btn btn-gold booking-submit-btn">
+                <span>Zakažite Konsultacije &bull; Pošaljite Prijavu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ČESTO POSTAVLJANA PITANJA (FAQ Accordion)
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            Odgovori na Pitanja
+          </span>
+          <h2 class="section-title">Sve što vas zanima pre nego što počnemo saradnju</h2>
+          <p class="section-desc">Prikupili smo najčešće nedoumice autora koji prvi put izdaju knjigu.</p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>Da li ja zadržavam sva autorska prava i zaradu od prodaje knjige?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Apsolutno da! Za razliku od tradicionalnih izdavača koji autorima uzimaju prava i daju samo 5-10% honorara, u ORA BOOKS vi ste 100% vlasnik svog dela. Knjiga je vaša, tiraž je vaš, a sav novac od prodatih primeraka pripada isključivo vama.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Koji je minimalni tiraž koji mogu da odštampam?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Minimalan preporučeni tiraž je samo 50 primeraka! Zahvaljujući modernoj digitalnoj tehnologiji štampe, više niste u obavezi da štampate 1.000 ili 2.000 primeraka i ulažete ogromne sume novca. Možete početi sa manjim tiražom, a zatim lako doštampavati kako se knjiga prodaje.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Šta ako moj tekst ima pravopisne i stilske greške?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>To je potpuno prirodno i nema razloga za brigu. Naš stručni lektor i urednik pažljivo prolaze kroz ceo rukopis, ispravljaju sve pravopisne i sintaksičke nepravilnosti, daju stilske sugestije i doteruju tekst do nivoa salonskog književnog izdanja, uz potpuno poštovanje vašeg stila.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Šta tačno znači CIP zapis i ISBN broj?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>ISBN (International Standard Book Number) je jedinstveni međunarodni matični broj knjige, a CIP je kataloški zapis Narodne biblioteke Srbije. Bez ovih oznaka knjiga se smatra samo običnom brošurom. Uz ISBN i CIP, vaša knjiga je zvanično registrovana u bibliotečkom sistemu i ima legalan barkod koji omogućava prodaju u bilo kojoj knjižari.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Koliko traje ceo proces od rukopisa do gotove knjige u mojim rukama?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Uobičajen rok za kompletno izdanje (lektura, prelom, odobravanje korica, dobijanje CIP zapisa iz Narodne biblioteke i štampa tvrdog poveza) iznosi između 3 i 5 nedelja. Veliki izdavači na ovo troše po godinu i po dana — kod nas nema čekanja u fiokama.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Kako funkcioniše konkurs „Ruže i stihovi 2026“?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Konkurs je otvoren za sve pesnike i autore kratkih priča. Možete poslati do tri svoje neobjavljene pesme ili priču putem našeg formulara. Urednički kolegijum ORA BOOKS bira najlepša dela koja ulaze u reprezentativni štampani zbornik tvrdog poveza, a svaki uvršteni autor dobija svoj primerak i sertifikat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <div class="brand-wrapper" style="margin-bottom: 0.5rem;">
+            <div class="brand-logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                <path d="M6 6h10"/>
+                <path d="M6 10h10"/>
+                <path d="M6 14h6"/>
+              </svg>
+            </div>
+            <div class="brand-details">
+              <span class="brand-name" style="color: var(--white);">ORA BOOKS</span>
+              <span class="brand-tagline">Izdavačka Kuća</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            „Vi pišete priču, mi je pretvaramo u knjigu.“<br>
+            Pružamo piscima kompletnu podršku od sirovog teksta do polica knjižara i domova čitalaca.
+          </p>
+          <div style="font-size: 0.8rem; color: var(--ink-400); line-height: 1.6;">
+            <strong>ALEKSANDAR JOCIĆ PREDUZETNIK ORA BOOKS</strong><br>
+            Matični broj i registracija: APR Srbija
+          </div>
+        </div>
+
+        <!-- Col 2: Brzi Linkovi -->
+        <div class="footer-col">
+          <h4>Navigacija</h4>
+          <div class="footer-links-list">
+            <a href="#hero" class="footer-link">Početna</a>
+            <a href="#izdanja" class="footer-link">Naša Izdanja</a>
+            <a href="#usluge" class="footer-link">Usluge & Proces</a>
+            <a href="#kalkulator" class="footer-link">Kalkulator Izdavanja</a>
+            <a href="#poređenje" class="footer-link">Zašto ORA BOOKS</a>
+            <a href="#instagram" class="footer-link">Instagram & Reels</a>
+            <a href="#osnivac" class="footer-link">Osnivač & Misija</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Izdavački Paketi -->
+        <div class="footer-col">
+          <h4>Paketi & Usluge</h4>
+          <div class="footer-links-list">
+            <a href="#kalkulator" class="footer-link">Start Paket za Početnike</a>
+            <a href="#kalkulator" class="footer-link">Standard Tvrd Povez</a>
+            <a href="#kalkulator" class="footer-link">Premijum sa Zlatotiskom</a>
+            <a href="#usluge" class="footer-link">Lektura & Korektura</a>
+            <a href="#usluge" class="footer-link">CIP Zapis & ISBN Kod</a>
+            <a href="#zakazivanje" class="footer-link">Konkurs Ruže i Stihovi</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Kontakt Podaci -->
+        <div class="footer-col">
+          <h4>Kontakt & Lokacija</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>13. aprila br. 4, 21215 Sirig (Vojvodina, Srbija)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:orabooks98@gmail.com" class="footer-link">orabooks98@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+381601234567" class="footer-link">+381 60 123 4567</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Ponedeljak – Petak: 09:00 – 19:00h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ORA BOOKS. Sva prava zadržana. „Vi pišete priču, mi je pretvaramo u knjigu.“
+        </div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-link">Politika Privatnosti</a>
+          <a href="#" class="footer-link">Uslovi Saradnje</a>
+          <a href="#" class="footer-link">Dostava & Plaćanje</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+
+  <!-- Modal 1: Čitanje Odlomka Knjige -->
+  <div class="modal-backdrop" id="excerpt-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="close-excerpt-modal" aria-label="Zatvori odlomak">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div id="excerpt-modal-content">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Brza Narudžbenica Knjige -->
+  <div class="modal-backdrop" id="order-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="close-order-modal" aria-label="Zatvori formu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div style="margin-bottom: 1.5rem;">
+        <span class="section-tag">Brza Narudžbina</span>
+        <h3 class="font-serif" id="order-book-modal-title" style="font-size: 1.6rem; color: var(--ink-950); margin-top: 0.5rem;">Naručite Knjigu</h3>
+        <p style="font-size: 0.9rem; color: var(--ink-600); margin-top: 0.25rem;">Plaćanje pouzećem prilikom preuzimanja od kurira (Post Express).</p>
+      </div>
+
+      <form id="order-book-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="hidden" id="order-hidden-title" value="">
+        <input type="hidden" id="order-hidden-price" value="">
+
+        <div class="form-field">
+          <label for="order-name" class="form-label">Ime i Prezime: *</label>
+          <input type="text" id="order-name" class="form-input" placeholder="Vaše puno ime" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="order-phone" class="form-label">Broj Telefona: *</label>
+            <input type="tel" id="order-phone" class="form-input" placeholder="060 123 4567" required>
+          </div>
+          <div class="form-field">
+            <label for="order-qty" class="form-label">Količina (primeraka):</label>
+            <input type="number" id="order-qty" class="form-input" value="1" min="1" max="50">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="order-address" class="form-label">Ulica i Broj: *</label>
+          <input type="text" id="order-address" class="form-input" placeholder="Ulica i kućni broj / stan" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="order-zip" class="form-label">Poštanski Broj: *</label>
+            <input type="text" id="order-zip" class="form-input" placeholder="npr. 11000 ili 21000" required>
+          </div>
+          <div class="form-field">
+            <label for="order-city" class="form-label">Mesto / Grad: *</label>
+            <input type="text" id="order-city" class="form-input" placeholder="npr. Beograd, Novi Sad, Niš..." required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="order-note" class="form-label">Napomena za kurira (opciono):</label>
+          <input type="text" id="order-note" class="form-input" placeholder="npr. Zvoniti na interfon 12...">
+        </div>
+
+        <div style="background-color: var(--paper-100); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--paper-200); display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+          <span style="font-weight: 600; font-size: 0.92rem; color: var(--ink-850);">Ukupno za naplatu:</span>
+          <strong id="order-summary-price" style="font-size: 1.25rem; color: var(--gold-600); font-family: var(--font-serif);">1.200 RSD</strong>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 0.5rem;">
+          <span>Potvrdite Narudžbinu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Video Reel Player Preview -->
+  <div class="modal-backdrop" id="reel-modal">
+    <div class="modal-dialog" style="max-width: 500px; padding: 2rem;">
+      <button class="modal-close-btn" id="close-reel-modal" aria-label="Zatvori video">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div id="reel-modal-body">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Potvrda Uspešnog Zakazivanja -->
+  <div class="modal-backdrop" id="success-modal">
+    <div class="modal-dialog" style="max-width: 480px; text-align: center; padding: 2.8rem 2rem;">
+      <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #ecfdf5; color: #16a34a; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 32px; height: 32px;"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="font-serif" style="font-size: 1.6rem; color: var(--ink-950); margin-bottom: 0.75rem;">Uspešno ste poslali prijavu!</h3>
+      <p style="font-size: 0.95rem; color: var(--ink-600); line-height: 1.6; margin-bottom: 1.75rem;" id="success-modal-desc">
+        Hvala vam na ukazanom poverenju. Urednik Aleksandar Jocić će pregledati vaše podatke i kontaktirati vas u najkraćem roku radi potvrde termina.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <a href="https://wa.me/381601234567" target="_blank" rel="noopener" class="btn btn-gold" id="btn-whatsapp-followup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>Pošaljite Poruku Odmah na WhatsApp</span>
+        </a>
+        <button class="btn btn-outline" id="close-success-modal-btn">Zatvori Prozor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Floating Quick WhatsApp Button -->
+  <a href="https://wa.me/381601234567?text=Pozdrav%20Aleksandre,%20zainteresovan%20sam%20za%20izdavanje%20knjige%20u%20ORA%20BOOKS" target="_blank" rel="noopener" class="floating-widget-btn" title="Brz kontakt sa Aleksandrom na WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span>WhatsApp Konsultacije</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
