@@ -1,5 +1,5 @@
 /* ============================================================
-   UGROW — js/main.js
+   UGROW - js/main.js
    ============================================================ */
 
 // ── Calendly Integration ─────────────────────────────────────
@@ -17,7 +17,7 @@ function debounce(fn, ms) {
 }
 
 // ============================================================
-// HEADER — Scroll-based styling
+// HEADER: Scroll-based styling
 // ============================================================
 (function initHeader() {
   const header = document.getElementById('site-header');
@@ -45,12 +45,14 @@ function debounce(fn, ms) {
   function openMenu() {
     menu.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('mobile-menu-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menu.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-menu-open');
     document.body.style.overflow = '';
   }
 
@@ -113,14 +115,21 @@ function debounce(fn, ms) {
 
   function onScroll() {
     const heroH = document.querySelector('.hero')?.offsetHeight || window.innerHeight;
-    if (!appeared && window.scrollY > heroH * 0.6) {
-      appeared = true;
+    const booking = document.getElementById('booking');
+    const bookingTop = booking ? booking.getBoundingClientRect().top : 999999;
+
+    // Show if past hero, but hide when reaching the booking form
+    if (window.scrollY > heroH * 0.6 && bookingTop > window.innerHeight * 0.7) {
       bar.classList.add('visible');
       bar.removeAttribute('aria-hidden');
+    } else {
+      bar.classList.remove('visible');
+      bar.setAttribute('aria-hidden', 'true');
     }
   }
 
-  window.addEventListener('scroll', debounce(onScroll, 60), { passive: true });
+  window.addEventListener('scroll', debounce(onScroll, 40), { passive: true });
+  onScroll();
 })();
 
 // ============================================================
@@ -355,7 +364,7 @@ function debounce(fn, ms) {
     // Randomly vary available slots for realism (deterministic by date)
     const availableSlots = SLOTS.filter((_, i) => (d + i) % 3 !== 0);
 
-    slotLabel.textContent = `Available times — ${date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}`;
+    slotLabel.textContent = `Available times: ${date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}`;
     slotsGrid.innerHTML   = '';
 
     availableSlots.forEach(slot => {
@@ -404,7 +413,7 @@ function debounce(fn, ms) {
 })();
 
 // ============================================================
-// SMOOTH SCROLL — close mobile menu on anchor click
+// SMOOTH SCROLL: close mobile menu on anchor click
 // ============================================================
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
