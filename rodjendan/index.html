@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Srećan rođendan!</title>
+  <meta name="description" content="Interaktivna rođendanska čestitka sa virtuelnim duvanjem svećica u mikrofon, realističnim plamenom i vatrometom.">
+  <meta name="theme-color" content="#120d15">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Atmosferska svetlosna pozadina -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="ambient-stars" id="ambient-stars"></div>
+  </div>
+
+  <!-- Celooekranski Canvas za konfete i vatromet -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <div class="app-container">
+
+    <!-- Gornje plutajuće zaglavlje -->
+    <header class="app-header">
+      <div class="brand-badge" id="profile-tagline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>Za najposebniju osobu</span>
+      </div>
+
+      <div class="header-actions">
+        <!-- Prebacivanje profila (Selena / Luka) -->
+        <button id="btn-switch-profile" class="btn-switcher" type="button" title="Prebaci profil">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <polyline points="16 11 18 13 22 9"></polyline>
+          </svg>
+          <span>Promeni verziju</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- GLAVNI SADRŽAJ SA 3 EKRANA -->
+    <main class="main-content">
+
+      <!-- 1. UVODNI EKRAN (INTRO SCREEN) -->
+      <section id="intro-screen" class="screen intro-view">
+        <div class="intro-content">
+          <div class="intro-emblem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+              <path d="M12 2c-1.5 2-2 3.5-2 5a2 2 0 1 0 4 0c0-1.5-.5-3-2-5z"></path>
+              <path d="M18 13v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8"></path>
+              <path d="M4 13h16"></path>
+            </svg>
+          </div>
+
+          <p class="hero-tagline">Poseban dan je stigao</p>
+          <h1 id="hero-title" class="hero-title">Srećan rođendan!</h1>
+          <p id="hero-subtitle" class="hero-subtitle">Pripremili smo malo virtuelno iznenađenje samo za tebe.</p>
+
+          <button id="btn-start" class="btn-primary-large" type="button">
+            <span>Započni slavlje</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <p class="btn-caption-hint">Zatvori oči, zamisli želju i ugasi svećice duvanjem u mikrofon</p>
+        </div>
+      </section>
+
+      <!-- 2. EKRAN SA TORTOM I DUVANJEM SVEĆICA (CAKE SCREEN) -->
+      <section id="cake-screen" class="screen cake-view screen-hidden">
+        <div class="instructions-header">
+          <h2 id="wish-title" class="wish-title">Zaželi želju</h2>
+          <p id="wish-instruction" class="wish-instruction">Zatvori oči, zamisli želju i snažno duni u mikrofon telefona ili računara!</p>
+          <div id="lit-counter-badge" class="lit-counter-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+              <path d="M12 2c-1.5 2-2 3.5-2 5a2 2 0 1 0 4 0c0-1.5-.5-3-2-5z"></path>
+              <path d="M10 11h4v11h-4z"></path>
+            </svg>
+            <span id="lit-counter-text">Svećice gore...</span>
+          </div>
+        </div>
+
+        <!-- 3D Scena sa bogatom gurmanskom tortom i canvasom za plamen -->
+        <div class="cake-stage">
+          <div id="blow-aura" class="blow-aura"></div>
+
+          <div id="cake-stand" class="cake-stand">
+            <!-- 3D Vektorska luksuzna torta -->
+            <svg class="cake-master-svg" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Senka podnožja -->
+                <radialGradient id="cakeFloorShadow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(0,0,0,0.65)"/>
+                  <stop offset="60%" stop-color="rgba(0,0,0,0.3)"/>
+                  <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+                </radialGradient>
+
+                <!-- Postolje stalak -->
+                <linearGradient id="standMetallic" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2a2530"/>
+                  <stop offset="25%" stop-color="#4a4252"/>
+                  <stop offset="50%" stop-color="#7a7082"/>
+                  <stop offset="70%" stop-color="#4a4252"/>
+                  <stop offset="100%" stop-color="#1f1a26"/>
+                </linearGradient>
+
+                <!-- Tanjir postolja -->
+                <linearGradient id="platterRim" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#3d3545"/>
+                  <stop offset="35%" stop-color="#8c7f99"/>
+                  <stop offset="50%" stop-color="#ded4e8"/>
+                  <stop offset="65%" stop-color="#8c7f99"/>
+                  <stop offset="100%" stop-color="#292330"/>
+                </linearGradient>
+
+                <!-- Donji biskvit torte -->
+                <linearGradient id="bottomTierGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--cake-base)"/>
+                  <stop offset="25%" stop-color="var(--cake-frosting)"/>
+                  <stop offset="55%" stop-color="var(--cake-icing)"/>
+                  <stop offset="85%" stop-color="var(--cake-frosting)"/>
+                  <stop offset="100%" stop-color="var(--cake-base)"/>
+                </linearGradient>
+
+                <!-- Gornji sprat torte -->
+                <linearGradient id="topTierGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--cake-frosting)"/>
+                  <stop offset="35%" stop-color="var(--cake-icing)"/>
+                  <stop offset="65%" stop-color="var(--cake-frosting)"/>
+                  <stop offset="100%" stop-color="var(--cake-base)"/>
+                </linearGradient>
+
+                <!-- Sjajni preliv (Drip) -->
+                <linearGradient id="dripGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="var(--color-primary)"/>
+                  <stop offset="60%" stop-color="var(--cake-frosting)"/>
+                  <stop offset="100%" stop-color="var(--color-secondary)"/>
+                </linearGradient>
+              </defs>
+
+              <!-- 1. Senka na stolu -->
+              <ellipse cx="200" cy="342" rx="175" ry="16" fill="url(#cakeFloorShadow)"/>
+
+              <!-- 2. Stalak / Pedestal za tortu -->
+              <!-- Donja baza postolja -->
+              <ellipse cx="200" cy="330" rx="90" ry="14" fill="url(#standMetallic)"/>
+              <ellipse cx="200" cy="328" rx="85" ry="11" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              
+              <!-- Stub postolja -->
+              <path d="M188 328 C188 295 180 275 175 258 L225 258 C220 275 212 295 212 328 Z" fill="url(#standMetallic)"/>
+              
+              <!-- Veliki tanjir / Platter -->
+              <ellipse cx="200" cy="258" rx="170" ry="24" fill="url(#platterRim)"/>
+              <ellipse cx="200" cy="256" rx="166" ry="21" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+
+              <!-- 3. Donji sprat torte (Tier 1) -->
+              <!-- Telo donjeg sprata -->
+              <path d="M48 246 C48 266 116 282 200 282 C284 282 352 266 352 246 L352 186 C352 206 284 222 200 222 C116 222 48 206 48 186 Z" fill="url(#bottomTierGrad)"/>
+              
+              <!-- Donji biserni ukrasni venac -->
+              <g fill="var(--color-primary)" opacity="0.9">
+                <circle cx="56" cy="246" r="3.5"/><circle cx="72" cy="254" r="3.5"/><circle cx="90" cy="262" r="3.5"/>
+                <circle cx="110" cy="269" r="3.5"/><circle cx="132" cy="274" r="3.5"/><circle cx="155" cy="278" r="3.5"/>
+                <circle cx="178" cy="281" r="3.5"/><circle cx="200" cy="282" r="4"/><circle cx="222" cy="281" r="3.5"/>
+                <circle cx="245" cy="278" r="3.5"/><circle cx="268" cy="274" r="3.5"/><circle cx="290" cy="269" r="3.5"/>
+                <circle cx="310" cy="262" r="3.5"/><circle cx="328" cy="254" r="3.5"/><circle cx="344" cy="246" r="3.5"/>
+              </g>
+
+              <!-- Gornja površina donjeg sprata -->
+              <ellipse cx="200" cy="186" rx="152" ry="22" fill="var(--cake-icing)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+              <!-- 4. Gornji sprat torte (Tier 2) -->
+              <!-- Telo gornjeg sprata -->
+              <path d="M72 178 C72 198 129 214 200 214 C271 214 328 198 328 178 L328 124 C328 144 271 160 200 160 C129 160 72 144 72 124 Z" fill="url(#topTierGrad)"/>
+
+              <!-- Luksuzni organski drip preliv koji se sliva niz gornji sprat -->
+              <path d="M72 124 
+                       C72 144 129 160 200 160 
+                       C271 160 328 144 328 124 
+                       L328 136
+                       C318 144 314 158 310 158 C306 158 302 138 294 138
+                       C286 138 282 168 276 168 C270 168 266 142 258 142
+                       C250 142 246 172 238 172 C230 172 226 145 218 145
+                       C210 145 206 175 198 175 C190 175 186 143 178 143
+                       C170 143 166 168 158 168 C150 168 146 138 138 138
+                       C130 138 126 164 120 164 C114 164 110 140 102 140
+                       C94 140 90 156 84 156 C78 156 75 138 72 136 Z" 
+                    fill="url(#dripGrad)" opacity="0.95"/>
+
+              <!-- Sjajne kapljice na krajevima preliva -->
+              <circle cx="276" cy="168" r="3.2" fill="var(--color-primary)"/>
+              <circle cx="238" cy="172" r="3.8" fill="var(--color-primary)"/>
+              <circle cx="198" cy="175" r="4.2" fill="var(--color-primary)"/>
+              <circle cx="158" cy="168" r="3.5" fill="var(--color-primary)"/>
+              <circle cx="120" cy="164" r="3.2" fill="var(--color-primary)"/>
+
+              <!-- 5. Glavna gornja elipsa torte na kojoj gore svećice -->
+              <ellipse cx="200" cy="124" rx="128" ry="24" fill="var(--cake-icing)" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+              <ellipse cx="200" cy="124" rx="122" ry="21" fill="none" stroke="var(--color-secondary)" stroke-width="1" stroke-dasharray="4,4"/>
+
+              <!-- Ukrasne ružice / puslice od šlaga po ivici gornjeg sprata -->
+              <g fill="var(--cake-icing)" stroke="var(--cake-frosting)" stroke-width="0.8">
+                <circle cx="78" cy="122" r="5"/><circle cx="96" cy="130" r="5"/><circle cx="118" cy="138" r="5"/>
+                <circle cx="144" cy="144" r="5"/><circle cx="172" cy="147" r="5"/><circle cx="200" cy="148" r="5.5"/>
+                <circle cx="228" cy="147" r="5"/><circle cx="256" cy="144" r="5"/><circle cx="282" cy="138" r="5"/>
+                <circle cx="304" cy="130" r="5"/><circle cx="322" cy="122" r="5"/>
+              </g>
+            </svg>
+
+            <!-- Canvas za 3D svećice, plamenove, odsjaj i dim -->
+            <canvas id="flame-canvas"></canvas>
+          </div>
+        </div>
+
+        <!-- HUD: Vizuelni indikator jačine duvanja -->
+        <div class="blow-hud">
+          <div class="hud-header">
+            <div class="hud-title-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+              </svg>
+              <span>Jačina duvanja</span>
+            </div>
+            <span id="blow-intensity-val" class="blow-value-badge">0%</span>
+          </div>
+
+          <div class="blow-meter-track">
+            <div id="blow-meter-progress" class="blow-meter-fill"></div>
+          </div>
+
+          <div class="hud-fallback-row">
+            <span id="fallback-instruction" class="fallback-text">Ili dodirni svećice prstom</span>
+            <button id="btn-touch-blow" class="btn-ghost-sm" type="button" title="Ugasi svećice dodirom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                <path d="M12 2a4 4 0 0 0-4 4v7a2 2 0 0 1-2 2H5a1 1 0 0 0-1 1v2a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6V9a4 4 0 0 0-4-4"></path>
+              </svg>
+              <span>Ugasi dodirom</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Plutajuće dugme za ponovno otvaranje čestitke kada se zatvori popup -->
+        <button id="btn-reopen-celebration" class="btn-reopen-celebration btn-reopen-hidden" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Pogledaj rođendansku čestitku</span>
+        </button>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- 3. SLAVLJENIČKI POPUP NAKON GAŠENJA SVEĆICA (POPUP PREKO SVEGA) -->
+  <div id="celebration-screen" class="celebration-modal modal-hidden" role="dialog" aria-modal="true">
+    <div class="celebration-popup-card">
+      <!-- Dugme za zatvaranje popup-a (X) -->
+      <button id="btn-close-celebration" class="btn-popup-close" type="button" title="Zatvori i pogledaj tortu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="celebration-badge-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </div>
+
+      <h2 id="celebration-title" class="celebration-title">Srećan rođendan!</h2>
+      <p id="celebration-subtitle" class="celebration-subtitle">Želja je poletela ka zvezdama!</p>
+
+      <!-- Lična poruka slavljeniku -->
+      <div class="letter-box">
+        <div class="letter-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span id="message-title">Pismo slavljeniku</span>
+        </div>
+        <p id="personal-message" class="personal-message-text"></p>
+        <p id="message-signature" class="letter-signature"></p>
+      </div>
+
+      <!-- Normalna, moderna galerija fotografija visokog kvaliteta -->
+      <div class="photo-gallery-section">
+        <div class="gallery-title-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <span>Uspomene i najlepši trenuci</span>
+        </div>
+        <div id="photo-gallery" class="luxury-gallery-grid"></div>
+      </div>
+
+      <!-- Akciona dugmad -->
+      <div class="celebration-actions">
+        <button id="btn-relight" class="btn-primary-large" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <path d="M12 2c-1.5 2-2 3.5-2 5a2 2 0 1 0 4 0c0-1.5-.5-3-2-5z"></path>
+            <path d="M21.5 2v6h-6"></path>
+            <path d="M21.35 15.5A9 9 0 1 1 19 8.5l2.5-2.5"></path>
+          </svg>
+          <span>Zapali ponovo</span>
+        </button>
+
+        <button id="btn-share" class="btn-secondary-action" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Podeli čestitku</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- KALIBRACIONI MODAL ZA ŠUM PROSTORIJE -->
+  <div id="calibration-modal" class="calibration-modal modal-hidden" role="dialog" aria-modal="true">
+    <div class="calibration-card">
+      <div class="calibration-icon-pulse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+          <line x1="12" y1="19" x2="12" y2="23"></line>
+          <line x1="8" y1="23" x2="16" y2="23"></line>
+        </svg>
+      </div>
+      <h3>Usklađivanje sa mikrofonom...</h3>
+      <p>Merenje ambijentalnog zvuka prostorije radi maksimalne osetljivosti na dah.</p>
+      <div class="calibration-progress-track">
+        <div id="calibration-bar" class="calibration-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST OBAVEŠTENJE -->
+  <aside id="toast-notice" class="toast-notice toast-hidden" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Obaveštenje</span>
+  </aside>
+
+  <!-- Skripte -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
