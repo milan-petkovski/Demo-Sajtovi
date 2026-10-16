@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodavnica patika | Kickpoint.rs - Svi modeli na stanju</title>
+  <meta name="description" content="Kompletna kolekcija patika na Kickpoint.rs. Filtriraj po veličini (38-46), kategoriji i ceni. Plaćanje pouzećem i dostava za 48h širom Srbije.">
+  <link rel="canonical" href="https://kickpoint.rs/prodavnica.html">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <meta property="og:site_name" content="Kickpoint.rs">
+  <meta property="og:title" content="Prodavnica patika | Kickpoint.rs">
+  <meta property="og:description" content="Pregledaj sve aktuelne modele patika. Plaćanje pouzećem pri preuzimanju i laka zamena veličine.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kickpoint.rs/prodavnica.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    Dostava širom Srbije za 48h &bull; Plaćanje pouzećem pri preuzimanju &bull; 14 dana za zamenu broja
+  </div>
+
+  <!-- Zaglavlje (Header) -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Kickpoint.rs početna strana">
+        <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="220" height="38">
+      </a>
+
+      <nav class="site-nav" aria-label="Glavna navigacija">
+        <a href="index.html" class="site-nav__link">Početna</a>
+        <a href="prodavnica.html" class="site-nav__link active">Prodavnica</a>
+        <a href="index.html#dostava-i-zamena" class="site-nav__link">Dostava i zamena</a>
+        <a href="#kontakt" class="site-nav__link">Kontakt</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="cart-trigger" onclick="openCartDrawer()" aria-label="Otvori korpu">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-cart"></use></svg>
+          <span class="cart-trigger__badge cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <button type="button" class="menu-trigger" onclick="toggleMobileNav()" aria-label="Otvori meni">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-filter"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobilni navigacioni meni -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobilna navigacija">
+    <a href="index.html" class="mobile-nav__link" onclick="closeMobileNav()">Početna</a>
+    <a href="prodavnica.html" class="mobile-nav__link" onclick="closeMobileNav()">Prodavnica</a>
+    <a href="index.html#dostava-i-zamena" class="mobile-nav__link" onclick="closeMobileNav()">Dostava i zamena</a>
+    <a href="#kontakt" class="mobile-nav__link" onclick="closeMobileNav()">Kontakt</a>
+    <button type="button" class="btn btn--primary btn--full" style="margin-top: 16px;" onclick="closeMobileNav(); openCartDrawer();">
+      Tvoja korpa (<span class="cart-count-badge">0</span>)
+    </button>
+  </nav>
+
+  <main class="section-padding">
+    <div class="container">
+      
+      <!-- Naslov stranice i info -->
+      <div class="section-header" style="margin-bottom: var(--space-6);">
+        <span class="section-header__tag">Kompletna ponuda</span>
+        <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem); margin-top: 4px;">Prodavnica patika</h1>
+        <p style="color: var(--text-secondary); max-width: 600px;">
+          Svi modeli su spremni za slanje sa lagera u Srbiji. Plaćanje pouzećem gotovinom prilikom preuzimanja paketa od kurira.
+        </p>
+      </div>
+
+      <!-- Toolbar za pretragu, sortiranje i mobilne filtere -->
+      <div class="shop-toolbar">
+        <!-- Pretraga -->
+        <div class="search-box">
+          <svg class="icon icon--sm"><use href="assets/icons.svg#icon-search"></use></svg>
+          <input type="text" id="searchInput" placeholder="Pretraži modele (npr. TN, Court, Black)..." aria-label="Pretraga patika">
+        </div>
+
+        <!-- Dugme za mobilni filter sheet -->
+        <button type="button" class="mobile-filter-btn" onclick="openMobileFilterSheet()">
+          <svg class="icon icon--sm"><use href="assets/icons.svg#icon-filter"></use></svg>
+          <span>Filteri i sortiranje</span>
+        </button>
+
+        <!-- Sortiranje na desktopu -->
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <label for="sortSelect" style="font-size: 0.875rem; font-weight: 600; color: var(--text-secondary); display: none;">Sortiraj:</label>
+          <select id="sortSelect" class="sort-select" aria-label="Sortiraj proizvode">
+            <option value="featured">Preporučeno</option>
+            <option value="price-asc">Cena: od niže ka višoj</option>
+            <option value="price-desc">Cena: od više ka nižoj</option>
+            <option value="rating">Najbolje ocenjeno</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Broj rezultata i aktivni filteri -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); font-size: 0.875rem; color: var(--text-muted);">
+        <span id="resultsCountText">Prikazano modela...</span>
+        <button type="button" id="resetFiltersBtn" onclick="resetAllFilters()" style="color: var(--primary); font-weight: 600; text-decoration: underline; display: none;">
+          Poništi filtere
+        </button>
+      </div>
+
+      <!-- Glavni raspored prodavnice (Sidebar + Mreža) -->
+      <div class="shop-layout">
+        
+        <!-- Desktop Sidebar sa filterima -->
+        <aside class="filter-sidebar" aria-label="Filteri proizvoda">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid var(--border-light);">
+            <h3 style="font-size: 1.125rem;">Filteri</h3>
+            <button type="button" onclick="resetAllFilters()" style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">
+              Resetuj sve
+            </button>
+          </div>
+
+          <!-- Kategorije -->
+          <div class="filter-group">
+            <span class="filter-group__title">Kategorija / Stil</span>
+            <div class="filter-pill-list" id="desktopCategoryFilters">
+              <button type="button" class="filter-pill active" data-cat="all">Sve</button>
+              <button type="button" class="filter-pill" data-cat="air">Tuned / Air</button>
+              <button type="button" class="filter-pill" data-cat="court">Lifestyle / Court</button>
+              <button type="button" class="filter-pill" data-cat="retro">Retro / Duboke</button>
+              <button type="button" class="filter-pill" data-cat="running">Trčanje</button>
+            </div>
+          </div>
+
+          <!-- Veličine -->
+          <div class="filter-group">
+            <div class="filter-group__title">
+              <span>Broj (EU)</span>
+              <button type="button" onclick="openSizeModal()" style="font-size: 0.75rem; color: var(--primary); font-weight: 600; text-decoration: underline;">Tabela mera</button>
+            </div>
+            <div class="filter-pill-list" id="desktopSizeFilters">
+              <button type="button" class="filter-pill" data-size="36">36</button>
+              <button type="button" class="filter-pill" data-size="38">38</button>
+              <button type="button" class="filter-pill" data-size="39">39</button>
+              <button type="button" class="filter-pill" data-size="40">40</button>
+              <button type="button" class="filter-pill" data-size="41">41</button>
+              <button type="button" class="filter-pill" data-size="42">42</button>
+              <button type="button" class="filter-pill" data-size="43">43</button>
+              <button type="button" class="filter-pill" data-size="44">44</button>
+              <button type="button" class="filter-pill" data-size="45">45</button>
+              <button type="button" class="filter-pill" data-size="46">46</button>
+            </div>
+          </div>
+
+          <!-- Garancija i info -->
+          <div style="background: var(--bg-subtle); border-radius: var(--radius-md); padding: 14px; font-size: 0.8125rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--text-primary);">
+              <svg class="icon icon--sm" style="color: var(--primary);"><use href="assets/icons.svg#icon-shield"></use></svg>
+              Sigurna kupovina
+            </div>
+            <div>Plaća se isključivo kuriru u gotovini. Zamena veličine obezbeđena u roku od 14 dana.</div>
+          </div>
+        </aside>
+
+        <!-- Mreža proizvoda -->
+        <section aria-label="Lista modela">
+          <div class="product-grid" id="shopProductGrid">
+            <!-- Renderovano dinamički iz JavaScripta -->
+          </div>
+
+          <!-- Empty State (ako filteri daju 0 rezultata) -->
+          <div id="shopEmptyState" style="display: none; text-align: center; padding: 64px 16px; background: var(--bg-subtle); border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--bg-card-muted); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--text-muted);">
+              <svg class="icon icon--lg"><use href="assets/icons.svg#icon-search"></use></svg>
+            </div>
+            <h3 style="margin-bottom: 8px;">Nema modela koji odgovaraju izabranim filterima</h3>
+            <p style="margin-bottom: 16px;">Pokušaj da ukloniš neki od filtera ili pretražiš drugi termin.</p>
+            <button type="button" class="btn btn--primary" onclick="resetAllFilters()">Poništi sve filtere</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobilni filter Bottom Sheet Drawer -->
+  <div class="filter-sheet-overlay" id="mobileFilterSheet">
+    <div class="filter-sheet" role="dialog" aria-modal="true" aria-labelledby="filterSheetTitle">
+      <div class="filter-sheet__header">
+        <h3 id="filterSheetTitle" style="display: flex; align-items: center; gap: 8px;">
+          <svg class="icon icon--sm"><use href="assets/icons.svg#icon-filter"></use></svg>
+          Filteri i sortiranje
+        </h3>
+        <button type="button" class="cart-drawer__close" onclick="closeMobileFilterSheet()" aria-label="Zatvori filtere">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+
+      <div class="filter-sheet__body">
+        <!-- Sortiranje na telefonu -->
+        <div class="filter-group">
+          <span class="filter-group__title">Sortiraj po ceni i oceni</span>
+          <select id="mobileSortSelect" class="sort-select" style="width: 100%;">
+            <option value="featured">Preporučeno</option>
+            <option value="price-asc">Cena: od niže ka višoj</option>
+            <option value="price-desc">Cena: od više ka nižoj</option>
+            <option value="rating">Najbolje ocenjeno</option>
+          </select>
+        </div>
+
+        <!-- Kategorije -->
+        <div class="filter-group">
+          <span class="filter-group__title">Kategorija</span>
+          <div class="filter-pill-list" id="mobileCategoryFilters">
+            <button type="button" class="filter-pill active" data-cat="all">Sve</button>
+            <button type="button" class="filter-pill" data-cat="air">Tuned / Air</button>
+            <button type="button" class="filter-pill" data-cat="court">Lifestyle / Court</button>
+            <button type="button" class="filter-pill" data-cat="retro">Retro / Duboke</button>
+            <button type="button" class="filter-pill" data-cat="running">Trčanje</button>
+          </div>
+        </div>
+
+        <!-- Veličina -->
+        <div class="filter-group">
+          <span class="filter-group__title">Veličina (EU)</span>
+          <div class="filter-pill-list" id="mobileSizeFilters">
+            <button type="button" class="filter-pill" data-size="36">36</button>
+            <button type="button" class="filter-pill" data-size="38">38</button>
+            <button type="button" class="filter-pill" data-size="39">39</button>
+            <button type="button" class="filter-pill" data-size="40">40</button>
+            <button type="button" class="filter-pill" data-size="41">41</button>
+            <button type="button" class="filter-pill" data-size="42">42</button>
+            <button type="button" class="filter-pill" data-size="43">43</button>
+            <button type="button" class="filter-pill" data-size="44">44</button>
+            <button type="button" class="filter-pill" data-size="45">45</button>
+            <button type="button" class="filter-pill" data-size="46">46</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-sheet__footer">
+        <button type="button" class="btn btn--secondary" onclick="resetAllFilters(); closeMobileFilterSheet();" style="flex: 1;">
+          Resetuj
+        </button>
+        <button type="button" class="btn btn--primary" onclick="closeMobileFilterSheet()" style="flex: 2;">
+          Primeni filtere
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Podnožje (Footer) -->
+  <footer class="site-footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" style="display: inline-block; margin-bottom: 16px;">
+            <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p style="color: #94A3B8; font-size: 0.9375rem; line-height: 1.5; margin-bottom: 16px;">
+            Tvoja pouzdana online prodavnica najtraženijih patika u Srbiji. Brza isporuka kurirskom službom, plaćanje pouzećem i sigurna zamena veličine.
+          </p>
+          <span class="footer-demo-tag">DEMO PROJEKAT &bull; KICKPOINT.RS</span>
+        </div>
+
+        <div>
+          <h4 class="footer-col__title">Kupovina</h4>
+          <ul class="footer-nav">
+            <li><a href="prodavnica.html">Svi modeli patika</a></li>
+            <li><a href="prodavnica.html?cat=air">Air & Tuned modeli</a></li>
+            <li><a href="prodavnica.html?cat=court">Lifestyle & Court</a></li>
+            <li><a href="prodavnica.html?cat=retro">Retro siluete</a></li>
+            <li><a href="javascript:void(0)" onclick="openSizeModal()">Tabela veličina (cm)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col__title">Informacije</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html#dostava-i-zamena">Plaćanje pouzećem</a></li>
+            <li><a href="index.html#dostava-i-zamena">Rokovi i cene isporuke</a></li>
+            <li><a href="index.html#dostava-i-zamena">Zamena veličine (14 dana)</a></li>
+            <li><a href="index.html#kako-naruciti">Kako naručiti</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col__title">Kontakt i narudžbine</h4>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-instagram"></use></svg>
+            <a href="https://instagram.com/kickpoint.rs" target="_blank" rel="noopener">@kickpoint.rs (Instagram DM)</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-phone"></use></svg>
+            <span>Pon - Sub: 09:00 - 18:00h</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-truck"></use></svg>
+            <span>Isporuka: Cela teritorija Srbije</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Kickpoint.rs &bull; Sva prava zadržana.</div>
+        <div>Dizajnirano i optimizovano za mobilne uređaje (Mobile First).</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Korpa Drawer & Tabela veličina Modal -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <aside class="cart-drawer" aria-label="Tvoja korpa">
+      <div class="cart-drawer__header">
+        <h3 class="cart-drawer__title">
+          <svg class="icon icon--lg" style="color: var(--primary);"><use href="assets/icons.svg#icon-cart"></use></svg>
+          Tvoja korpa (<span class="cart-count-badge">0</span>)
+        </h3>
+        <button type="button" class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Zatvori korpu">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <div class="shipping-bar" id="cartShippingBar" style="display: none;"></div>
+      <div class="cart-drawer__body" id="cartDrawerItems"></div>
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;"></div>
+    </aside>
+  </div>
+
+  <div class="modal-overlay" id="sizeGuideModal" role="dialog" aria-modal="true" aria-labelledby="sizeModalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="sizeModalTitle" style="display: flex; align-items: center; gap: 8px;">
+          <svg class="icon icon--lg" style="color: var(--primary);"><use href="assets/icons.svg#icon-ruler"></use></svg>
+          Tabela veličina obuće
+        </h3>
+        <button type="button" class="cart-drawer__close" onclick="closeSizeModal()" aria-label="Zatvori">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Standardni kalupi obuće (EU). Izmerite dužinu gazišta u centimetrima (CM).
+        </p>
+        <table class="size-table">
+          <thead>
+            <tr><th>EU Veličina</th><th>Dužina gazišta (CM)</th><th>US Men</th><th>UK</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>38</strong></td><td>24.0 cm</td><td>5.5</td><td>5.0</td></tr>
+            <tr><td><strong>39</strong></td><td>24.5 cm</td><td>6.5</td><td>6.0</td></tr>
+            <tr><td><strong>40</strong></td><td>25.0 cm</td><td>7.0</td><td>6.0</td></tr>
+            <tr><td><strong>41</strong></td><td>26.0 cm</td><td>8.0</td><td>7.0</td></tr>
+            <tr><td><strong>42</strong></td><td>26.5 cm</td><td>8.5</td><td>7.5</td></tr>
+            <tr><td><strong>43</strong></td><td>27.5 cm</td><td>9.5</td><td>8.5</td></tr>
+            <tr><td><strong>44</strong></td><td>28.0 cm</td><td>10.0</td><td>9.0</td></tr>
+            <tr><td><strong>45</strong></td><td>29.0 cm</td><td>11.0</td><td>10.0</td></tr>
+            <tr><td><strong>46</strong></td><td>30.0 cm</td><td>12.0</td><td>11.0</td></tr>
+          </tbody>
+        </table>
+        <div style="background: var(--bg-subtle); border-radius: var(--radius-sm); padding: 12px; margin-top: 16px; font-size: 0.8125rem; color: var(--text-secondary);">
+          <strong>Savet:</strong> Ako niste sigurni između dva broja, izaberite veći. Zamena veličine je moguća u roku od 14 dana.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Logika filtriranja i sortiranja u prodavnici
+    let currentCategory = 'all';
+    let currentSelectedSize = null;
+    let searchQuery = '';
+    let currentSort = 'featured';
+
+    function openMobileFilterSheet() {
+      const sheet = document.getElementById('mobileFilterSheet');
+      if (sheet) {
+        sheet.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileFilterSheet() {
+      const sheet = document.getElementById('mobileFilterSheet');
+      if (sheet) {
+        sheet.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function resetAllFilters() {
+      currentCategory = 'all';
+      currentSelectedSize = null;
+      searchQuery = '';
+      currentSort = 'featured';
+
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value = 'featured';
+      const mobSort = document.getElementById('mobileSortSelect');
+      if (mobSort) mobSort.value = 'featured';
+
+      // Resetuj pills
+      document.querySelectorAll('.filter-pill[data-cat]').forEach(p => {
+        p.classList.toggle('active', p.dataset.cat === 'all');
+      });
+      document.querySelectorAll('.filter-pill[data-size]').forEach(p => {
+        p.classList.remove('active');
+      });
+
+      renderFilteredProducts();
+    }
+
+    function renderFilteredProducts() {
+      const grid = document.getElementById('shopProductGrid');
+      const emptyState = document.getElementById('shopEmptyState');
+      const countText = document.getElementById('resultsCountText');
+      const resetBtn = document.getElementById('resetFiltersBtn');
+
+      let filtered = PRODUCTS.filter(p => {
+        // Pretraga
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase().trim();
+          const matchName = p.name.toLowerCase().includes(q);
+          const matchCat = p.category.toLowerCase().includes(q);
+          const matchDesc = p.description.toLowerCase().includes(q);
+          if (!matchName && !matchCat && !matchDesc) return false;
+        }
+
+        // Kategorija
+        if (currentCategory !== 'all') {
+          if (p.categorySlug !== currentCategory) return false;
+        }
+
+        // Veličina
+        if (currentSelectedSize) {
+          if (!p.sizes.includes(parseInt(currentSelectedSize, 10))) return false;
+        }
+
+        return true;
+      });
+
+      // Sortiranje
+      if (currentSort === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (currentSort === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (currentSort === 'rating') {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      // Tekst broja rezultata
+      countText.textContent = `Prikazano ${filtered.length} od ${PRODUCTS.length} modela`;
+      const hasActiveFilters = currentCategory !== 'all' || currentSelectedSize !== null || searchQuery !== '';
+      resetBtn.style.display = hasActiveFilters ? 'inline-block' : 'none';
+
+      if (filtered.length === 0) {
+        grid.style.display = 'none';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      grid.style.display = 'grid';
+      emptyState.style.display = 'none';
+
+      let html = '';
+      filtered.forEach(product => {
+        const thumb = product.images[0];
+        let badgeHtml = '';
+        if (product.badge) {
+          const badgeClass = product.badge.includes('Bestseller') ? 'badge--bestseller' : (product.badge.includes('Novo') ? 'badge--new' : 'badge--sale');
+          badgeHtml = `<span class="product-card__badge ${badgeClass}">${product.badge}</span>`;
+        }
+
+        const oldPriceHtml = product.oldPrice ? `<span class="product-card__old-price">${formatRSD(product.oldPrice)}</span>` : '';
+        const sizesPreview = product.sizes.slice(0, 5).map(s => `<span class="product-card__size-pill ${currentSelectedSize == s ? 'active' : ''}">${s}</span>`).join('') + (product.sizes.length > 5 ? `<span class="product-card__size-pill">+${product.sizes.length - 5}</span>` : '');
+
+        html += `
+          <article class="product-card">
+            <a href="proizvod.html?id=${product.id}" class="product-card__visual">
+              ${badgeHtml}
+              <img src="${thumb}" alt="${product.name}" loading="lazy" width="300" height="300">
+            </a>
+            <div class="product-card__info">
+              <span class="product-card__cat">${product.category}</span>
+              <h3 class="product-card__title">
+                <a href="proizvod.html?id=${product.id}">${product.name}</a>
+              </h3>
+              <div class="product-card__sizes">
+                ${sizesPreview}
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price-group">
+                  <span class="product-card__price">${formatRSD(product.price)}</span>
+                  ${oldPriceHtml}
+                </div>
+                <a href="proizvod.html?id=${product.id}" class="product-card__btn" aria-label="Pogledaj ${product.name}">
+                  <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-right"></use></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      });
+
+      grid.innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Proveri URL query parametar ?cat=
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat');
+      if (catParam) {
+        currentCategory = catParam;
+        document.querySelectorAll('.filter-pill[data-cat]').forEach(p => {
+          p.classList.toggle('active', p.dataset.cat === catParam);
+        });
+      }
+
+      // Event listener za pretragu
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderFilteredProducts();
+      });
+
+      // Event listener za sortiranje
+      const sortSelect = document.getElementById('sortSelect');
+      const mobileSort = document.getElementById('mobileSortSelect');
+
+      sortSelect.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        if (mobileSort) mobileSort.value = currentSort;
+        renderFilteredProducts();
+      });
+
+      if (mobileSort) {
+        mobileSort.addEventListener('change', (e) => {
+          currentSort = e.target.value;
+          sortSelect.value = currentSort;
+          renderFilteredProducts();
+        });
+      }
+
+      // Delegirani klikovi za kategorije i veličine
+      document.body.addEventListener('click', (e) => {
+        const catBtn = e.target.closest('.filter-pill[data-cat]');
+        if (catBtn) {
+          const cat = catBtn.dataset.cat;
+          currentCategory = cat;
+          document.querySelectorAll('.filter-pill[data-cat]').forEach(p => {
+            p.classList.toggle('active', p.dataset.cat === cat);
+          });
+          renderFilteredProducts();
+          return;
+        }
+
+        const sizeBtn = e.target.closest('.filter-pill[data-size]');
+        if (sizeBtn) {
+          const sz = sizeBtn.dataset.size;
+          if (currentSelectedSize === sz) {
+            currentSelectedSize = null;
+            document.querySelectorAll('.filter-pill[data-size]').forEach(p => p.classList.remove('active'));
+          } else {
+            currentSelectedSize = sz;
+            document.querySelectorAll('.filter-pill[data-size]').forEach(p => {
+              p.classList.toggle('active', p.dataset.size === sz);
+            });
+          }
+          renderFilteredProducts();
+          return;
+        }
+      });
+
+      // Zatvaranje filter sheeta na klik van njega
+      const filterOverlay = document.getElementById('mobileFilterSheet');
+      if (filterOverlay) {
+        filterOverlay.addEventListener('click', (e) => {
+          if (e.target === filterOverlay) closeMobileFilterSheet();
+        });
+      }
+
+      // Prvi render
+      renderFilteredProducts();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tn-a-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.25" />
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="tn-a-mesh" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="60%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0B132B" />
+    </linearGradient>
+    <linearGradient id="tn-a-air" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="300" cy="345" rx="225" ry="22" fill="url(#tn-a-shadow)" />
+
+  <g id="sneaker-tn-cyan-angle">
+    <!-- Midsole Base -->
+    <path d="M140 315 C135 305 145 298 165 295 L445 285 C475 285 490 295 485 310 C480 325 455 332 420 334 L165 334 C148 334 142 325 140 315 Z" fill="#FFFFFF" />
+    <path d="M145 330 L425 330 C455 330 475 324 478 334 C470 342 445 344 415 344 L165 344 C148 344 145 338 145 330 Z" fill="#0B132B" />
+
+    <!-- Tuned Air Windows Angle -->
+    <g fill="url(#tn-a-air)" stroke="#0B132B" stroke-width="1.8">
+      <rect x="160" y="315" width="22" height="12" rx="3" />
+      <rect x="190" y="314" width="24" height="12" rx="3" />
+      <rect x="345" y="306" width="22" height="10" rx="3" />
+      <rect x="375" y="304" width="24" height="10" rx="3" />
+    </g>
+
+    <!-- Upper Body Mesh with Cyan to Dark Gradient -->
+    <path d="M155 295 C145 250 165 210 205 195 C230 185 270 190 310 195 L445 240 C470 255 480 275 470 290 L155 295 Z" fill="url(#tn-a-mesh)" />
+
+    <!-- Ribs (TPU Cage) in Perspective -->
+    <g stroke="#0B132B" stroke-width="4.5" stroke-linecap="round" fill="none">
+      <path d="M185 220 C180 245 185 270 190 295" />
+      <path d="M225 210 C220 240 226 268 238 294" />
+      <path d="M275 215 C275 242 284 268 300 292" />
+      <path d="M330 228 C336 250 350 272 370 290" />
+      <path d="M385 245 C395 262 410 278 430 288" />
+    </g>
+
+    <!-- Yellow Tuned Swoosh -->
+    <path d="M270 250 C290 252 318 256 332 254 C320 262 300 264 285 260 Z" fill="#FBBF24" stroke="#0B132B" stroke-width="1.2" />
+
+    <!-- Black Mudguard -->
+    <path d="M365 290 C360 255 385 235 415 230 C450 238 475 260 475 280 C475 290 450 294 410 294 L365 290 Z" fill="#0B132B" />
+
+    <!-- Collar & Tongue -->
+    <path d="M195 200 C205 170 240 160 270 165 C285 168 295 180 295 195 L255 205 C240 195 220 195 205 205 Z" fill="#0B132B" />
+    <path d="M260 165 L310 145 C320 142 328 148 328 158 L320 200 L275 205 Z" fill="#0F172A" />
+
+    <!-- Lacing -->
+    <g stroke="#38BDF8" stroke-width="3" stroke-linecap="round">
+      <line x1="280" y1="185" x2="315" y2="175" />
+      <line x1="275" y1="200" x2="305" y2="190" />
+      <line x1="270" y1="215" x2="295" y2="205" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="fw-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.18" />
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="fw-sole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="85%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="305" cy="345" rx="230" ry="24" fill="url(#fw-shadow)" />
+
+  <g id="sneaker-force-white">
+    <!-- Padded Collar Lining (Clean White) -->
+    <path d="M145 180 C145 152 170 140 205 145 C222 147 240 162 250 178 L232 195 C222 185 205 176 185 176 C165 176 150 184 145 178 Z" fill="#F1F5F9" />
+    <path d="M148 182 C156 162 178 154 208 158 C225 160 240 172 248 184" stroke="#CBD5E1" stroke-width="4" fill="none" stroke-linecap="round" />
+
+    <!-- Tongue -->
+    <path d="M210 150 L275 128 C282 125 292 129 295 138 L308 188 L252 205 Z" fill="#FFFFFF" />
+    <!-- Tongue silver lace dubrae badge & tag -->
+    <rect x="270" y="128" width="22" height="15" rx="2" fill="#E2E8F0" transform="rotate(-18 270 128)" />
+    <line x1="274" y1="135" x2="286" y2="131" stroke="#94A3B8" stroke-width="2" />
+
+    <!-- Main Leather Base (Crisp Triple White) -->
+    <path d="M125 240 C122 198 140 182 165 182 C185 182 225 198 250 202 C285 206 360 215 410 230 C455 244 505 270 515 295 C518 305 500 310 470 310 L130 310 C120 310 115 290 125 240 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+
+    <!-- Toe Box (Perforated) -->
+    <path d="M395 242 C430 250 480 272 498 290 C505 298 480 305 450 306 L380 306 C368 280 375 255 395 242 Z" fill="#F8FAFC" />
+    <g fill="#CBD5E1">
+      <circle cx="435" cy="272" r="2.2" />
+      <circle cx="447" cy="275" r="2.2" />
+      <circle cx="459" cy="280" r="2.2" />
+      <circle cx="430" cy="282" r="2.2" />
+      <circle cx="442" cy="285" r="2.2" />
+      <circle cx="454" cy="290" r="2.2" />
+      <circle cx="425" cy="292" r="2.2" />
+      <circle cx="437" cy="295" r="2.2" />
+      <circle cx="420" cy="301" r="2.2" />
+    </g>
+
+    <!-- Toe Overlay Stitching -->
+    <path d="M375 306 C370 275 385 248 415 240 C465 248 512 280 520 298 C524 308 505 310 460 310 L375 306 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Heel Overlay -->
+    <path d="M125 240 C121 200 138 180 165 180 C182 180 205 188 220 196 L210 245 C190 255 160 255 130 255 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M118 275 C116 250 120 230 135 225 C160 225 185 245 195 270 C200 288 195 306 190 310 L122 310 C116 305 116 290 118 275 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Eyestay Overlay -->
+    <path d="M225 196 L298 152 C306 150 315 158 312 168 L285 240 C280 248 270 250 260 248 L220 238 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Silver Metal AF1 Lace Dubrae at bottom of laces -->
+    <rect x="330" y="240" width="18" height="8" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1" transform="rotate(12 330 240)" />
+
+    <!-- Laces (White Flat Cotton) -->
+    <g stroke="#F8FAFC" stroke-width="5.5" stroke-linecap="round">
+      <path d="M305 180 L275 170" />
+      <path d="M298 196 L268 184" />
+      <path d="M288 212 L258 200" />
+      <path d="M278 228 L250 216" />
+      <path d="M265 242 L245 232" />
+    </g>
+
+    <!-- Swoosh Overlay (White Leather with Shadow Outline) -->
+    <path d="M190 248 C240 240 310 242 370 262 C395 270 410 282 395 285 C370 290 320 270 270 262 C230 256 195 260 185 262 L190 248 Z" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.8" />
+    <path d="M190 248 C160 245 140 230 135 210 C140 215 165 235 190 248 Z" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.8" />
+
+    <!-- Chunky Cupsole Midsole (Solid White with Embossed AIR text) -->
+    <path d="M115 310 C112 302 118 296 130 296 L475 296 C505 296 525 304 522 318 C520 326 500 330 460 330 L130 330 C116 330 114 322 115 310 Z" fill="url(#fw-sole)" />
+    <!-- Sole Top Stitching -->
+    <path d="M125 304 L485 304 C500 304 510 308 512 312" stroke="#CBD5E1" stroke-width="1.8" stroke-dasharray="4 3" fill="none" />
+    <!-- AIR embossed line -->
+    <line x1="165" y1="316" x2="225" y2="316" stroke="#CBD5E1" stroke-width="2" />
+    <text x="180" y="324" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="900" fill="#94A3B8" letter-spacing="2">AIR</text>
+
+    <!-- Outsole Bottom Tread -->
+    <path d="M116 328 L475 328 C505 328 518 331 516 336 C514 340 495 342 455 342 L132 342 C118 342 115 336 116 328 Z" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+  </g>
+</svg>

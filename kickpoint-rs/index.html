@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kickpoint.rs | Prodaja patika u Srbiji - Plaćanje pouzećem</title>
+  <meta name="description" content="Kickpoint.rs - Najtraženiji modeli patika u Srbiji. Plaćanje pouzećem pri preuzimanju, brza dostava na tvoju adresu za 48h i jednostavna zamena veličine.">
+  <link rel="canonical" href="https://kickpoint.rs/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Kickpoint.rs">
+  <meta property="og:title" content="Kickpoint.rs | Prodaja patika u Srbiji">
+  <meta property="og:description" content="Najtraženiji modeli patika uz plaćanje pouzećem i brzu dostavu širom Srbije. Bezbedna kupovina i laka zamena veličine.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kickpoint.rs/">
+  <meta property="og:image" content="assets/products/model-tn-cyan.svg">
+
+  <!-- Fontovi (Google Fonts sa font-display: swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stilovi -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Struktuirani podaci -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kickpoint.rs",
+    "url": "https://kickpoint.rs",
+    "logo": "https://kickpoint.rs/assets/logo.svg",
+    "description": "Specijalizovana online prodavnica patika u Srbiji sa plaćanjem pouzećem i brzom dostavom.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "RS"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    Dostava širom Srbije za 48h &bull; Plaćanje pouzećem pri preuzimanju paketa &bull; <a href="prodavnica.html">Pogledaj sve modele</a>
+  </div>
+
+  <!-- Zaglavlje (Header) -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- Logo -->
+      <a href="index.html" class="site-header__logo" aria-label="Kickpoint.rs početna strana">
+        <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="220" height="38">
+      </a>
+
+      <!-- Desktop Navigacija -->
+      <nav class="site-nav" aria-label="Glavna navigacija">
+        <a href="index.html" class="site-nav__link active">Početna</a>
+        <a href="prodavnica.html" class="site-nav__link">Prodavnica</a>
+        <a href="#dostava-i-zamena" class="site-nav__link">Dostava i zamena</a>
+        <a href="#kontakt" class="site-nav__link">Kontakt</a>
+      </nav>
+
+      <!-- Akcije: Korpa i Mobilni meni -->
+      <div class="site-header__actions">
+        <button type="button" class="cart-trigger" onclick="openCartDrawer()" aria-label="Otvori korpu">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-cart"></use></svg>
+          <span class="cart-trigger__badge cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <button type="button" class="menu-trigger" onclick="toggleMobileNav()" aria-label="Otvori meni">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-filter"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobilni navigacioni meni -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobilna navigacija">
+    <a href="index.html" class="mobile-nav__link" onclick="closeMobileNav()">Početna</a>
+    <a href="prodavnica.html" class="mobile-nav__link" onclick="closeMobileNav()">Prodavnica</a>
+    <a href="#dostava-i-zamena" class="mobile-nav__link" onclick="closeMobileNav()">Dostava i zamena</a>
+    <a href="#kontakt" class="mobile-nav__link" onclick="closeMobileNav()">Kontakt</a>
+    <button type="button" class="btn btn--primary btn--full" style="margin-top: 16px;" onclick="closeMobileNav(); openCartDrawer();">
+      Tvoja korpa (<span class="cart-count-badge">0</span>)
+    </button>
+  </nav>
+
+  <main>
+    <!-- 1. HERO SEKCIJA -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <svg class="icon icon--sm"><use href="assets/icons.svg#icon-shield"></use></svg>
+            Sigurna kupovina &bull; Plaćanje kuriru
+          </div>
+          <h1 class="hero__title">
+            Tvoj sledeći par patika na tvojoj adresi za <span class="text-gradient">48 sati</span>.
+          </h1>
+          <p class="hero__subtitle">
+            Jednostavno naručivanje u dva klika bez registracije. Pregledaj najtraženije modele, izaberi svoj broj i plati tek kada ti paket stigne u ruke.
+          </p>
+          <div class="hero__actions">
+            <a href="prodavnica.html" class="btn btn--primary btn--lg">
+              Pogledaj modele <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-right"></use></svg>
+            </a>
+            <a href="#kako-naruciti" class="btn btn--secondary btn--lg">
+              Kako funkcioniše
+            </a>
+          </div>
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-check"></use></svg>
+              Svi brojevi od 38 do 46
+            </div>
+            <div class="hero__meta-item">
+              <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-check"></use></svg>
+              14 dana za besplatnu zamenu
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__card">
+            <div class="hero__tag-floating">
+              <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-star"></use></svg>
+              <span>Bestseller &bull; Model TN Sky Cyan</span>
+            </div>
+            <img src="assets/products/model-tn-cyan.svg" class="hero__sneaker-img" alt="Kickpoint Model TN Sky Cyan" width="700" height="440" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RED POVERENJA (TRUST BAR - 3 ključna stuba) -->
+    <section class="trust-bar" id="dostava-i-zamena">
+      <div class="container trust-bar__grid">
+        <!-- 1. Pouzeće -->
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg class="icon icon--lg"><use href="assets/icons.svg#icon-shield"></use></svg>
+          </div>
+          <div>
+            <h3 class="trust-item__title">Plaćanje pouzećem</h3>
+            <p class="trust-item__desc">Bez unosa platnih kartica. Plaćate u gotovini kuriru tek kada preuzmete pošiljku.</p>
+          </div>
+        </div>
+
+        <!-- 2. Dostava -->
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg class="icon icon--lg"><use href="assets/icons.svg#icon-truck"></use></svg>
+          </div>
+          <div>
+            <h3 class="trust-item__title">Dostava širom Srbije za 48h</h3>
+            <p class="trust-item__desc">Brza isporuka kurirskom službom Post Express ili BEX direktno na vaša vrata.</p>
+          </div>
+        </div>
+
+        <!-- 3. Zamena veličine -->
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg class="icon icon--lg"><use href="assets/icons.svg#icon-repeat"></use></svg>
+          </div>
+          <div>
+            <h3 class="trust-item__title">Laka zamena veličine</h3>
+            <p class="trust-item__desc">Ako broj ne odgovara u potpunosti, menjamo za odgovarajući broj u roku od 14 dana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. IZDVOJENI MODELI (8 MODELA) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-header__tag">Aktuelna ponuda</span>
+          <h2 class="section-header__title">Izdvojeni modeli patika</h2>
+          <p class="section-header__subtitle">
+            Najtraženije siluete i koloriti sa direktnim stanjem veličina.
+          </p>
+        </div>
+
+        <!-- Mreža 8 modela -->
+        <div class="product-grid" id="featuredProductGrid">
+          <!-- Dinamički renderovano iz js/products.js radi čistog i konzistentnog koda -->
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-8);">
+          <a href="prodavnica.html" class="btn btn--dark btn--lg">
+            Pogledaj celu kolekciju u prodavnici <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KAKO NARUČITI (3 KORAKA) -->
+    <section class="how-it-works section-padding" id="kako-naruciti">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-header__tag">Jednostavan proces</span>
+          <h2 class="section-header__title">Kako da poručiš u 3 koraka</h2>
+          <p class="section-header__subtitle">
+            Kupovina je maksimalno pojednostavljena — bez komplikovanih registracija i šifara.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Korak 1 -->
+          <div class="step-card">
+            <div class="step-card__number">1</div>
+            <h3 class="step-card__title">Izaberi model i svoj broj</h3>
+            <p class="step-card__desc">
+              Odaberi patike koje ti se dopadaju, selektuj svoju standardnu veličinu (od 38 do 46) i klikni na "Dodaj u korpu".
+            </p>
+          </div>
+
+          <!-- Korak 2 -->
+          <div class="step-card">
+            <div class="step-card__number">2</div>
+            <h3 class="step-card__title">Unesi podatke za isporuku</h3>
+            <p class="step-card__desc">
+              Popuni osnovne podatke za kurira: ime, adresu, grad i broj telefona na jednoj jednostavnoj stranici u samo 30 sekundi.
+            </p>
+          </div>
+
+          <!-- Korak 3 -->
+          <div class="step-card">
+            <div class="step-card__number">3</div>
+            <h3 class="step-card__title">Plati kuriru pri preuzimanju</h3>
+            <p class="step-card__desc">
+              Paket ti stiže na kućnu adresu za 24–48h. Otvori paket i plati pouzećem gotovinom kada preuzmeš svoje nove patike.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. UTISCI KUPACA (RECENZIJE) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-header__tag">Iskustva kupaca</span>
+          <h2 class="section-header__title">Šta kažu oni koji već nose naše modele</h2>
+          <p class="section-header__subtitle">
+            Preko 20.000 pratilaca na Instagramu i stotine uspešno isporučenih paketa svakog meseca.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Kartica 1 -->
+          <div class="review-card">
+            <div class="review-card__stars">
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+            </div>
+            <p class="review-card__text">
+              "Stigle su bukvalno za 48 sati u Niš. Prezadovoljan sam izgledom i kvalitetom za ovaj novac. Platio kuriru na vratima, sve čisto i uredno."
+            </p>
+            <div class="review-card__author">
+              <div>
+                <div class="review-card__name">Miloš K.</div>
+                <div class="review-card__location">Niš &bull; Model TN Sky Cyan</div>
+              </div>
+              <span class="review-card__verified">
+                <svg class="icon icon--sm"><use href="assets/icons.svg#icon-check"></use></svg> Potvrđeno
+              </span>
+            </div>
+          </div>
+
+          <!-- Kartica 2 -->
+          <div class="review-card">
+            <div class="review-card__stars">
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+            </div>
+            <p class="review-card__text">
+              "Prvi put sam promašio broj za pola centimetra. Javili su se odmah na Instagramu i zamenili za veći bez ijedne reči. Retko korektna ekipa, svaka čast!"
+            </p>
+            <div class="review-card__author">
+              <div>
+                <div class="review-card__name">Stefan M.</div>
+                <div class="review-card__location">Beograd &bull; Model TL Stealth Black</div>
+              </div>
+              <span class="review-card__verified">
+                <svg class="icon icon--sm"><use href="assets/icons.svg#icon-check"></use></svg> Potvrđeno
+              </span>
+            </div>
+          </div>
+
+          <!-- Kartica 3 -->
+          <div class="review-card">
+            <div class="review-card__stars">
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-star"></use></svg>
+            </div>
+            <p class="review-card__text">
+              "Bele Court Classic patike su san snova. Udobne, prošiven đon, stoje savršeno i uz farmerke i trenerku. Naručujem sigurno još jedan par uskoro."
+            </p>
+            <div class="review-card__author">
+              <div>
+                <div class="review-card__name">Jelena P.</div>
+                <div class="review-card__location">Novi Sad &bull; Model Court Classic</div>
+              </div>
+              <span class="review-card__verified">
+                <svg class="icon icon--sm"><use href="assets/icons.svg#icon-check"></use></svg> Potvrđeno
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Napomena o primeru utisaka -->
+        <!-- POTVRDITI SA KLIJENTOM -->
+        <p class="reviews-placeholder-note">
+          * Prikazani utisci su ilustrativni primeri korisničkih iskustava pripremljeni za potrebe demonstracije sajta.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. FAQ (5 KLJUČNIH PITANJA) -->
+    <section class="section-padding" style="background: var(--bg-subtle); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-header__tag">Česta pitanja</span>
+          <h2 class="section-header__title">Sve što te zanima o kupovini</h2>
+          <p class="section-header__subtitle">
+            Kratki i direktni odgovori na najčešća pitanja naših kupaca.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Pitanje 1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>Kako funkcioniše plaćanje pouzećem?</span>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-down"></use></svg>
+            </button>
+            <div class="faq-answer">
+              Plaćanje pouzećem znači da ceo iznos porudžbine plaćaš gotovinom kuriru tek u trenutku kada ti paket uruči na tvojoj adresi. Nije potrebno unositi podatke sa platne kartice niti plaćati bilo šta unapred.
+            </div>
+          </div>
+
+          <!-- Pitanje 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Koliko traje isporuka i kolika je cena poštarine?</span>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-down"></use></svg>
+            </button>
+            <div class="faq-answer">
+              Sve porudžbine poslate radnim danom do 14h šaljemo istog dana. Isporuka na teritoriji cele Srbije obično traje 24 do 48 radnih sati. Poštarina za sve narudžbine iznad 7.000 RSD je besplatna, dok je za manje iznose fiksna i iznosi 390 RSD <!-- POTVRDITI SA KLIJENTOM -->.
+            </div>
+          </div>
+
+          <!-- Pitanje 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Šta se dešava ako mi veličina patika ne odgovara?</span>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-down"></use></svg>
+            </button>
+            <div class="faq-answer">
+              Ukoliko ti patike budu preuske ili komotne, imaš rok od 14 dana od prijema da nam se javiš radi zamene veličine. Dovoljno je da nas kontaktiraš na Instagram ili telefon podrške, i novi broj ti šaljemo odmah po dogovoru. Patike ne smeju imati tragove spoljnog nošenja.
+            </div>
+          </div>
+
+          <!-- Pitanje 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Da li moram da pravim nalog da bih naručio?</span>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-down"></use></svg>
+            </button>
+            <div class="faq-answer">
+              Ne! Nema potrebe za kreiranjem naloga, pamtanjem šifara niti verifikacijom putem emaila. Dovoljno je da uneseš svoje ime, prezime, adresu i broj telefona za kurira i porudžbina je gotova za pola minuta.
+            </div>
+          </div>
+
+          <!-- Pitanje 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Kako da tačno odredim veličinu svog stopala?</span>
+              <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-down"></use></svg>
+            </button>
+            <div class="faq-answer">
+              Naši modeli odgovaraju standardnim evropskim EU veličinama (true to size). Preporučujemo da izabereš broj koji standardno nosiš u sportskoj obući. Ako se dvoumiš između dva broja, pogledaj našu <button type="button" onclick="openSizeModal()" style="color: var(--primary); font-weight: 700; text-decoration: underline;">tabelu dužine gazišta u centimetrima</button>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. PODNOŽJE (FOOTER) -->
+  <footer class="site-footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- O sajtu -->
+        <div>
+          <a href="index.html" style="display: inline-block; margin-bottom: 16px;">
+            <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p style="color: #94A3B8; font-size: 0.9375rem; line-height: 1.5; margin-bottom: 16px;">
+            Tvoja pouzdana online prodavnica najtraženijih patika u Srbiji. Brza isporuka kurirskom službom, plaćanje pouzećem i sigurna zamena veličine.
+          </p>
+          <span class="footer-demo-tag">DEMO PROJEKAT &bull; KICKPOINT.RS</span>
+        </div>
+
+        <!-- Brzi linkovi -->
+        <div>
+          <h4 class="footer-col__title">Kupovina</h4>
+          <ul class="footer-nav">
+            <li><a href="prodavnica.html">Svi modeli patika</a></li>
+            <li><a href="prodavnica.html?cat=air">Air & Tuned modeli</a></li>
+            <li><a href="prodavnica.html?cat=court">Lifestyle & Court</a></li>
+            <li><a href="prodavnica.html?cat=retro">Retro siluete</a></li>
+            <li><a href="javascript:void(0)" onclick="openSizeModal()">Tabela veličina (cm)</a></li>
+          </ul>
+        </div>
+
+        <!-- Podrška i uslovi -->
+        <div>
+          <h4 class="footer-col__title">Informacije</h4>
+          <ul class="footer-nav">
+            <li><a href="#dostava-i-zamena">Plaćanje pouzećem</a></li>
+            <li><a href="#dostava-i-zamena">Rokovi i cene isporuke</a></li>
+            <li><a href="#dostava-i-zamena">Zamena veličine (14 dana)</a></li>
+            <li><a href="#kako-naruciti">Kako naručiti</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt info -->
+        <div>
+          <h4 class="footer-col__title">Kontakt i narudžbine</h4>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-instagram"></use></svg>
+            <a href="https://instagram.com/kickpoint.rs" target="_blank" rel="noopener">@kickpoint.rs (Instagram DM)</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-phone"></use></svg>
+            <span>Pon - Sub: 09:00 - 18:00h</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon icon--sm" style="color: #38BDF8;"><use href="assets/icons.svg#icon-truck"></use></svg>
+            <span>Isporuka: Cela teritorija Srbije</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Kickpoint.rs &bull; Sva prava zadržana.</div>
+        <div>Dizajnirano i optimizovano za mobilne uređaje (Mobile First).</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- KORPA DRAWER (ZAJEDNIČKI ZA SVE STRANICE) -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <aside class="cart-drawer" aria-label="Tvoja korpa">
+      <div class="cart-drawer__header">
+        <h3 class="cart-drawer__title">
+          <svg class="icon icon--lg" style="color: var(--primary);"><use href="assets/icons.svg#icon-cart"></use></svg>
+          Tvoja korpa (<span class="cart-count-badge">0</span>)
+        </h3>
+        <button type="button" class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Zatvori korpu">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+
+      <!-- Free shipping progress bar -->
+      <div class="shipping-bar" id="cartShippingBar" style="display: none;"></div>
+
+      <!-- Stavke u korpi -->
+      <div class="cart-drawer__body" id="cartDrawerItems"></div>
+
+      <!-- Footer korpe sa zbirom -->
+      <div class="cart-drawer__footer" id="cartDrawerFooter" style="display: none;"></div>
+    </aside>
+  </div>
+
+  <!-- TABELA VELIČINA (MODAL) -->
+  <div class="modal-overlay" id="sizeGuideModal" role="dialog" aria-modal="true" aria-labelledby="sizeModalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="sizeModalTitle" style="display: flex; align-items: center; gap: 8px;">
+          <svg class="icon icon--lg" style="color: var(--primary);"><use href="assets/icons.svg#icon-ruler"></use></svg>
+          Tabela veličina obuće
+        </h3>
+        <button type="button" class="cart-drawer__close" onclick="closeSizeModal()" aria-label="Zatvori">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Naši modeli odgovaraju standardnim evropskim kalupima (EU). Izmerite dužinu gazišta od pete do najdužeg prsta u centimetrima (CM).
+        </p>
+
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>EU Veličina</th>
+              <th>Dužina gazišta (CM)</th>
+              <th>US Men</th>
+              <th>UK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>38</strong></td><td>24.0 cm</td><td>5.5</td><td>5.0</td></tr>
+            <tr><td><strong>39</strong></td><td>24.5 cm</td><td>6.5</td><td>6.0</td></tr>
+            <tr><td><strong>40</strong></td><td>25.0 cm</td><td>7.0</td><td>6.0</td></tr>
+            <tr><td><strong>41</strong></td><td>26.0 cm</td><td>8.0</td><td>7.0</td></tr>
+            <tr><td><strong>42</strong></td><td>26.5 cm</td><td>8.5</td><td>7.5</td></tr>
+            <tr><td><strong>43</strong></td><td>27.5 cm</td><td>9.5</td><td>8.5</td></tr>
+            <tr><td><strong>44</strong></td><td>28.0 cm</td><td>10.0</td><td>9.0</td></tr>
+            <tr><td><strong>45</strong></td><td>29.0 cm</td><td>11.0</td><td>10.0</td></tr>
+            <tr><td><strong>46</strong></td><td>30.0 cm</td><td>12.0</td><td>11.0</td></tr>
+          </tbody>
+        </table>
+
+        <div style="background: var(--bg-subtle); border-radius: var(--radius-sm); padding: 12px; margin-top: 16px; font-size: 0.8125rem; color: var(--text-secondary);">
+          <strong>Savet:</strong> Ukoliko ste između dva broja, preporučujemo odabir pola broja ili jednog broja većeg radi veće udobnosti. Podsećamo da u roku od 14 dana imate mogućnost besplatne zamene veličine!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skripte -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Inicijalizacija 8 izdvojenih proizvoda na početnoj strani
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('featuredProductGrid');
+      if (!grid) return;
+
+      const featured = PRODUCTS.slice(0, 8);
+      let html = '';
+
+      featured.forEach(product => {
+        const thumb = product.images[0];
+        let badgeHtml = '';
+        if (product.badge) {
+          const badgeClass = product.badge.includes('Bestseller') ? 'badge--bestseller' : (product.badge.includes('Novo') ? 'badge--new' : 'badge--sale');
+          badgeHtml = `<span class="product-card__badge ${badgeClass}">${product.badge}</span>`;
+        }
+
+        const oldPriceHtml = product.oldPrice ? `<span class="product-card__old-price">${formatRSD(product.oldPrice)}</span>` : '';
+
+        // Prikaz dostupnih veličina u kratkoj formi
+        const sizesPreview = product.sizes.slice(0, 5).map(s => `<span class="product-card__size-pill">${s}</span>`).join('') + (product.sizes.length > 5 ? `<span class="product-card__size-pill">+${product.sizes.length - 5}</span>` : '');
+
+        html += `
+          <article class="product-card">
+            <a href="proizvod.html?id=${product.id}" class="product-card__visual">
+              ${badgeHtml}
+              <img src="${thumb}" alt="${product.name}" loading="lazy" width="300" height="300">
+            </a>
+            <div class="product-card__info">
+              <span class="product-card__cat">${product.category}</span>
+              <h3 class="product-card__title">
+                <a href="proizvod.html?id=${product.id}">${product.name}</a>
+              </h3>
+              <div class="product-card__sizes">
+                ${sizesPreview}
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price-group">
+                  <span class="product-card__price">${formatRSD(product.price)}</span>
+                  ${oldPriceHtml}
+                </div>
+                <a href="proizvod.html?id=${product.id}" class="product-card__btn" aria-label="Pogledaj ${product.name}">
+                  <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-right"></use></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      });
+
+      grid.innerHTML = html;
+    });
+  </script>
+</body>
+</html>

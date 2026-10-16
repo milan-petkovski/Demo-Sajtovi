@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" width="100%" height="100%">
+  <defs>
+    <!-- Realistic ground drop shadow -->
+    <radialGradient id="tn-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.28" />
+      <stop offset="50%" stop-color="#0F172A" stop-opacity="0.12" />
+      <stop offset="85%" stop-color="#0F172A" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Mesh Sunset/Sky Gradient (Cyan to Royal to Midnight) -->
+    <linearGradient id="tn-sky-mesh" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="35%" stop-color="#0284C7" />
+      <stop offset="70%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0B132B" />
+    </linearGradient>
+
+    <!-- Midsole White Gradient -->
+    <linearGradient id="tn-midsole-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Whale Tail Shank Gradient -->
+    <linearGradient id="tn-whale-shank" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0B132B" />
+    </linearGradient>
+
+    <!-- Tuned Air Chamber Glow (Red-Orange Tuned Hemispheres) -->
+    <radialGradient id="air-bubble-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FF5722" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#D84315" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#212121" stop-opacity="0.95" />
+    </radialGradient>
+
+    <!-- Glossy Highlight on TPU cage -->
+    <linearGradient id="cage-gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Ambient Ground Drop Shadow -->
+  <ellipse cx="360" cy="380" rx="270" ry="24" fill="url(#tn-shadow)" />
+  <ellipse cx="400" cy="382" rx="190" ry="16" fill="url(#tn-shadow)" opacity="0.6" />
+
+  <!-- SNEAKER VECTOR GROUP -->
+  <g id="sneaker-tn-air-plus" transform="translate(20, 20)">
+
+    <!-- Padded Collar Lining & Sockliner (Black) -->
+    <path d="M165 175 C162 142 190 125 230 132 C252 136 272 152 282 172 L260 190 C248 178 230 168 208 168 C185 168 170 178 165 175 Z" fill="#0B132B" />
+    <path d="M170 178 C180 156 205 146 238 150 C256 152 272 166 280 178" stroke="#1E293B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+
+    <!-- Tongue Body -->
+    <path d="M235 135 L310 105 C318 102 328 106 332 115 L345 172 L285 192 Z" fill="#0B132B" />
+    <!-- Tongue Hexagon TN Emblem -->
+    <polygon points="310,110 322,116 322,128 310,134 298,128 298,116" fill="#FBBF24" stroke="#0B132B" stroke-width="1.5" />
+    <text x="310" y="125" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="900" text-anchor="middle" fill="#0B132B">TN</text>
+
+    <!-- Main Upper Mesh (Vibrant Cyan to Dark Royal Gradient) -->
+    <path d="M142 245 C138 200 158 178 188 178 C212 178 255 195 285 200 C325 205 410 215 470 232 C520 248 578 275 588 304 C592 315 570 320 535 320 L148 320 C136 320 132 300 142 245 Z" fill="url(#tn-sky-mesh)" />
+
+    <!-- TPU Palm Tree Rib Exoskeleton (Tapered Elegant Ribs) -->
+    <!-- Rib 1 (Heel) -->
+    <path d="M175 220 C168 250 170 282 176 312" stroke="url(#cage-gloss)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M202 210 C194 245 195 280 204 314" stroke="url(#cage-gloss)" stroke-width="5.5" stroke-linecap="round" fill="none" />
+    <!-- Rib 2 -->
+    <path d="M236 206 C228 244 230 280 240 315" stroke="url(#cage-gloss)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Rib 3 -->
+    <path d="M275 208 C268 245 272 282 284 316" stroke="url(#cage-gloss)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Rib 4 -->
+    <path d="M315 214 C312 248 318 282 334 318" stroke="url(#cage-gloss)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Rib 5 -->
+    <path d="M358 222 C360 252 372 285 390 318" stroke="url(#cage-gloss)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Rib 6 -->
+    <path d="M405 232 C412 258 428 288 450 318" stroke="url(#cage-gloss)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- Rib 7 (Forefoot) -->
+    <path d="M455 246 C466 268 488 294 515 318" stroke="url(#cage-gloss)" stroke-width="5.5" stroke-linecap="round" fill="none" />
+    <!-- Rib 8 (Toe) -->
+    <path d="M510 265 C522 282 542 302 562 318" stroke="url(#cage-gloss)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Mini Lateral Swoosh (Yellow/Gold with Sharp Red/Black Contour) -->
+    <g transform="translate(305, 260)">
+      <path d="M0 8 C18 10 44 14 62 8 C50 18 28 22 12 18 Z" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+      <path d="M0 8 C6 2 12 -4 14 -10 C13 -6 8 0 0 8 Z" fill="#FBBF24" stroke="#D97706" stroke-width="1.2" />
+    </g>
+
+    <!-- Glossy Clear TPU Toe Bumper Cap -->
+    <path d="M545 292 C565 296 588 306 586 316 C582 322 558 322 530 322 L525 312 C536 304 542 298 545 292 Z" fill="#0F172A" opacity="0.85" />
+    <!-- Toe cap highlight reflection -->
+    <path d="M552 298 C570 304 580 312 580 316" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6" />
+
+    <!-- Patent Leather Mudguard (Contoured Base wrapping whole sneaker) -->
+    <path d="M140 298 C135 284 145 272 160 272 C190 274 250 282 320 286 C390 290 480 298 535 304 C575 308 588 314 588 320 L140 320 Z" fill="#0B132B" />
+    <!-- Mudguard edge highlight -->
+    <path d="M148 296 C190 286 260 284 335 288 C410 292 490 300 550 306" stroke="#334155" stroke-width="1.5" fill="none" />
+
+    <!-- Heel Hexagon TN Emblem -->
+    <polygon points="144,285 152,289 152,298 144,302 136,298 136,289" fill="#FBBF24" stroke="#0B132B" stroke-width="1" />
+    <text x="144" y="296" font-family="'Space Grotesk', sans-serif" font-size="5.5" font-weight="900" text-anchor="middle" fill="#0B132B">TN</text>
+
+    <!-- Ghillie Lacing Eyestay Panel -->
+    <path d="M255 198 L340 148 C348 145 358 152 355 162 L325 240 C320 248 310 250 300 248 L252 238 Z" fill="#0B132B" />
+
+    <!-- Lacing System (Ghillie loops + Round White/Cyan Flecked Laces) -->
+    <g stroke="#38BDF8" stroke-width="3" stroke-linecap="round">
+      <line x1="275" y1="205" x2="295" y2="195" />
+      <line x1="292" y1="218" x2="312" y2="208" />
+      <line x1="310" y1="230" x2="330" y2="220" />
+      <line x1="326" y1="242" x2="346" y2="232" />
+    </g>
+    <g stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round">
+      <line x1="282" y1="200" x2="308" y2="190" />
+      <line x1="300" y1="212" x2="325" y2="202" />
+      <line x1="318" y1="225" x2="340" y2="215" />
+    </g>
+
+    <!-- Tuned Midsole (Sculpted Crisp White Arch with Curves) -->
+    <path d="M130 320 C126 312 132 306 148 306 L545 306 C578 306 598 314 596 328 C594 336 570 340 530 340 L146 340 C130 340 128 332 130 320 Z" fill="url(#tn-midsole-grad)" />
+
+    <!-- Whale Tail Midfoot Shank Plate (Cyan/Blue Gradient Architecture) -->
+    <path d="M295 320 C315 306 340 308 358 338 L310 340 Z" fill="url(#tn-whale-shank)" stroke="#0284C7" stroke-width="1.5" />
+
+    <!-- Tuned Air Bubbles (Visible Air Windows with Red/Orange Chambers) -->
+    <!-- Heel Chamber 1 -->
+    <rect x="156" y="320" width="28" height="15" rx="5" fill="url(#air-bubble-glow)" stroke="#0B132B" stroke-width="2" />
+    <line x1="170" y1="320" x2="170" y2="335" stroke="#FBBF24" stroke-width="2.5" />
+
+    <!-- Heel Chamber 2 -->
+    <rect x="194" y="321" width="30" height="15" rx="5" fill="url(#air-bubble-glow)" stroke="#0B132B" stroke-width="2" />
+    <line x1="209" y1="321" x2="209" y2="336" stroke="#FBBF24" stroke-width="2.5" />
+
+    <!-- Forefoot Chamber 1 -->
+    <rect x="390" y="322" width="28" height="14" rx="4.5" fill="url(#air-bubble-glow)" stroke="#0B132B" stroke-width="2" />
+    <line x1="404" y1="322" x2="404" y2="336" stroke="#FBBF24" stroke-width="2" />
+
+    <!-- Forefoot Chamber 2 -->
+    <rect x="428" y="322" width="30" height="14" rx="4.5" fill="url(#air-bubble-glow)" stroke="#0B132B" stroke-width="2" />
+    <line x1="443" y1="322" x2="443" y2="336" stroke="#FBBF24" stroke-width="2" />
+
+    <!-- Forefoot Chamber 3 -->
+    <rect x="468" y="323" width="28" height="13" rx="4" fill="url(#air-bubble-glow)" stroke="#0B132B" stroke-width="2" />
+    <line x1="482" y1="323" x2="482" y2="336" stroke="#FBBF24" stroke-width="2" />
+
+    <!-- Tuned Air Chamber Highlights (Glassy Reflections) -->
+    <rect x="160" y="322" width="20" height="3" rx="1.5" fill="#FFFFFF" opacity="0.6" />
+    <rect x="198" y="323" width="22" height="3" rx="1.5" fill="#FFFFFF" opacity="0.6" />
+    <rect x="394" y="324" width="20" height="2.5" rx="1.2" fill="#FFFFFF" opacity="0.6" />
+    <rect x="432" y="324" width="22" height="2.5" rx="1.2" fill="#FFFFFF" opacity="0.6" />
+
+    <!-- Outsole Bottom Rubber (Black Waffle Tread with Grip Nodes) -->
+    <path d="M132 338 L545 338 C578 338 592 342 590 348 C588 353 568 355 528 355 L150 355 C134 355 130 348 132 338 Z" fill="#0B132B" />
+    <!-- Yellow Tuned badge on outsole heel -->
+    <polygon points="145,342 153,338 161,342 161,350 153,354 145,350" fill="#FBBF24" />
+
+    <!-- Tread Grip Notches -->
+    <line x1="245" y1="344" x2="245" y2="352" stroke="#334155" stroke-width="2.5" />
+    <line x1="270" y1="344" x2="270" y2="352" stroke="#334155" stroke-width="2.5" />
+    <line x1="370" y1="344" x2="370" y2="352" stroke="#334155" stroke-width="2.5" />
+    <line x1="505" y1="344" x2="505" y2="352" stroke="#334155" stroke-width="2.5" />
+  </g>
+</svg>

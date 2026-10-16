@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tl-b-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.25" />
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="tl-air-full" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="305" cy="345" rx="235" ry="24" fill="url(#tl-b-shadow)" />
+
+  <g id="sneaker-tl-black">
+    <!-- Collar & Tongue -->
+    <path d="M142 188 C140 162 165 145 200 152 C218 156 235 170 245 186 L226 202 C216 192 200 184 180 184 C160 184 146 194 142 188 Z" fill="#1E293B" />
+    <path d="M208 155 L272 130 C280 126 290 130 293 140 L305 192 L250 210 Z" fill="#0F172A" />
+
+    <!-- Main Upper (Stealth Black) -->
+    <path d="M125 245 C122 205 140 188 165 188 C185 188 225 204 250 208 C285 212 360 220 410 235 C455 248 505 272 515 298 C518 308 500 312 470 312 L130 312 C120 312 115 295 125 245 Z" fill="#1E293B" />
+
+    <!-- TL Concentric Flow Waves (Silver & Charcoal Reflective Lines) -->
+    <g stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" fill="none">
+      <path d="M140 230 C200 220 300 230 460 270" />
+      <path d="M135 248 C200 238 310 248 475 285" />
+      <path d="M130 268 C210 258 320 268 485 298" stroke="#E2E8F0" stroke-width="3" />
+    </g>
+
+    <!-- Side TL Emblem & Swoosh -->
+    <circle cx="230" cy="255" r="14" fill="#0F172A" stroke="#94A3B8" stroke-width="2" />
+    <text x="230" y="259" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="900" text-anchor="middle" fill="#FFFFFF">TL</text>
+
+    <!-- Mudguard (Matte Black Synthetic) -->
+    <path d="M125 292 C120 280 128 270 140 270 C165 272 220 280 280 284 C340 288 420 294 470 300 C505 304 515 310 515 312 L125 312 Z" fill="#0F172A" />
+
+    <!-- Eyestay & Lacing -->
+    <path d="M222 202 L298 158 C306 156 315 164 312 174 L285 246 C280 254 270 256 260 254 L220 244 Z" fill="#0B132B" />
+    <g stroke="#38BDF8" stroke-width="3" stroke-linecap="round">
+      <line x1="248" y1="205" x2="268" y2="198" />
+      <line x1="262" y1="218" x2="282" y2="210" />
+      <line x1="276" y1="230" x2="295" y2="222" />
+    </g>
+
+    <!-- Full Length Max Air Midsole (Smoked Translucent Air Windows) -->
+    <path d="M115 312 C112 304 118 298 130 298 L475 298 C505 298 525 306 522 320 C520 328 500 332 460 332 L130 332 C116 332 114 324 115 312 Z" fill="#0F172A" />
+    <!-- Full-length Air Chamber Pillared Windows -->
+    <g fill="url(#tl-air-full)" stroke="#475569" stroke-width="1.8">
+      <rect x="135" y="312" width="40" height="15" rx="4" />
+      <rect x="185" y="313" width="45" height="15" rx="4" />
+      <rect x="240" y="314" width="45" height="14" rx="4" />
+      <rect x="295" y="315" width="45" height="13" rx="4" />
+      <rect x="350" y="315" width="45" height="13" rx="4" />
+      <rect x="405" y="316" width="45" height="12" rx="4" />
+    </g>
+
+    <!-- Outsole Bottom (Grip Black) -->
+    <path d="M116 330 L475 330 C505 330 518 333 516 338 C514 343 495 345 455 345 L132 345 C118 345 115 338 116 330 Z" fill="#020617" />
+  </g>
+</svg>

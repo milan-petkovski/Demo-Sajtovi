@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hvala ti na porudžbini! | Kickpoint.rs</title>
+  <meta name="description" content="Potvrda porudžbine na Kickpoint.rs. Tvoj paket se priprema za slanje kurirskom službom sa plaćanjem pouzećem.">
+  <link rel="canonical" href="https://kickpoint.rs/hvala.html">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--bg-subtle);">
+
+  <!-- Zaglavlje -->
+  <header class="site-header" style="background: var(--bg-white);">
+    <div class="container site-header__inner" style="justify-content: center;">
+      <a href="index.html" class="site-header__logo" aria-label="Kickpoint.rs">
+        <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="220" height="38">
+      </a>
+    </div>
+  </header>
+
+  <main class="section-padding">
+    <div class="container">
+      
+      <div class="thank-you-box">
+        <!-- Znak uspeha -->
+        <div class="thank-you-icon">
+          <svg class="icon icon--xl"><use href="assets/icons.svg#icon-check"></use></svg>
+        </div>
+
+        <span class="section-header__tag" style="background: var(--color-success-light); color: var(--color-success);">
+          Porudžbina uspešno primljena
+        </span>
+
+        <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 8px 0;">
+          Hvala ti na poverenju!
+        </h1>
+        
+        <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto;">
+          Tvoja porudžbina je evidentirana u sistemu. Pripremamo tvoje patike za slanje kurirskom službom.
+        </p>
+
+        <!-- Broj porudžbine -->
+        <div class="order-number-badge" id="orderNumberDisplay">
+          Broj porudžbine: #KP-2026-4829
+        </div>
+
+        <!-- Šta sledi dalje (3 koraka) -->
+        <div class="next-steps-list">
+          <div style="font-weight: 700; font-size: 1rem; margin-bottom: 4px; color: var(--text-primary);">
+            Šta se dešava sledeće?
+          </div>
+
+          <div class="next-step-item">
+            <svg class="icon icon--sm" style="color: var(--primary); flex-shrink: 0; margin-top: 3px;"><use href="assets/icons.svg#icon-package"></use></svg>
+            <div>
+              <strong>1. Pakovanje i priprema pošiljke</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.8125rem;">Tvoje patike pakujemo u originalnu zaštitnu kutiju za bezbedan transport.</span>
+            </div>
+          </div>
+
+          <div class="next-step-item">
+            <svg class="icon icon--sm" style="color: var(--primary); flex-shrink: 0; margin-top: 3px;"><use href="assets/icons.svg#icon-truck"></use></svg>
+            <div>
+              <strong>2. Isporuka za 24–48h na tvoju adresu</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.8125rem;">Kurir (Post Express / BEX) te kontaktira telefonom pre uručenja pošiljke.</span>
+            </div>
+          </div>
+
+          <div class="next-step-item">
+            <svg class="icon icon--sm" style="color: var(--primary); flex-shrink: 0; margin-top: 3px;"><use href="assets/icons.svg#icon-shield"></use></svg>
+            <div>
+              <strong>3. Plaćanje pouzećem gotovinom</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.8125rem;">Ceo iznos plaćaš kuriru u gotovini tek kada preuzmeš svoj paket.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prikaz detalja porudžbine ako postoje u sessionStorage -->
+        <div id="orderDetailsCard" style="display: none; text-align: left; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+          <h3 style="font-size: 1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-light);">
+            Pregled naručenih artikala
+          </h3>
+          <div id="orderItemsSummaryList" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;"></div>
+
+          <div style="font-size: 0.875rem; color: var(--text-secondary); border-top: 1px solid var(--border-light); padding-top: 12px; display: flex; flex-direction: column; gap: 4px;">
+            <div>Adresa za dostavu: <strong id="orderDeliveryAddress" style="color: var(--text-primary);">-</strong></div>
+            <div>Telefon primaoca: <strong id="orderDeliveryPhone" style="color: var(--text-primary);">-</strong></div>
+            <div>Način plaćanja: <strong id="orderPaymentMethod" style="color: var(--text-primary);">-</strong></div>
+            <div style="margin-top: 8px; font-size: 1.0625rem; font-weight: 800; color: var(--text-primary);">
+              Iznos za plaćanje kuriru: <span class="text-gradient" id="orderTotalAmount">0 RSD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dugmad za nastavak -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+          <a href="prodavnica.html" class="btn btn--primary btn--lg">
+            Nastavi kupovinu u prodavnici
+          </a>
+          <a href="index.html" class="btn btn--secondary btn--lg">
+            Povratak na početnu
+          </a>
+        </div>
+
+        <!-- Podrška -->
+        <div style="margin-top: 24px; font-size: 0.8125rem; color: var(--text-muted);">
+          Imaš pitanje u vezi sa porudžbinom? Javi nam se na Instagramu: <a href="https://instagram.com/kickpoint.rs" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">@kickpoint.rs</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" style="padding-block: var(--space-8); border-top: 1px solid var(--border-light);">
+    <div class="container" style="text-align: center; font-size: 0.8125rem; color: #94A3B8;">
+      &copy; 2026 Kickpoint.rs &bull; DEMO VERZIJA &bull; Sve cene i uslovi su ilustrativni primeri.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const orderParam = urlParams.get('order');
+
+      let orderNumber = orderParam || ('KP-2026-' + Math.floor(1000 + Math.random() * 9000));
+      document.getElementById('orderNumberDisplay').textContent = `Broj porudžbine: #${orderNumber}`;
+
+      // Učitaj podatke iz sessionStorage ako postoje
+      try {
+        const raw = sessionStorage.getItem('kickpoint_last_order');
+        if (raw) {
+          const data = JSON.parse(raw);
+          if (data && data.orderNumber) {
+            document.getElementById('orderNumberDisplay').textContent = `Broj porudžbine: #${data.orderNumber}`;
+            document.getElementById('orderDetailsCard').style.display = 'block';
+
+            document.getElementById('orderDeliveryAddress').textContent = `${data.customer.name}, ${data.customer.address}, ${data.customer.zip} ${data.customer.city}`;
+            document.getElementById('orderDeliveryPhone').textContent = data.customer.phone;
+            document.getElementById('orderPaymentMethod').textContent = data.paymentMethod;
+            document.getElementById('orderTotalAmount').textContent = formatRSD(data.totals.total);
+
+            const listElem = document.getElementById('orderItemsSummaryList');
+            let itemsHtml = '';
+            data.items.forEach(it => {
+              itemsHtml += `
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem;">
+                  <div>
+                    <strong>${it.name}</strong> (Broj: ${it.size}) &times; ${it.quantity}
+                  </div>
+                  <div style="font-weight: 700; font-family: var(--font-heading);">
+                    ${formatRSD(it.total)}
+                  </div>
+                </div>
+              `;
+            });
+            listElem.innerHTML = itemsHtml;
+          }
+        }
+      } catch (e) {
+        console.error('Greška pri čitanju orderData:', e);
+      }
+    });
+  </script>
+</body>
+</html>

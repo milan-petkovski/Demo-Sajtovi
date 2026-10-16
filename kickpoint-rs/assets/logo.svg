@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="kp-cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#56CCF2" />
+      <stop offset="50%" stop-color="#2F80ED" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="kp-k-grad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <filter id="kp-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0284C7" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle Badge -->
+  <circle cx="250" cy="250" r="235" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="4" />
+  <circle cx="250" cy="250" r="215" fill="#FFFFFF" />
+
+  <!-- Stylized Letter 'K' in background -->
+  <g stroke="url(#kp-k-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95">
+    <!-- Vertical left stem of K (italicized/angled) -->
+    <path d="M175 110 L105 390" />
+    <!-- Upper right wing of K -->
+    <path d="M142 245 L320 115 C350 95 385 110 375 140 L230 255" />
+    <!-- Lower right leg of K -->
+    <path d="M210 240 L345 375 C365 395 395 385 390 365" />
+  </g>
+
+  <!-- Sneaker Outline (Air Max Plus TN Silhouette) in foreground -->
+  <g stroke="url(#kp-cyan-grad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#kp-glow)">
+    <!-- Sole & Air unit contours -->
+    <path d="M110 270 C100 285 115 305 135 315 L175 330 C205 340 240 338 270 325 L320 345 C350 360 385 370 415 370 C435 370 445 355 440 340 L425 320 C420 310 405 300 395 290 L330 230 C300 200 270 170 240 160 C220 152 205 160 200 175 L180 205 C165 220 130 240 110 270 Z" />
+
+    <!-- Outsole tread grips -->
+    <path d="M125 305 C140 318 165 326 185 326" />
+    <path d="M285 335 C305 348 335 358 365 365" />
+    <path d="M380 368 C395 370 410 368 425 362" />
+
+    <!-- Midsole Air Bubble Windows -->
+    <g stroke-width="5">
+      <!-- Heel air units -->
+      <ellipse cx="145" cy="305" rx="14" ry="8" transform="rotate(15 145 305)" />
+      <ellipse cx="175" cy="315" rx="14" ry="8" transform="rotate(15 175 315)" />
+      <!-- Mid-shank plate (Whale tail) -->
+      <path d="M235 315 C250 305 265 308 275 325" stroke-width="6" />
+      <!-- Forefoot air units -->
+      <ellipse cx="330" cy="335" rx="12" ry="6" transform="rotate(15 330 335)" />
+      <ellipse cx="360" cy="345" rx="12" ry="6" transform="rotate(15 360 345)" />
+      <ellipse cx="390" cy="350" rx="10" ry="5" transform="rotate(15 390 350)" />
+    </g>
+
+    <!-- Upper wavy TPU rib cage (Signature TN palm tree / wave design) -->
+    <path d="M190 240 C175 255 165 270 160 288" />
+    <path d="M215 230 C200 250 190 275 185 295" />
+    <path d="M245 225 C235 250 230 275 225 300" />
+    <path d="M275 228 C270 255 270 280 272 305" />
+    <path d="M305 240 C305 265 312 290 322 315" />
+    <path d="M335 255 C340 275 350 298 365 320" />
+    <path d="M365 275 C372 292 385 312 400 328" />
+
+    <!-- Eyestay and Lacing System -->
+    <path d="M240 180 L350 260" stroke-width="6" />
+    <!-- Lace loops -->
+    <g stroke-width="4">
+      <line x1="255" y1="185" x2="270" y2="195" />
+      <line x1="275" y1="200" x2="290" y2="210" />
+      <line x1="295" y1="215" x2="310" y2="225" />
+      <line x1="315" y1="230" x2="330" y2="240" />
+      <line x1="335" y1="245" x2="350" y2="255" />
+    </g>
+
+    <!-- Tongue & Collar -->
+    <path d="M225 170 C215 160 205 170 200 185 L185 210" stroke-width="6" />
+    <path d="M225 170 C235 162 250 165 255 175" stroke-width="5" />
+
+    <!-- Swoosh emblem on lateral side -->
+    <path d="M255 265 C268 268 285 272 300 270 C290 278 275 282 265 278 Z" fill="url(#kp-cyan-grad)" stroke-width="2" />
+
+    <!-- Mudguard border line -->
+    <path d="M128 290 C170 295 240 295 320 310 C365 320 405 330 425 330" stroke-width="4" stroke-dasharray="8 4" />
+  </g>
+</svg>

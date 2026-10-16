@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sc-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.30" />
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="sc-bubble" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="60%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="305" cy="355" rx="235" ry="24" fill="url(#sc-shadow)" />
+
+  <g id="sneaker-scorpion-black">
+    <!-- Flyknit Sock Collar (Black textured) -->
+    <path d="M150 170 C155 145 185 135 220 142 C240 146 255 160 262 176 L240 192 C230 182 215 174 195 174 C175 174 160 180 150 170 Z" fill="#0F172A" />
+
+    <!-- Sock-like Flyknit Upper (Charcoal & Jet Black Knit) -->
+    <path d="M135 235 C130 190 150 172 178 172 C200 172 235 188 260 192 C295 196 370 206 418 222 C462 238 505 264 515 285 C518 295 500 298 470 298 L140 298 C130 298 126 275 135 235 Z" fill="#1E293B" />
+
+    <!-- Flyknit Ribbed Texture Lines -->
+    <g stroke="#334155" stroke-width="1.8" fill="none">
+      <path d="M180 185 C220 205 320 220 450 255" />
+      <path d="M170 200 C215 220 315 235 465 270" />
+      <path d="M160 215 C210 235 310 250 480 282" />
+      <path d="M150 230 C205 250 305 265 470 292" />
+    </g>
+
+    <!-- Sleek Stealth Black Swoosh -->
+    <path d="M210 235 C255 230 320 234 375 252 C395 258 405 268 390 270 C365 272 320 258 275 252 C245 248 220 250 210 252 Z" fill="#020617" stroke="#475569" stroke-width="1.5" />
+
+    <!-- Integrated Rope Lacing -->
+    <g stroke="#64748B" stroke-width="3.5" stroke-linecap="round">
+      <line x1="265" y1="188" x2="285" y2="180" />
+      <line x1="278" y1="202" x2="298" y2="194" />
+      <line x1="292" y1="216" x2="312" y2="208" />
+      <line x1="305" y1="230" x2="325" y2="222" />
+    </g>
+
+    <!-- Massive Cloud-Like Air Bubble Midsole / Sole System (Signature Scorpion Silhouette) -->
+    <!-- Pod 1 - Heel Giant Air Pod -->
+    <ellipse cx="160" cy="318" rx="42" ry="24" fill="url(#sc-bubble)" stroke="#334155" stroke-width="2" />
+    <ellipse cx="152" cy="312" rx="20" ry="8" fill="#475569" opacity="0.4" />
+
+    <!-- Pod 2 - Midfoot Connector Air Pod -->
+    <ellipse cx="235" cy="324" rx="40" ry="22" fill="url(#sc-bubble)" stroke="#334155" stroke-width="2" />
+    <ellipse cx="230" cy="318" rx="18" ry="7" fill="#475569" opacity="0.4" />
+
+    <!-- Pod 3 - Forefoot Air Pod -->
+    <ellipse cx="310" cy="326" rx="42" ry="22" fill="url(#sc-bubble)" stroke="#334155" stroke-width="2" />
+    <ellipse cx="305" cy="320" rx="20" ry="7" fill="#475569" opacity="0.4" />
+
+    <!-- Pod 4 - Toe Air Pod -->
+    <ellipse cx="388" cy="328" rx="44" ry="20" fill="url(#sc-bubble)" stroke="#334155" stroke-width="2" />
+    <ellipse cx="385" cy="322" rx="22" ry="6" fill="#475569" opacity="0.4" />
+
+    <!-- Pod 5 - Front Tip Air Pod -->
+    <ellipse cx="462" cy="326" rx="36" ry="16" fill="url(#sc-bubble)" stroke="#334155" stroke-width="2" />
+
+    <!-- External Structural Bridge Connecting Pods -->
+    <path d="M125 304 C200 300 320 302 490 310" stroke="#020617" stroke-width="6" fill="none" />
+
+    <!-- Bottom Traction Studs -->
+    <g fill="#020617">
+      <ellipse cx="160" cy="342" rx="25" ry="6" />
+      <ellipse cx="235" cy="345" rx="25" ry="6" />
+      <ellipse cx="310" cy="347" rx="25" ry="6" />
+      <ellipse cx="388" cy="347" rx="25" ry="6" />
+      <ellipse cx="462" cy="341" rx="20" ry="5" />
+    </g>
+  </g>
+</svg>

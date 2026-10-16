@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="rm-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.22" />
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="rm-sole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF6" />
+      <stop offset="85%" stop-color="#F2EDE4" />
+      <stop offset="100%" stop-color="#E4DDD2" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="305" cy="345" rx="230" ry="24" fill="url(#rm-shadow)" />
+
+  <g id="sneaker-high-mocha">
+    <!-- High Top Collar Ankle Padding (Black) -->
+    <path d="M135 125 C135 105 160 98 195 102 C215 105 230 120 238 140 L215 165 C205 152 190 145 170 145 C150 145 138 152 135 125 Z" fill="#111111" />
+
+    <!-- High Top Ankle Collar Flap (Rich Mocha Nubuck / Brown) -->
+    <path d="M125 180 C120 135 145 110 185 110 C215 110 238 128 245 155 L215 195 C190 180 160 178 125 180 Z" fill="#6B4F3A" />
+    <!-- Embossed Wings Logo Circle on Ankle Flap -->
+    <circle cx="178" cy="142" r="14" fill="#111111" />
+    <path d="M168 142 L188 142" stroke="#FFFFFF" stroke-width="2" />
+    <text x="178" y="145" font-family="'Space Grotesk', sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="#FFFFFF">KICK</text>
+
+    <!-- Tongue (Sail White Nylon) -->
+    <path d="M205 112 L260 90 C268 86 278 92 280 102 L295 182 L240 198 Z" fill="#FBF9F5" />
+    <rect x="252" y="90" width="22" height="15" rx="2" fill="#111111" transform="rotate(-18 252 90)" />
+    <line x1="256" y1="97" x2="268" y2="93" stroke="#38BDF8" stroke-width="2" />
+
+    <!-- Mid-panel Base (Sail / Off-White Leather) -->
+    <path d="M125 240 C122 198 140 182 165 182 C185 182 225 198 250 202 C285 206 360 215 410 230 C455 244 505 270 515 295 C518 305 500 310 470 310 L130 310 C120 310 115 290 125 240 Z" fill="#FBF9F5" />
+
+    <!-- Perforated Toe Box (Sail Leather) -->
+    <path d="M395 242 C430 250 480 272 498 290 C505 298 480 305 450 306 L380 306 C368 280 375 255 395 242 Z" fill="#FFFFFF" />
+    <g fill="#D6CFBF">
+      <circle cx="435" cy="272" r="2.2" />
+      <circle cx="447" cy="275" r="2.2" />
+      <circle cx="459" cy="280" r="2.2" />
+      <circle cx="430" cy="282" r="2.2" />
+      <circle cx="442" cy="285" r="2.2" />
+      <circle cx="454" cy="290" r="2.2" />
+      <circle cx="425" cy="292" r="2.2" />
+      <circle cx="437" cy="295" r="2.2" />
+    </g>
+
+    <!-- Toe Cap Mudguard Overlay (Jet Black Leather) -->
+    <path d="M375 306 C370 275 385 248 415 240 C465 248 512 280 520 298 C524 308 505 310 460 310 L375 306 Z" fill="#111111" />
+
+    <!-- Heel Lower Counter (Mocha Brown Nubuck) -->
+    <path d="M118 275 C116 250 120 230 135 225 C160 225 185 245 195 270 C200 288 195 306 190 310 L122 310 C116 305 116 290 118 275 Z" fill="#6B4F3A" />
+
+    <!-- Eyestay Overlay (Black Leather) -->
+    <path d="M225 196 L288 120 C294 118 304 125 302 135 L285 240 C280 248 270 250 260 248 L220 238 Z" fill="#111111" />
+
+    <!-- High-top Criss-Cross Black Laces -->
+    <g stroke="#111111" stroke-width="4.5" stroke-linecap="round">
+      <line x1="285" y1="140" x2="260" y2="132" />
+      <line x1="290" y1="160" x2="265" y2="150" />
+      <line x1="295" y1="180" x2="270" y2="170" />
+      <line x1="290" y1="200" x2="265" y2="190" />
+      <line x1="282" y1="218" x2="258" y2="208" />
+      <line x1="272" y1="234" x2="248" y2="224" />
+    </g>
+
+    <!-- Lateral Swoosh (Black Leather) -->
+    <path d="M190 248 C240 240 310 242 370 262 C395 270 410 282 395 285 C370 290 320 270 270 262 C230 256 195 260 185 262 L190 248 Z" fill="#111111" />
+    <path d="M190 248 C160 245 140 230 135 210 C140 215 165 235 190 248 Z" fill="#111111" />
+
+    <!-- Vintage Sail Midsole -->
+    <path d="M115 310 C112 302 118 296 130 296 L475 296 C505 296 525 304 522 318 C520 326 500 330 460 330 L130 330 C116 330 114 322 115 310 Z" fill="url(#rm-sole)" />
+    <path d="M125 306 L485 306 C500 306 510 310 512 314" stroke="#DCD5C5" stroke-width="1.8" stroke-dasharray="4 3" fill="none" />
+
+    <!-- Outsole (Black Rubber) -->
+    <path d="M116 328 L475 328 C505 328 518 331 516 336 C514 340 495 342 455 342 L132 342 C118 342 115 336 116 328 Z" fill="#111111" />
+  </g>
+</svg>

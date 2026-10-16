@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Završetak porudžbine | Kickpoint.rs</title>
+  <meta name="description" content="Sigurna i brza porudžbina patika uz plaćanje pouzećem. Bez unosa platne kartice, isporuka za 48h na celoj teritoriji Srbije.">
+  <link rel="canonical" href="https://kickpoint.rs/checkout.html">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--bg-subtle);">
+
+  <!-- Zaglavlje (Minimalističko za Checkout bez distrakcija) -->
+  <header class="site-header" style="background: var(--bg-white);">
+    <div class="container site-header__inner" style="justify-content: space-between;">
+      <a href="index.html" class="site-header__logo" aria-label="Kickpoint.rs početna">
+        <img src="assets/logo-nav.svg" alt="Kickpoint.rs" width="220" height="38">
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+        <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-shield"></use></svg>
+        <span>Sigurno naručivanje &bull; Plaćanje pouzećem</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="section-padding" style="padding-top: var(--space-6);">
+    <div class="container">
+      
+      <!-- Jasna DEMO oznaka -->
+      <div class="checkout-demo-banner">
+        <svg class="icon icon--lg" style="flex-shrink: 0;"><use href="assets/icons.svg#icon-shield"></use></svg>
+        <div>
+          <strong>DEMO REŽIM PRODAVNICE:</strong> Ova web prodavnica je demonstracija za Kickpoint.rs. Porudžbine su simulacija, podaci se ne šalju na eksterni server i ne zahteva se unos pravih platnih kartica.
+        </div>
+      </div>
+
+      <div style="margin-bottom: var(--space-6);">
+        <a href="prodavnica.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">
+          <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-left"></use></svg>
+          Nazad u prodavnicu
+        </a>
+        <h1 style="font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-top: 4px;">Završetak porudžbine</h1>
+      </div>
+
+      <!-- Checkout Grid -->
+      <div class="checkout-grid" id="checkoutMainContainer">
+        
+        <!-- Leva kolona: Forma sa podacima za slanje -->
+        <div>
+          <form id="checkoutForm" novalidate>
+            
+            <!-- 1. Podaci za isporuku -->
+            <div class="checkout-section">
+              <h2 class="checkout-section__title">
+                <svg class="icon icon--sm" style="color: var(--primary);"><use href="assets/icons.svg#icon-truck"></use></svg>
+                Podaci za isporuku kurirskom službom
+              </h2>
+
+              <div class="form-grid">
+                <!-- Ime i prezime -->
+                <div class="form-group">
+                  <label class="form-label" for="custName">
+                    Ime i prezime <span class="required">*</span>
+                  </label>
+                  <input type="text" id="custName" class="form-input" placeholder="npr. Marko Petrović" required>
+                  <div class="form-error-msg">Molimo unesite vaše ime i prezime.</div>
+                </div>
+
+                <!-- Telefon i Email -->
+                <div class="form-grid form-grid--2col">
+                  <div class="form-group">
+                    <label class="form-label" for="custPhone">
+                      Broj telefona (za kurira) <span class="required">*</span>
+                    </label>
+                    <input type="tel" id="custPhone" class="form-input" placeholder="npr. 064 123 4567" required>
+                    <div class="form-error-msg">Unesite validan broj telefona.</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="custEmail">
+                      Email adresa (za potvrdu) <span class="required">*</span>
+                    </label>
+                    <input type="email" id="custEmail" class="form-input" placeholder="npr. marko@primer.rs" required>
+                    <div class="form-error-msg">Unesite ispravnu email adresu.</div>
+                  </div>
+                </div>
+
+                <!-- Grad i Poštanski broj -->
+                <div class="form-grid form-grid--2col">
+                  <div class="form-group">
+                    <label class="form-label" for="custCity">
+                      Grad / Mesto <span class="required">*</span>
+                    </label>
+                    <input type="text" id="custCity" class="form-input" placeholder="npr. Beograd" required>
+                    <div class="form-error-msg">Unesite grad ili mesto.</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="custZip">
+                      Poštanski broj <span class="required">*</span>
+                    </label>
+                    <input type="text" id="custZip" class="form-input" placeholder="npr. 11000" required>
+                    <div class="form-error-msg">Unesite poštanski broj.</div>
+                  </div>
+                </div>
+
+                <!-- Ulica i broj -->
+                <div class="form-group">
+                  <label class="form-label" for="custAddress">
+                    Ulica i kućni broj, stan <span class="required">*</span>
+                  </label>
+                  <input type="text" id="custAddress" class="form-input" placeholder="npr. Bulevar Kralja Aleksandra 45, stan 12" required>
+                  <div class="form-error-msg">Unesite adresu za dostavu.</div>
+                </div>
+
+                <!-- Napomena za kurira -->
+                <div class="form-group">
+                  <label class="form-label" for="custNote">
+                    Napomena za kurira (opciono)
+                  </label>
+                  <input type="text" id="custNote" class="form-input" placeholder="npr. Zvoniti na Petrović, interfon 12, drugi sprat">
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Način plaćanja -->
+            <div class="checkout-section">
+              <h2 class="checkout-section__title">
+                <svg class="icon icon--sm" style="color: var(--primary);"><use href="assets/icons.svg#icon-shield"></use></svg>
+                Način plaćanja
+              </h2>
+
+              <div class="payment-methods">
+                <!-- Opcija 1: Pouzeće (Unapred izabrano) -->
+                <label class="payment-card active" id="payMethodCashCard">
+                  <input type="radio" name="paymentMethod" value="pouzece" checked onchange="handlePaymentChange('pouzece')">
+                  <div class="payment-card__content">
+                    <div class="payment-card__title">
+                      <span>Plaćanje pouzećem (gotovinom kuriru pri preuzimanju)</span>
+                      <span style="font-size: 0.75rem; background: var(--primary); color: #fff; padding: 2px 8px; border-radius: var(--radius-full);">Preporučeno</span>
+                    </div>
+                    <p class="payment-card__desc">
+                      Plaćate novcem kuriru u trenutku kada vam donese paket na adresu. Bezbedno, bez ikakvog rizika i bez unosa brojeva sa kartice.
+                    </p>
+                  </div>
+                </label>
+
+                <!-- Opcija 2: Kartica (DEMO) -->
+                <label class="payment-card" id="payMethodCardCard">
+                  <input type="radio" name="paymentMethod" value="kartica" onchange="handlePaymentChange('kartica')">
+                  <div class="payment-card__content">
+                    <div class="payment-card__title">
+                      <span>Platna kartica (DEMO opcija)</span>
+                      <span style="font-size: 0.75rem; background: #64748B; color: #fff; padding: 2px 8px; border-radius: var(--radius-full);">DEMO</span>
+                    </div>
+                    <p class="payment-card__desc">
+                      Simulacija plaćanja. U ovom demo režimu ne prikupljamo niti procesiramo podatke vaše kartice.
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dugme za slanje na mobilnom -->
+            <button type="submit" class="btn btn--primary btn--lg btn--full" style="margin-top: 16px;">
+              Potvrdi i poruči patike <svg class="icon icon--sm"><use href="assets/icons.svg#icon-chevron-right"></use></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Desna kolona: Rezime porudžbine (Sticky) -->
+        <div>
+          <div class="order-summary-card">
+            <h3 style="font-size: 1.125rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-light);">
+              Tvoja porudžbina (<span id="checkoutItemsCount">0</span>)
+            </h3>
+
+            <!-- Lista stavki -->
+            <div id="checkoutItemsList" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; max-height: 320px; overflow-y: auto;">
+              <!-- Renderovano dinamički iz korpe -->
+            </div>
+
+            <!-- Zbir i dostava -->
+            <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-light); font-size: 0.9375rem;">
+              <div class="cart-summary-row">
+                <span>Međuzbir:</span>
+                <strong id="checkoutSubtotal">0 RSD</strong>
+              </div>
+              <div class="cart-summary-row">
+                <span>Dostava (Post Express):</span>
+                <span id="checkoutShipping">390 RSD</span>
+              </div>
+              <div class="cart-summary-row cart-summary-row--total">
+                <span>Ukupno za plaćanje kuriru:</span>
+                <span class="text-gradient" id="checkoutTotal" style="font-size: 1.25rem;">0 RSD</span>
+              </div>
+            </div>
+
+            <!-- Dugme Poruči (u rezimeu) -->
+            <button type="button" class="btn btn--primary btn--lg btn--full" onclick="document.getElementById('checkoutForm').requestSubmit()" style="margin-top: 20px;">
+              Potvrdi i poruči patike
+            </button>
+
+            <!-- Garancija -->
+            <div style="margin-top: 16px; font-size: 0.75rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-check"></use></svg>
+                Plaćaš gotovinom pri preuzimanju paketa
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-check"></use></svg>
+                Rok za zamenu veličine je 14 dana od prijema
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <svg class="icon icon--sm" style="color: var(--color-success);"><use href="assets/icons.svg#icon-check"></use></svg>
+                Isporuka za 24–48h na celoj teritoriji Srbije
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ako je korpa prazna pri ulasku na checkout -->
+      <div id="checkoutEmptyState" style="display: none; text-align: center; padding: 64px 16px; background: var(--bg-white); border-radius: var(--radius-lg); border: 1px solid var(--border-light); max-width: 600px; margin: 32px auto;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--bg-card-muted); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--text-muted);">
+          <svg class="icon icon--lg"><use href="assets/icons.svg#icon-cart"></use></svg>
+        </div>
+        <h2 style="margin-bottom: 8px;">Tvoja korpa je prazna</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;">Da bi završio porudžbinu, prvo dodaj željeni model patika u korpu.</p>
+        <a href="prodavnica.html" class="btn btn--primary btn--lg">Pogledaj ponudu patika</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" style="padding-block: var(--space-8); border-top: 1px solid var(--border-light);">
+    <div class="container" style="text-align: center; font-size: 0.8125rem; color: #94A3B8;">
+      &copy; 2026 Kickpoint.rs &bull; Podrška za porudžbine: Pon - Sub 09:00 - 18:00h &bull; DEMO VERZIJA
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let currentPaymentMethod = 'pouzece';
+
+    function handlePaymentChange(method) {
+      currentPaymentMethod = method;
+      document.getElementById('payMethodCashCard').classList.toggle('active', method === 'pouzece');
+      document.getElementById('payMethodCardCard').classList.toggle('active', method === 'kartica');
+    }
+
+    function renderCheckoutSummary(totals) {
+      const cart = getCart();
+      const mainContainer = document.getElementById('checkoutMainContainer');
+      const emptyState = document.getElementById('checkoutEmptyState');
+
+      if (cart.length === 0) {
+        if (mainContainer) mainContainer.style.display = 'none';
+        if (emptyState) emptyState.style.display = 'block';
+        return;
+      }
+
+      if (mainContainer) mainContainer.style.display = 'grid';
+      if (emptyState) emptyState.style.display = 'none';
+
+      document.getElementById('checkoutItemsCount').textContent = totals.itemsCount;
+      document.getElementById('checkoutSubtotal').textContent = formatRSD(totals.subtotal);
+      
+      const shippingElem = document.getElementById('checkoutShipping');
+      if (totals.isFreeShipping) {
+        shippingElem.innerHTML = '<span style="color: var(--color-success); font-weight: 700;">Besplatna</span>';
+      } else {
+        shippingElem.textContent = formatRSD(totals.shippingFee);
+      }
+
+      document.getElementById('checkoutTotal').textContent = formatRSD(totals.total);
+
+      // Renderuj stavke
+      const listContainer = document.getElementById('checkoutItemsList');
+      let html = '';
+      cart.forEach(item => {
+        const prod = getProductById(item.productId);
+        if (!prod) return;
+        const itemSum = prod.price * item.quantity;
+        html += `
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="width: 52px; height: 52px; background: var(--bg-card-muted); border-radius: var(--radius-sm); padding: 4px; flex-shrink: 0;">
+              <img src="${prod.images[0]}" alt="${prod.name}" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="font-weight: 700; font-size: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${prod.name}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Broj: <strong>${item.size}</strong> &bull; Kol: ${item.quantity}</div>
+            </div>
+            <div style="font-family: var(--font-heading); font-size: 0.875rem; font-weight: 700;">
+              ${formatRSD(itemSum)}
+            </div>
+          </div>
+        `;
+      });
+      listContainer.innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutSummary(getCartTotals());
+
+      // Obrada slanja forme
+      const form = document.getElementById('checkoutForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Validacija
+        let isValid = true;
+        const requiredInputs = form.querySelectorAll('input[required]');
+        
+        requiredInputs.forEach(input => {
+          if (!input.value.trim()) {
+            input.classList.add('error');
+            isValid = false;
+          } else {
+            input.classList.remove('error');
+          }
+
+          input.addEventListener('input', () => {
+            if (input.value.trim()) input.classList.remove('error');
+          }, { once: true });
+        });
+
+        if (!isValid) {
+          const firstError = form.querySelector('.form-input.error');
+          if (firstError) firstError.focus();
+          return;
+        }
+
+        const cart = getCart();
+        if (cart.length === 0) {
+          alert('Vaša korpa je prazna.');
+          return;
+        }
+
+        const totals = getCartTotals();
+        const orderNumber = 'KP-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+        // Sačuvaj detalje porudžbine u sessionStorage
+        const orderData = {
+          orderNumber,
+          date: new Date().toLocaleDateString('sr-RS'),
+          customer: {
+            name: document.getElementById('custName').value.trim(),
+            phone: document.getElementById('custPhone').value.trim(),
+            email: document.getElementById('custEmail').value.trim(),
+            city: document.getElementById('custCity').value.trim(),
+            zip: document.getElementById('custZip').value.trim(),
+            address: document.getElementById('custAddress').value.trim(),
+            note: document.getElementById('custNote').value.trim()
+          },
+          paymentMethod: currentPaymentMethod === 'pouzece' ? 'Plaćanje pouzećem (gotovinom kuriru)' : 'Platna kartica (DEMO)',
+          items: cart.map(item => {
+            const p = getProductById(item.productId);
+            return {
+              name: p ? p.name : 'Patike',
+              size: item.size,
+              color: item.color,
+              quantity: item.quantity,
+              price: p ? p.price : 0,
+              total: p ? p.price * item.quantity : 0,
+              image: p ? p.images[0] : 'assets/favicon.svg'
+            };
+          }),
+          totals
+        };
+
+        try {
+          sessionStorage.setItem('kickpoint_last_order', JSON.stringify(orderData));
+        } catch (err) {
+          console.error('Greška pri čuvanju porudžbine u sessionStorage:', err);
+        }
+
+        // Isprazni korpu i preusmeri na stranicu zahvalnosti
+        clearCart();
+        window.location.href = `hvala.html?order=${orderNumber}`;
+      });
+    });
+  </script>
+</body>
+</html>

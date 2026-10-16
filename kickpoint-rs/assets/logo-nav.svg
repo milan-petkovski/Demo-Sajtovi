@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark (Mini stylized K + TN sneaker silhouette) -->
+  <g transform="translate(4, 2) scale(0.09)">
+    <!-- Stylized K -->
+    <g stroke="url(#nav-grad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M175 110 L105 390" />
+      <path d="M142 245 L320 115 C350 95 385 110 375 140 L230 255" />
+      <path d="M210 240 L345 375 C365 395 395 385 390 365" />
+    </g>
+    <!-- Sneaker outline -->
+    <g stroke="url(#nav-grad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M110 270 C100 285 115 305 135 315 L175 330 C205 340 240 338 270 325 L320 345 C350 360 385 370 415 370 C435 370 445 355 440 340 L425 320 L330 230 C300 200 270 170 240 160 C220 152 205 160 200 175 L180 205 C165 220 130 240 110 270 Z" />
+      <ellipse cx="150" cy="310" rx="14" ry="8" />
+      <ellipse cx="360" cy="345" rx="14" ry="8" />
+      <path d="M200 230 C190 255 180 285 175 305" />
+      <path d="M250 230 C240 260 235 290 230 315" />
+      <path d="M300 245 C305 275 315 305 330 330" />
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="56" y="31" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.03em" fill="#0F172A">
+    KICKPOINT<tspan fill="url(#nav-grad)">.RS</tspan>
+  </text>
+</svg>

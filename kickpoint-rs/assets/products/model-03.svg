@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="m03-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="m03-sole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF5" />
+      <stop offset="85%" stop-color="#F3ECE0" />
+      <stop offset="100%" stop-color="#E5DC handle" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="305" cy="340" rx="230" ry="24" fill="url(#m03-shadow)" />
+
+  <g id="sneaker-low-cream">
+    <!-- Back Collar & Interior Lining -->
+    <path d="M145 178 C145 152 170 140 205 145 C222 147 240 162 250 178 L232 195 C222 185 205 176 185 176 C165 176 150 184 145 178 Z" fill="#EAE5DC" />
+    <path d="M148 180 C156 160 178 152 208 156 C225 158 240 170 248 182" stroke="#D8D1C5" stroke-width="4" fill="none" stroke-linecap="round" />
+
+    <!-- Tongue -->
+    <path d="M210 148 L275 125 C282 122 292 126 295 135 L308 185 L252 202 Z" fill="#FDFBF7" />
+    <rect x="268" y="125" width="22" height="16" rx="3" fill="#D8D1C5" transform="rotate(-18 268 125)" />
+    <line x1="272" y1="133" x2="284" y2="129" stroke="#E4572E" stroke-width="2.5" />
+
+    <!-- Main Upper Base (Ivory Cream) -->
+    <path d="M125 240 C122 198 140 182 165 182 C185 182 225 198 250 202 C285 206 360 215 410 230 C455 244 505 270 515 295 C518 305 500 310 470 310 L130 310 C120 310 115 290 125 240 Z" fill="#FAF7F2" />
+
+    <!-- Toe Box -->
+    <path d="M395 242 C430 250 480 272 498 290 C505 298 480 305 450 306 L380 306 C368 280 375 255 395 242 Z" fill="#FFFFFF" />
+    <g fill="#DCD5C9">
+      <circle cx="435" cy="272" r="2.2" />
+      <circle cx="447" cy="275" r="2.2" />
+      <circle cx="459" cy="280" r="2.2" />
+      <circle cx="430" cy="282" r="2.2" />
+      <circle cx="442" cy="285" r="2.2" />
+      <circle cx="454" cy="290" r="2.2" />
+      <circle cx="425" cy="292" r="2.2" />
+      <circle cx="437" cy="295" r="2.2" />
+    </g>
+
+    <!-- Toe Mudguard (Warm Biscuit / Sail) -->
+    <path d="M375 306 C370 275 385 248 415 240 C465 248 512 280 520 298 C524 308 505 310 460 310 L375 306 Z" fill="#EFE8DC" />
+    <path d="M385 302 C382 280 395 258 420 248 C465 256 505 284 512 298" stroke="#DFD7CA" stroke-width="1.5" fill="none" />
+
+    <!-- Heel Counter (Warm Biscuit / Sail) -->
+    <path d="M125 240 C121 200 138 180 165 180 C182 180 205 188 220 196 L210 245 C190 255 160 255 130 255 Z" fill="#EFE8DC" />
+    <path d="M118 275 C116 250 120 230 135 225 C160 225 185 245 195 270 C200 288 195 306 190 310 L122 310 C116 305 116 290 118 275 Z" fill="#E4DDD0" />
+
+    <!-- Eyestay Overlay -->
+    <path d="M225 196 L298 152 C306 150 315 158 312 168 L285 240 C280 248 270 250 260 248 L220 238 Z" fill="#EFE8DC" />
+
+    <!-- Eyelets -->
+    <circle cx="288" cy="172" r="3" fill="#D8D1C5" stroke="#BFB7A8" stroke-width="1" />
+    <circle cx="278" cy="188" r="3" fill="#D8D1C5" stroke="#BFB7A8" stroke-width="1" />
+    <circle cx="268" cy="204" r="3" fill="#D8D1C5" stroke="#BFB7A8" stroke-width="1" />
+    <circle cx="258" cy="220" r="3" fill="#D8D1C5" stroke="#BFB7A8" stroke-width="1" />
+
+    <!-- Laces -->
+    <g stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
+      <path d="M305 180 L275 170" />
+      <path d="M298 196 L268 184" />
+      <path d="M288 212 L258 200" />
+      <path d="M278 228 L250 216" />
+      <path d="M265 242 L245 232" />
+    </g>
+    <path d="M302 165 C315 150 325 155 318 172 C312 185 295 182 295 175" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
+    <path d="M295 165 C285 145 270 152 280 168 C285 175 295 172 295 170" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Swoosh Accent -->
+    <path d="M190 248 C240 240 310 242 370 262 C395 270 410 282 395 285 C370 290 320 270 270 262 C230 256 195 260 185 262 L190 248 Z" fill="#D5CDBC" />
+    <path d="M190 248 C160 245 140 230 135 210 C140 215 165 235 190 248 Z" fill="#D5CDBC" />
+
+    <!-- Midsole (Vintage Sail) -->
+    <path d="M115 310 C112 302 118 296 130 296 L475 296 C505 296 525 304 522 318 C520 326 500 330 460 330 L130 330 C116 330 114 322 115 310 Z" fill="#F4EFE6" />
+    <path d="M125 306 L485 306 C500 306 510 310 512 314" stroke="#DFD6C8" stroke-width="1.8" stroke-dasharray="4 3" fill="none" />
+    <text x="175" y="322" font-family="-apple-system, sans-serif" font-size="7" font-weight="bold" fill="#B5AC9D" letter-spacing="2">KICKPOINT</text>
+
+    <!-- Outsole (Light Caramel Gum / Beige) -->
+    <path d="M116 328 L475 328 C505 328 518 331 516 336 C514 340 495 342 455 342 L132 342 C118 342 115 336 116 328 Z" fill="#C9BA9F" />
+    <line x1="160" y1="334" x2="160" y2="340" stroke="#B0A084" stroke-width="2" />
+    <line x1="220" y1="334" x2="220" y2="340" stroke="#B0A084" stroke-width="2" />
+    <line x1="300" y1="334" x2="300" y2="340" stroke="#B0A084" stroke-width="2" />
+    <line x1="380" y1="334" x2="380" y2="340" stroke="#B0A084" stroke-width="2" />
+    <line x1="440" y1="334" x2="440" y2="340" stroke="#B0A084" stroke-width="2" />
+  </g>
+</svg>
