@@ -81,12 +81,15 @@
         <div class="instructions-header">
           <h2 id="wish-title" class="wish-title">Zaželi želju</h2>
           <p id="wish-instruction" class="wish-instruction">Zatvori oči, zamisli želju i snažno duni u mikrofon telefona ili računara!</p>
-          <div id="lit-counter-badge" class="lit-counter-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
-              <path d="M12 2c-1.5 2-2 3.5-2 5a2 2 0 1 0 4 0c0-1.5-.5-3-2-5z"></path>
-              <path d="M10 11h4v11h-4z"></path>
-            </svg>
-            <span id="lit-counter-text">Svećice gore...</span>
+          <div class="hud-badges-wrapper">
+            <div id="lit-counter-badge" class="lit-counter-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                <path d="M12 2c-1.5 2-2 3.5-2 5a2 2 0 1 0 4 0c0-1.5-.5-3-2-5z"></path>
+                <path d="M10 11h4v11h-4z"></path>
+              </svg>
+              <span id="lit-counter-text">Svećice gore...</span>
+            </div>
+            <div id="user-status-badge" class="user-status-badge status-hidden"></div>
           </div>
         </div>
 
@@ -239,13 +242,21 @@
           </div>
 
           <div class="hud-fallback-row">
-            <span id="fallback-instruction" class="fallback-text">Ili dodirni svećice prstom</span>
-            <button id="btn-touch-blow" class="btn-ghost-sm" type="button" title="Ugasi svećice dodirom">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
-                <path d="M12 2a4 4 0 0 0-4 4v7a2 2 0 0 1-2 2H5a1 1 0 0 0-1 1v2a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6V9a4 4 0 0 0-4-4"></path>
-              </svg>
-              <span>Ugasi dodirom</span>
-            </button>
+            <span id="fallback-instruction" class="fallback-text">Opcije:</span>
+            <div class="hud-buttons-group">
+              <button id="btn-touch-blow" class="btn-hud-pill" type="button" title="Ugasi svećice dodirom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                  <path d="M12 2a4 4 0 0 0-4 4v7a2 2 0 0 1-2 2H5a1 1 0 0 0-1 1v2a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6V9a4 4 0 0 0-4-4"></path>
+                </svg>
+                <span>Ugasi dodirom</span>
+              </button>
+              <button id="btn-troll-hud" class="btn-hud-pill btn-troll-hud" type="button" title="Kupi jači dah preko PayPal-a">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span id="btn-troll-hud-text">Turbo dah (10€)</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -329,26 +340,177 @@
           </svg>
           <span>Podeli čestitku</span>
         </button>
+
+        <a id="btn-troll-donate" href="https://paypal.me/milanwebportal/10EUR" target="_blank" rel="noopener noreferrer" class="btn-secondary-action btn-troll-donate" title="Časti menadžera Milana za tortu i server">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+          </svg>
+          <span>Časti Milana (10€)</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- KALIBRACIONI MODAL ZA ŠUM PROSTORIJE -->
+  <!-- KALIBRACIONI & TROLL MODAL ZA MIKROFON -->
   <div id="calibration-modal" class="calibration-modal modal-hidden" role="dialog" aria-modal="true">
     <div class="calibration-card">
-      <div class="calibration-icon-pulse">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
-          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-          <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-          <line x1="12" y1="19" x2="12" y2="23"></line>
-          <line x1="8" y1="23" x2="16" y2="23"></line>
-        </svg>
+      
+      <!-- Faza 1: Usklađivanje sa mikrofonom -->
+      <div id="calibration-step-loading">
+        <div class="calibration-icon-pulse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </div>
+        <h3 id="calibration-title">Usklađivanje sa mikrofonom...</h3>
+        <p id="calibration-desc">Merenje ambijentalnog zvuka prostorije radi maksimalne osetljivosti na dah.</p>
+        <div class="calibration-progress-track">
+          <div id="calibration-bar" class="calibration-progress-fill"></div>
+        </div>
       </div>
-      <h3>Usklađivanje sa mikrofonom...</h3>
-      <p>Merenje ambijentalnog zvuka prostorije radi maksimalne osetljivosti na dah.</p>
-      <div class="calibration-progress-track">
-        <div id="calibration-bar" class="calibration-progress-fill"></div>
+
+      <!-- Faza 2: Šaljivi PayPal Troll Paywall -->
+      <div id="calibration-step-troll" class="troll-step-hidden">
+        <div class="troll-alert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+          </svg>
+        </div>
+        <div class="troll-badge-warning">Greška #402: Plaćanje neophodno</div>
+        <h3 class="troll-title">Licenca za duvanje svećica nije plaćena!</h3>
+        <p class="troll-desc">
+          Milan Web Portal detektovao je neizmirene obaveze za korišćenje vazduha i gašenje <strong id="troll-candles-count">30</strong> svećica.
+        </p>
+
+        <!-- Specifikacija troška -->
+        <div class="troll-invoice">
+          <div class="troll-invoice-row">
+            <span>Potrošnja vazduha & mikrofona:</span>
+            <span class="troll-price">10.00 EUR</span>
+          </div>
+          <div class="troll-invoice-row">
+            <span>Tutz Gang popust:</span>
+            <span class="troll-discount">0.00 EUR</span>
+          </div>
+          <div class="troll-invoice-row troll-invoice-total">
+            <span>UKUPNO ZA UPLATU:</span>
+            <span class="troll-total-amount">10.00 EUR</span>
+          </div>
+        </div>
+
+        <div class="troll-actions">
+          <a id="btn-troll-paypal" href="https://paypal.me/milanwebportal/10EUR" target="_blank" rel="noopener noreferrer" class="btn-paypal-troll">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Plati 10€ odmah preko PayPal-a</span>
+          </a>
+
+          <button id="btn-troll-beg-milan" class="btn-troll-secondary" type="button">
+            <span>Nemam 10€, molim Milana za popust (100%)</span>
+          </button>
+        </div>
       </div>
+
+      <!-- Faza 3A: VIP Kraljevski tretman (za one koji uplate preko PayPal-a) -->
+      <div id="calibration-step-vip" class="troll-step-hidden">
+        <div class="troll-vip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <div class="troll-badge-vip">DIAMOND VIP DONATOR • 10.00 EUR PRIMLJENO</div>
+        <h3 class="troll-title troll-title-vip">GOSPODSKI TRETMAN: Menadžer Milan se klanja!</h3>
+        <p class="troll-vip-msg" id="troll-vip-text">
+          Menadžer Milan: <em>„To se traži! Pravi gospodski potez! Za tebe stiže uvozni planinski alpski kiseonik i automatski turbo dah. Svećice nemaju nikakve šanse!“</em>
+        </p>
+
+        <div class="vip-perks-box">
+          <div class="vip-perk-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+            <span>Dodeljen status: <strong class="text-gold">Milanov VIP Favorit</strong></span>
+          </div>
+          <div class="vip-perk-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Turbo dah otključan: Jednim dodirom gasiš sve svećice u zlatnom plamenu!</span>
+          </div>
+        </div>
+
+        <button id="btn-troll-vip-finish" class="btn-primary-large btn-vip-gold-btn" type="button">
+          <span>Uđi na slavlje kao Kralj (VIP Ulaz)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Faza 3B: Sirotinjski oprost duga (za one koji mole za popust) -->
+      <div id="calibration-step-forgive" class="troll-step-hidden">
+        <div class="troll-poor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="8" y1="15" x2="16" y2="15"></line>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
+        <div class="troll-badge-poor">STATUS: ŠVORC • SOCIJALNA POMOĆ TUTZ GANGA</div>
+        <h3 class="troll-title">Odobrena milostinja menadžera Milana</h3>
+        <p class="troll-forgive-msg" id="troll-forgive-text">
+          Menadžer Milan: <em>„Znao sam, opet nema para... Dobro de, evo ti socijalni vazduh druge klase (malo ustajao). Dug od 10€ je ubeležen u crnu svesku sa 20% kamate za sledeću godinu!“</em>
+        </p>
+
+        <div class="poor-penalties-box">
+          <div class="poor-penalty-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Dodeljen status dužnika: <strong>Duguje 10.00 EUR Milanu</strong></span>
+          </div>
+          <div class="poor-penalty-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+            </svg>
+            <span>Socijalni režim: Nema turbo kompresora, moraš da duvaš iz sve snage!</span>
+          </div>
+        </div>
+
+        <button id="btn-troll-finish" class="btn-troll-secondary btn-poor-finish-btn" type="button">
+          <span>Priznajem da sam švorc, puštaj tortu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PREVIEW ZA FOTOGRAFIJE (KLIK ZA VELIKU SLIKU) -->
+  <div id="photo-lightbox" class="photo-lightbox modal-hidden" role="dialog" aria-modal="true" aria-label="Pregled fotografije">
+    <button id="btn-close-lightbox" class="btn-lightbox-close" type="button" title="Zatvori sliku">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Uspomena" class="lightbox-image" />
+      <video id="lightbox-video" src="" class="lightbox-video" controls playsinline></video>
+      <div id="lightbox-caption" class="lightbox-caption-text"></div>
     </div>
   </div>
 

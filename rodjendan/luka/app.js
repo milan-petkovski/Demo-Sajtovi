@@ -24,6 +24,7 @@ class BirthdayApp {
     this.glitchTimer = null;
     this.currentLitCount = this.profile.age;
     this._isGlitchingNow = false;
+    this.isVip = false;
 
     // Keširani DOM elementi
     this.elements = {};
@@ -54,6 +55,7 @@ class BirthdayApp {
     this._createAmbientStars();
     this._initConfetti();
     this._initGlitchEffect();
+    this._initPhotoLightbox();
     this._bindUserEvents();
   }
 
@@ -96,6 +98,20 @@ class BirthdayApp {
       blowAura: document.getElementById('blow-aura'),
       calibrationModal: document.getElementById('calibration-modal'),
       calibrationBar: document.getElementById('calibration-bar'),
+      stepLoading: document.getElementById('calibration-step-loading'),
+      stepTroll: document.getElementById('calibration-step-troll'),
+      stepVip: document.getElementById('calibration-step-vip'),
+      stepForgive: document.getElementById('calibration-step-forgive'),
+      trollCandlesCount: document.getElementById('troll-candles-count'),
+      trollVipText: document.getElementById('troll-vip-text'),
+      trollForgiveText: document.getElementById('troll-forgive-text'),
+      btnTrollPaypal: document.getElementById('btn-troll-paypal'),
+      btnTrollBegMilan: document.getElementById('btn-troll-beg-milan'),
+      btnTrollVipFinish: document.getElementById('btn-troll-vip-finish'),
+      btnTrollFinish: document.getElementById('btn-troll-finish'),
+      btnTrollHud: document.getElementById('btn-troll-hud'),
+      btnTrollHudText: document.getElementById('btn-troll-hud-text'),
+      userStatusBadge: document.getElementById('user-status-badge'),
       cakeStand: document.getElementById('cake-stand'),
       toastNotice: document.getElementById('toast-notice'),
       toastMessage: document.getElementById('toast-message'),
@@ -171,6 +187,7 @@ class BirthdayApp {
     if (this.elements.wishTitle) this.elements.wishTitle.textContent = p.wishTitle;
     if (this.elements.wishInstruction) this.elements.wishInstruction.textContent = p.wishInstruction;
     if (this.elements.fallbackInstruction) this.elements.fallbackInstruction.textContent = p.fallbackInstruction;
+    if (this.elements.trollCandlesCount) this.elements.trollCandlesCount.textContent = p.age;
 
     if (this.elements.celebrationTitle) this.elements.celebrationTitle.textContent = p.celebration.title;
     if (this.elements.celebrationSubtitle) this.elements.celebrationSubtitle.textContent = p.celebration.subtitle;
@@ -193,22 +210,99 @@ class BirthdayApp {
       `;
     }
 
-    // Galerija fotografija (moderne, čiste i luksuzne kartice)
+    // Galerija fotografija i videa (moderne, čiste i luksuzne kartice sa pravim uspomenama)
     if (this.elements.photoGallery && p.photos) {
-      this.elements.photoGallery.innerHTML = p.photos.map(photo => `
-        <div class="luxury-photo-card">
-          <div class="photo-media-wrapper">
-            <img src="${photo.url}" alt="${p.name}" class="photo-image" loading="lazy" />
+      this.elements.photoGallery.innerHTML = p.photos.map(photo => {
+        const isVideo = photo.type === 'video' || photo.url.endsWith('.mp4');
+        return `
+          <div class="luxury-photo-card ${isVideo ? 'luxury-video-card' : ''}" data-url="${photo.url}" data-type="${isVideo ? 'video' : 'image'}" data-caption="${photo.caption}" title="Klikni za pregled">
+            <div class="photo-media-wrapper">
+              ${isVideo ? `
+                <video src="${photo.url}" class="photo-image" playsinline muted loop autoplay preload="metadata" style="object-position: ${photo.position || 'center'};"></video>
+                <div class="photo-video-badge">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="svg-icon">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+              ` : `
+                <img src="${photo.url}" alt="${p.name}" class="photo-image" style="object-position: ${photo.position || 'center'};" loading="lazy" />
+              `}
+            </div>
+            <div class="photo-caption-bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>${photo.caption}</span>
+            </div>
           </div>
-          <div class="photo-caption-bar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-            <span>${photo.caption}</span>
-          </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
+  }
+
+  /**
+   * Lightbox modal za uvećan prikaz fotografija i videa na klik
+   */
+  _initPhotoLightbox() {
+    const lightbox = document.getElementById('photo-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const btnClose = document.getElementById('btn-close-lightbox');
+
+    if (!lightbox || !this.elements.photoGallery) return;
+
+    this.elements.photoGallery.addEventListener('click', (e) => {
+      const card = e.target.closest('.luxury-photo-card');
+      if (!card) return;
+      const url = card.getAttribute('data-url');
+      const type = card.getAttribute('data-type');
+      const caption = card.getAttribute('data-caption') || '';
+
+      if (url) {
+        if (type === 'video' || url.endsWith('.mp4')) {
+          if (lightboxImg) lightboxImg.style.display = 'none';
+          if (lightboxVideo) {
+            lightboxVideo.style.display = 'block';
+            lightboxVideo.src = url;
+            lightboxVideo.currentTime = 0;
+            lightboxVideo.play().catch(() => {});
+          }
+        } else {
+          if (lightboxVideo) {
+            lightboxVideo.pause();
+            lightboxVideo.src = '';
+            lightboxVideo.style.display = 'none';
+          }
+          if (lightboxImg) {
+            lightboxImg.style.display = 'block';
+            lightboxImg.src = url;
+          }
+        }
+
+        if (lightboxCaption) lightboxCaption.textContent = caption;
+        lightbox.classList.remove('modal-hidden');
+      }
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.add('modal-hidden');
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+      }
+      if (lightboxImg) lightboxImg.src = '';
+    };
+
+    if (btnClose) btnClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('modal-hidden')) {
+        closeLightbox();
+      }
+    });
   }
 
   /**
@@ -325,7 +419,7 @@ class BirthdayApp {
       );
     }
     if (this.elements.litCounterText && this.currentLitCount > 0) {
-      this.elements.litCounterText.innerHTML = `Preostalo svećica: ${this.currentLitCount} od <span class="glitch-text glitch-active">${g.altAge}${g.altCounterSuffix}</span>`;
+      this.elements.litCounterText.innerHTML = `Svećice: ${this.currentLitCount} od <span class="glitch-text glitch-active">${g.altAge}${g.altCounterSuffix}</span>`;
     }
   }
 
@@ -426,6 +520,115 @@ class BirthdayApp {
         this.elements.btnReopenCelebration.classList.add('btn-reopen-hidden');
       });
     }
+
+    // 8. Troll akcije: Molba Milanu za popust (Švorc / Socijalna pomoć)
+    if (this.elements.btnTrollBegMilan) {
+      this.elements.btnTrollBegMilan.addEventListener('click', () => {
+        this.isVip = false;
+        if (this.audioEngine) this.audioEngine.playSadTrombone();
+        if (this.elements.stepTroll) this.elements.stepTroll.classList.add('troll-step-hidden');
+        if (this.elements.stepForgive) {
+          const forgiveText = this.profile.id === 'selena'
+            ? `Menadžer Milan: <em>„Draga Selena, pošto ti je ${this.profile.age}. rođendan, ovaj put ti odobravam socijalni vazduh! Dug od 10€ ti pišem u crnu svesku sa 20% kamate za sledeću godinu!“</em>`
+            : `Menadžer Milan: <em>„Brate Tutz, ${this.profile.age} godina je ozbiljan jubilej, ali džep prazan! Oprostio bih ti rado, ali serveri koštaju. Dug od 10€ ti pišem u crnu svesku sa 20% zelenaške kamate!“</em>`;
+          if (this.elements.trollForgiveText) {
+            this.elements.trollForgiveText.innerHTML = forgiveText;
+          }
+          this.elements.stepForgive.classList.remove('troll-step-hidden');
+        }
+      });
+    }
+
+    // 9. Troll akcije: Klik na PayPal link (VIP Gospodski tretman)
+    if (this.elements.btnTrollPaypal) {
+      this.elements.btnTrollPaypal.addEventListener('click', () => {
+        this.isVip = true;
+        if (this.audioEngine) this.audioEngine.playVipSound();
+        if (this.confettiEngine) {
+          this.confettiEngine.launchCannons(35, 35, 20);
+        }
+        if (this.elements.stepTroll) this.elements.stepTroll.classList.add('troll-step-hidden');
+        if (this.elements.stepVip) {
+          const vipText = this.profile.id === 'selena'
+            ? `Menadžer Milan: <em>„Gospodski gest draga Selena! Pravi VIP donator! Za tebe stiže uvozni švajcarski planinski kiseonik. Svećice nemaju nikakve šanse!“</em>`
+            : `Menadžer Milan: <em>„To se traži brate Tutz! Uplata je legla, pravi gospodski potez! Milanov kompresor je spreman, svećice se gase na pogled!“</em>`;
+          if (this.elements.trollVipText) {
+            this.elements.trollVipText.innerHTML = vipText;
+          }
+          this.elements.stepVip.classList.remove('troll-step-hidden');
+        }
+      });
+    }
+
+    // 10A. Troll akcije: VIP Završetak i ulazak na slavlje
+    if (this.elements.btnTrollVipFinish) {
+      this.elements.btnTrollVipFinish.addEventListener('click', () => {
+        if (this.audioEngine) this.audioEngine.playSuccessFanfare();
+        this.elements.calibrationModal.classList.add('modal-hidden');
+        if (this.elements.userStatusBadge) {
+          this.elements.userStatusBadge.className = 'user-status-badge badge-vip';
+          this.elements.userStatusBadge.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>VIP GOSPODIN (10€ UPLAĆENO)</span>
+          `;
+          this.elements.userStatusBadge.classList.remove('status-hidden');
+        }
+        if (this.elements.btnTrollHud) {
+          this.elements.btnTrollHud.classList.add('hud-vip-active');
+        }
+        if (this.elements.btnTrollHudText) {
+          this.elements.btnTrollHudText.textContent = 'Turbo dah (Aktiviran)';
+        }
+        this.showToast('VIP status aktiviran! Milanov industrijski kompresor je spreman.', 4500);
+      });
+    }
+
+    // 10B. Troll akcije: Završetak za dužnike / švorc
+    if (this.elements.btnTrollFinish) {
+      this.elements.btnTrollFinish.addEventListener('click', () => {
+        if (this.audioEngine) this.audioEngine.playBuzzerSound();
+        this.elements.calibrationModal.classList.add('modal-hidden');
+        if (this.elements.userStatusBadge) {
+          this.elements.userStatusBadge.className = 'user-status-badge badge-poor';
+          this.elements.userStatusBadge.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-icon">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="8" y1="15" x2="16" y2="15"></line>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+            <span>STATUS: ŠVORC (DUG 10€ MILANU)</span>
+          `;
+          this.elements.userStatusBadge.classList.remove('status-hidden');
+        }
+        this.showToast('Dozvola odobrena na veresiju! Milan te drži u crnoj svesci.', 5000);
+      });
+    }
+
+    // 11. Troll HUD dugme (Turbo dah)
+    if (this.elements.btnTrollHud) {
+      this.elements.btnTrollHud.addEventListener('click', () => {
+        if (this.isVip) {
+          if (this.flameEngine) {
+            this.flameEngine.extinguishAll();
+          }
+          if (this.audioEngine) {
+            this.audioEngine.playVipSound();
+          }
+          if (this.confettiEngine) {
+            this.confettiEngine.launchCannons(50, 50, 25);
+          }
+          this.showToast('VIP TURBO DAH: Milanov kompresor gasi sve svećice u jednom cugu!', 4500);
+        } else {
+          if (this.audioEngine) this.audioEngine.playBuzzerSound();
+          // Otvara PayPal u novom tabu za uplatu 10€
+          window.open('https://paypal.me/milanwebportal/10EUR', '_blank');
+          this.showToast('Nema džabe turbo daha! Otvaram PayPal... Uplati 10€ da Milan uključi kompresor!', 5500);
+        }
+      });
+    }
   }
 
   /**
@@ -449,18 +652,28 @@ class BirthdayApp {
       }
     };
 
-    // Kalibracija završena
+    // Kalibracija završena -> Pokreni šaljivi Troll Paywall
     this.audioEngine.onCalibrationComplete = () => {
       this.isCalibrated = true;
-      this.elements.calibrationModal.classList.add('modal-hidden');
-      this.showToast('Mikrofon je spreman! Zaželi želju i duni u mikrofon.');
+      this._showCalibrationTrollPaywall();
     };
+
+    this._lastTrollToastTime = 0;
 
     // Povratni poziv za ažuriranje jačine duvanja (60 fps)
     this.audioEngine.onIntensityUpdate = ({ intensity, rawIntensity }) => {
       this.updateBlowFeedback(intensity);
       if (this.flameEngine) {
         this.flameEngine.setBlowIntensity(intensity);
+      }
+
+      // Šaljivi povremeni savet ako dah oslabi
+      if (intensity > 0.15 && intensity < 0.48 && this.flameEngine && this.flameEngine.candles.filter(c => c.isLit).length > 3) {
+        const now = performance.now();
+        if (now - this._lastTrollToastTime > 11000) {
+          this._lastTrollToastTime = now;
+          this.showToast('Detektovan slab dah! Preporučujemo uplatu 10€ na PayPal za jači ventilator.', 4500);
+        }
       }
     };
 
@@ -479,6 +692,21 @@ class BirthdayApp {
 
     // Pokreni audio engine
     await this.audioEngine.start();
+  }
+
+  /**
+   * Prikazuje šaljivi paywall prozor sa PayPal dugmetom nakon kalibracije
+   */
+  _showCalibrationTrollPaywall() {
+    if (this.audioEngine) {
+      this.audioEngine.playBuzzerSound();
+    }
+    if (this.elements.stepLoading) {
+      this.elements.stepLoading.classList.add('troll-step-hidden');
+    }
+    if (this.elements.stepTroll) {
+      this.elements.stepTroll.classList.remove('troll-step-hidden');
+    }
   }
 
   /**
@@ -505,8 +733,8 @@ class BirthdayApp {
       }
     });
 
-    // Broj svećica: tačne godine slavljenika (npr. 24 za Selenu, 25 za Luku)
-    const candleCount = this.profile.age || 24;
+    // Broj svećica: tačne godine slavljenika (npr. 29 za Selenu, 30 za Luku)
+    const candleCount = this.profile.age || 29;
     this.flameEngine.initCandles(candleCount, { width: rect.width, height: rect.height });
     this.flameEngine.start();
 
@@ -520,9 +748,9 @@ class BirthdayApp {
         this.elements.litCounterText.textContent = 'Sve svećice su ugašene!';
       } else {
         if (this.isGlitched && this.profile.glitch && this.profile.glitch.enabled) {
-          this.elements.litCounterText.innerHTML = `Preostalo svećica: ${litCount} od <span class="glitch-text glitch-active">${this.profile.glitch.altAge}${this.profile.glitch.altCounterSuffix}</span>`;
+          this.elements.litCounterText.innerHTML = `Svećice: ${litCount} od <span class="glitch-text glitch-active">${this.profile.glitch.altAge}${this.profile.glitch.altCounterSuffix}</span>`;
         } else {
-          this.elements.litCounterText.textContent = `Preostalo svećica: ${litCount} od ${this.profile.age}`;
+          this.elements.litCounterText.textContent = `Svećice: ${litCount} od ${this.profile.age}`;
         }
       }
     }

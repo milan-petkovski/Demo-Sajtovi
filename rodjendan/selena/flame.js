@@ -96,15 +96,15 @@ export class FlameEngine {
     candleList.sort((a, b) => a.y - b.y);
 
     // Dodeljujemo progresivne pragove gašenja
-    // Čvršći i prirodniji pragovi: traže dobar dah, drže se stabilno na vrhu i gase se u skladnom talasu
-    const minThreshold = 0.48;
-    const maxThreshold = 0.82;
+    // Osetno zahtevniji pragovi: traže pun plućni kapacitet i neprekidan snažan dah
+    const minThreshold = 0.55;
+    const maxThreshold = 0.86;
 
     this.candles = candleList.map((pos, idx) => {
       const progress = idx / Math.max(1, candleList.length - 1);
       // Fina nasumična varijacija za organski izgled
       const jitter = (Math.random() - 0.5) * 0.03;
-      const threshold = Math.min(0.85, Math.max(0.44, minThreshold + progress * (maxThreshold - minThreshold) + jitter));
+      const threshold = Math.min(0.88, Math.max(0.51, minThreshold + progress * (maxThreshold - minThreshold) + jitter));
 
       return {
         id: idx,
@@ -115,7 +115,7 @@ export class FlameEngine {
         flameWidth: 13,
         isLit: true,
         threshold: threshold,
-        requiredBlowMs: 360 + (progress * 300), // 360ms za prve, do 660ms za poslednje (zahteva zadržavanje daha)
+        requiredBlowMs: 580 + (progress * 550), // 580ms za prve, do čak 1130ms za poslednje
         accumulatedBlowMs: 0,
         flickerSeed: Math.random() * 100,
         scale: 0.88 + ((pos.y - centerY) / radiusY) * 0.18, // 3D perspektivno skaliranje
@@ -205,7 +205,7 @@ export class FlameEngine {
       if (intensity >= candle.threshold) {
         // Ravnomerna progresija gašenja
         const ratio = intensity / candle.threshold;
-        const multiplier = Math.min(1.65, Math.max(1.0, ratio * 1.1));
+        const multiplier = Math.min(1.15, Math.max(1.0, ratio * 1.01));
         candle.accumulatedBlowMs += dt * multiplier;
 
         if (candle.accumulatedBlowMs >= candle.requiredBlowMs) {
@@ -213,8 +213,8 @@ export class FlameEngine {
           newlyExtinguished++;
         }
       } else {
-        // Hlađenje pri posustajanju daha
-        candle.accumulatedBlowMs = Math.max(0, candle.accumulatedBlowMs - dt * 2.5);
+        // Brzo hlađenje pri posustajanju daha (zahteva konstantan pritisak bez prekida)
+        candle.accumulatedBlowMs = Math.max(0, candle.accumulatedBlowMs - dt * 3.6);
       }
     });
 
@@ -549,6 +549,25 @@ export class FlameEngine {
       ctx.fill();
       ctx.restore();
     }
+  }
+
+  /**
+   * VIP Turbo Dah: Sekvencijalno brzo gašenje svih svećica uz oblake dima
+   */
+  extinguishAll() {
+    const litCandles = this.candles.filter(c => c.isLit);
+    if (litCandles.length === 0) return;
+
+    litCandles.forEach((candle, idx) => {
+      setTimeout(() => {
+        if (candle.isLit) {
+          this.extinguishCandle(candle);
+          if (this.getLitCount() === 0 && this.onAllExtinguished) {
+            this.onAllExtinguished();
+          }
+        }
+      }, idx * 35);
+    });
   }
 
   /**

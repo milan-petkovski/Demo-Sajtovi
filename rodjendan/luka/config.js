@@ -19,20 +19,20 @@ export const CONFIG = {
     // Osnovni prag intenziteta duvanja (zahteva snažan i stabilan dah)
     // Manja vrednost = osetljiviji mikrofon (lakše gašenje)
     // Veća vrednost = potreban znatno jači i duži dah (teže gašenje)
-    blowThreshold: 0.50,
+    blowThreshold: 0.60,
 
     // Gornja granica niskih frekvencija za detekciju vetra/duvanja (Hz)
     // Duvanje u mikrofon stvara snažan vazdušni pritisak u rasponu 20-500 Hz
     lowFreqMaxHz: 500,
 
     // Minimalno vreme (u milisekundama) tokom kog intenzitet mora biti iznad praga
-    minBlowDurationMs: 340,
+    minBlowDurationMs: 450,
 
     // Trajanje kalibracije šuma prostorije pri startu (ms)
     calibrationDurationMs: 1200,
 
-    // Multiplikator osetljivosti (0.88 = traži jak, nameran dah za postizanje 100%)
-    sensitivityMultiplier: 0.88,
+    // Multiplikator osetljivosti (0.79 = zahteva vrlo snažan i fokusiran dah)
+    sensitivityMultiplier: 0.79,
 
     // Faktor ublažavanja (Exponential Moving Average, 0.1 do 0.3)
     smoothingAlpha: 0.18,
@@ -46,7 +46,7 @@ export const CONFIG = {
     // 'exact' = tačan broj svećica prema godinama slavljenika
     // 'compact' = najviše 12 svećica ako je broj godina veliki
     mode: 'exact',
-    maxCandlesDisplay: 30
+    maxCandlesDisplay: 35
   },
 
   // Profili sa specifičnim podacima za Selenu i Luku
@@ -54,9 +54,9 @@ export const CONFIG = {
     selena: {
       id: 'selena',
       name: 'Selena',
-      age: 24,
+      age: 29,
       tagline: 'Za najposebniju tutzovu ženu',
-      heroTitle: 'Srećan 24. rođendan, Selena!',
+      heroTitle: 'Srećan 29. rođendan, Selena!',
       heroSubtitle: 'Neka ti ova godina donese najlepše snove, bezbroj osmeha i nezaboravne avanture.',
       wishTitle: 'Zaželi najlepšu želju',
       wishInstruction: 'Zatvori oči, zamisli želju i snažno duni u mikrofon!',
@@ -86,14 +86,14 @@ export const CONFIG = {
       },
 
       celebration: {
-        title: 'Srećan 24. rođendan!',
+        title: 'Srećan 29. rođendan!',
         subtitle: 'Tvoja želja je poletela ka zvezdama...',
         messageTitle: 'Pismo slavljenici',
         personalMessage: `Draga Selena,
 
 Danas slavimo tebe i sve ono što te čini posebnom – tvoju energiju, tvoj osmeh i tvoju toplinu koja obasjava svaku prostoriju u koju uđeš.
 
-Neka ti ova 24. godina donese neverovatne uspehe, velika putovanja, iskrenu ljubav i trenutke koji oduzimaju dah.
+Neka ti ova 29. godina donese neverovatne uspehe, velika putovanja, iskrenu ljubav i trenutke koji oduzimaju dah.
 
 Hvala ti što si uvek inspiracija svima nama!`,
         signature: 'S ljubavlju, Milan (Menadžer tutz ganga)'
@@ -101,12 +101,14 @@ Hvala ti što si uvek inspiracija svima nama!`,
 
       photos: [
         {
-          url: 'assets/selena-1.jpg',
-          caption: 'Najlepši osmeh i slavljenički sjaj'
+          url: 'assets/selena2.png',
+          caption: 'Najlepši trenuci sa porodicom na moru',
+          position: 'center 32%'
         },
         {
-          url: 'assets/selena-2.jpg',
-          caption: 'Trenuci koji ostaju zauvek u sećanju'
+          url: 'assets/selena.jpg',
+          caption: 'Specijalno Coca-Cola izdanje samo za Selenu',
+          position: 'center 48%'
         }
       ]
     },
@@ -114,7 +116,7 @@ Hvala ti što si uvek inspiracija svima nama!`,
     luka: {
       id: 'luka',
       name: 'Luka',
-      age: 25,
+      age: 30,
       // Glitch podaci (Deda 67 godina unutar-ekipna fora)
       glitch: {
         enabled: true,
@@ -134,8 +136,8 @@ Hvala ti što si uvek inspiracija svima nama!`,
 Neka svaka sledeća partija šaha u parku bude još veća od prethodne!`,
         altCounterSuffix: ' (penzija!)'
       },
-      tagline: 'Četvrt veka dominacije i uspeha',
-      heroTitle: 'Srećan 25. rođendan, Luka!',
+      tagline: 'Tri decenije dominacije i uspeha',
+      heroTitle: 'Srećan 30. rođendan, Luka!',
       heroSubtitle: 'Nova prekretnica, novi veliki ciljevi i još moćnije pobede.',
       wishTitle: 'Fokusiraj se i zaželi želju',
       wishInstruction: 'Dubok udah, usmeri energiju i snažno duni u mikrofon!',
@@ -165,12 +167,12 @@ Neka svaka sledeća partija šaha u parku bude još veća od prethodne!`,
       },
 
       celebration: {
-        title: 'Srećan 25. rođendan, majstore!',
-        subtitle: 'Četvrt veka! Svećice su ugašene, planovi su pokrenuti...',
+        title: 'Srećan 30. rođendan, majstore!',
+        subtitle: 'Tri decenije! Svećice su ugašene, planovi su pokrenuti...',
         messageTitle: 'Poruka za Luku',
         personalMessage: `Brate Luka,
 
-Čestitamo ti ulazak u 25. godinu! Četvrt veka je ozbiljan jubilej, a najbolje stvari tek počinju.
+Čestitamo ti ulazak u 30. godinu! Tri decenije su ozbiljan jubilej, a najbolje stvari tek počinju.
 
 Želimo ti čelično zdravlje, bistru glavu za najveće projekte, neiscrpnu energiju i slobodu da stvaraš tačno onako kako zamisliš.
 
@@ -180,12 +182,40 @@ Neka svaka sledeća pobeda bude još veća od prethodne!`,
 
       photos: [
         {
-          url: 'assets/luka-1.jpg',
-          caption: 'Vizija, fokus i noćni grad'
+          url: 'assets/IMG-20251210-WA0009.jpg',
+          caption: 'Zvanična Tutz Gang majica i najjača podrška',
+          position: 'center 35%'
         },
         {
-          url: 'assets/luka-2.jpg',
-          caption: 'Slavimo 25. rođendan u punom stilu'
+          url: 'assets/AISelect_20261017_235411_WhatsApp.jpg',
+          caption: 'Tutz pog momenat uživo',
+          position: 'center center'
+        },
+        {
+          url: 'assets/AISelect_20261017_235305_WhatsApp.jpg',
+          caption: 'Legendarna Tutz glinena figura (Level 30 Boss)',
+          position: 'center 22%'
+        },
+        {
+          url: 'assets/IMG-20260124-WA0014.jpg',
+          caption: 'Legendarna reakcija sa strima',
+          position: 'center center'
+        },
+        {
+          url: 'assets/AISelect_20261017_235235_WhatsApp.jpg',
+          caption: 'Cyberpunk Tutz (Ultra Neon Edition)',
+          position: 'center center'
+        },
+        {
+          url: 'assets/IMG-20251104-WA0026.jpg',
+          caption: 'Bioskopske večeri, kokice i dobar film',
+          position: 'center 28%'
+        },
+        {
+          url: 'assets/VID-20260120-WA0048.mp4',
+          type: 'video',
+          caption: 'Tutz studio: „Neće noise cancel, šta je ovo bre!“',
+          position: 'center center'
         }
       ]
     }

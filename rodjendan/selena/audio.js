@@ -366,6 +366,111 @@ export class AudioEngine {
   }
 
   /**
+   * Zvuk greške / buzzer za šaljivi paywall prozor
+   */
+  playBuzzerSound() {
+    if (this.isMuted || !this.audioContext) return;
+
+    try {
+      const now = this.audioContext.currentTime;
+      const osc = this.audioContext.createOscillator();
+      const gain = this.audioContext.createGain();
+
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(140, now);
+      osc.frequency.setValueAtTime(110, now + 0.12);
+
+      gain.gain.setValueAtTime(0.28, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
+
+      osc.connect(gain);
+      gain.connect(this.sfxGainNode);
+
+      osc.start(now);
+      osc.stop(now + 0.34);
+    } catch (e) {
+      console.warn('Buzzer sound error:', e);
+    }
+  }
+
+  /**
+   * Zvuk za VIP status: Zlatni trijumfalni novčići i fanfara
+   */
+  playVipSound() {
+    if (this.isMuted || !this.audioContext) return;
+
+    try {
+      const now = this.audioContext.currentTime;
+      const notes = [
+        { f: 523.25, t: 0.0, d: 0.12 }, // C5
+        { f: 659.25, t: 0.08, d: 0.12 }, // E5
+        { f: 783.99, t: 0.16, d: 0.15 }, // G5
+        { f: 1046.50, t: 0.26, d: 0.35 }, // C6
+        { f: 1318.51, t: 0.38, d: 0.55 }  // E6
+      ];
+
+      notes.forEach(n => {
+        const osc = this.audioContext.createOscillator();
+        const gain = this.audioContext.createGain();
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(n.f, now + n.t);
+
+        gain.gain.setValueAtTime(0, now + n.t);
+        gain.gain.linearRampToValueAtTime(0.35, now + n.t + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + n.t + n.d);
+
+        osc.connect(gain);
+        gain.connect(this.sfxGainNode);
+
+        osc.start(now + n.t);
+        osc.stop(now + n.t + n.d + 0.05);
+      });
+    } catch (e) {
+      console.warn('VIP sound error:', e);
+    }
+  }
+
+  /**
+   * Zvuk za molbu za popust: Komični 'wah-wah-waaah' zvuk
+   */
+  playSadTrombone() {
+    if (this.isMuted || !this.audioContext) return;
+
+    try {
+      const now = this.audioContext.currentTime;
+      const drops = [
+        { f: 293.66, t: 0.0, d: 0.22 },  // D4
+        { f: 277.18, t: 0.26, d: 0.22 }, // C#4
+        { f: 261.63, t: 0.52, d: 0.24 }, // C4
+        { f: 246.94, t: 0.80, d: 0.55, bend: 220.00 } // B3 -> A3 bend
+      ];
+
+      drops.forEach(step => {
+        const osc = this.audioContext.createOscillator();
+        const gain = this.audioContext.createGain();
+
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(step.f, now + step.t);
+        if (step.bend) {
+          osc.frequency.linearRampToValueAtTime(step.bend, now + step.t + step.d);
+        }
+
+        gain.gain.setValueAtTime(0.18, now + step.t);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + step.t + step.d);
+
+        osc.connect(gain);
+        gain.connect(this.sfxGainNode);
+
+        osc.start(now + step.t);
+        osc.stop(now + step.t + step.d + 0.05);
+      });
+    } catch (e) {
+      console.warn('Sad trombone error:', e);
+    }
+  }
+
+  /**
    * Zvuk ponovnog paljenja svećica: magični zvučni arpeggio
    */
   playRelightSparkle() {
