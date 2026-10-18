@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0A0A0B"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#C9A66B" stroke-opacity="0.3" stroke-width="2"/>
+  <!-- Isometric Grid / Architectural Blueprint Mark -->
+  <path d="M12 24 L32 12 L52 24 L32 36 Z" fill="none" stroke="#C9A66B" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M12 24 L12 44 L32 56 L32 36" fill="none" stroke="#C9A66B" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M52 24 L52 44 L32 56" fill="none" stroke="#C9A66B" stroke-width="2" stroke-linejoin="round" stroke-opacity="0.6"/>
+  <!-- Inner engineering crosshair -->
+  <path d="M22 29 L42 41" stroke="#F4F4F2" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <circle cx="32" cy="35" r="2.5" fill="#C9A66B"/>
+</svg>

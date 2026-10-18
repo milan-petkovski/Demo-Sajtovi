@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="sr-Latn" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DI PLANS | Inženjersko i tehničko savetovanje u građevinarstvu</title>
+  <meta name="description" content="DI PLANS pruža inženjersko i tehničko savetovanje pri gradnji, adaptaciji i kupovini nekretnina. Stručna procena, analiza dokumentacije i kontrola bez suvišnog dopisivanja.">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mwp-diplans.netlify.app/">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:title" content="DI PLANS | Inženjersko i tehničko savetovanje">
+  <meta property="og:description" content="Inženjersko i tehničko savetovanje pri gradnji, rekonstrukciji i kupovini nekretnina. Pozovite ili pošaljite strukturirani upit.">
+  <meta property="og:url" content="https://mwp-diplans.netlify.app/">
+  <meta property="og:image" content="assets/favicon.svg">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+
+  <!-- Glavni stilovi -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>document.documentElement.className = "js";</script>
+
+  <!-- POTVRDITI SA KLIJENTOM: Podaci o firmi u Schema.org JSON-LD formatu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "DI PLANS",
+    "description": "Inženjersko i tehničko savetovanje u građevinarstvu i prometu nekretnina.",
+    "email": "diplans.ns@gmail.com",
+    "telephone": "+381640000000",
+    "url": "https://mwp-diplans.netlify.app/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Novi Sad",
+      "addressCountry": "RS"
+    },
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Srbija"
+    }
+  }
+  </script>
+</head>
+<body id="top">
+  <!-- Skip to content za pristupačnost -->
+  <a class="skip-link" href="#glavni-sadrzaj">Pređite na glavni sadržaj</a>
+
+  <!-- SVG Sprite sa tehničkim ikonicama (strogo bez emodžija) -->
+  <svg width="0" height="0" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Telefon -->
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.1-.6-2.3-.6-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM5 5h2.1c.1.7.3 1.4.5 2.1L6.3 8.4C5.7 7.3 5.2 6.2 5 5zm14 14c-1.2-.2-2.3-.7-3.4-1.3l1.3-1.3c.7.2 1.4.4 2.1.5V19z"/>
+      </symbol>
+      <!-- Email -->
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/>
+      </symbol>
+      <!-- WhatsApp -->
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.07-1.13.1-3.28-.79-2.58-1.07-4.22-3.71-4.35-3.88-.13-.17-1.05-1.4-1.05-2.67 0-1.27.66-1.89.9-2.14.24-.25.52-.31.69-.31.17 0 .35 0 .5.01.16.01.38-.06.59.45.22.53.75 1.83.82 1.97.07.14.11.31.02.5-.09.18-.14.3-.28.46-.14.17-.3.37-.43.5-.14.14-.29.3-.13.58.17.28.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.41.28.14.45.12.62-.07.17-.19.73-.85.92-1.14.2-.29.39-.24.66-.14.27.1.1.72 1.72 1.09.28.14.47.2.53.31.07.12.07.69-.17 1.37z"/>
+      </symbol>
+      <!-- Viber -->
+      <symbol id="icon-viber" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19.38 4.62C17.44 2.68 14.86 1.62 12.1 1.62c-5.75 0-10.42 4.67-10.42 10.42 0 1.88.5 3.71 1.46 5.32L1.6 22.38l5.58-1.46c1.55.85 3.3 1.3 5.09 1.3 5.75 0 10.42-4.67 10.42-10.42 0-2.76-1.06-5.34-3.31-7.18zM12.27 20.48c-1.57 0-3.11-.42-4.46-1.22l-.32-.19-3.31.87.88-3.23-.21-.33c-.88-1.4-1.34-3.03-1.34-4.7 0-4.78 3.89-8.67 8.67-8.67 2.32 0 4.49.9 6.13 2.54 1.64 1.64 2.54 3.82 2.54 6.13-.01 4.79-3.9 8.8-8.58 8.8zm4.76-6.52c-.26-.13-1.55-.76-1.79-.85-.24-.09-.41-.13-.58.13-.17.26-.67.85-.82 1.02-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.07-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.59-.44-.15-.01-.32-.01-.49-.01-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.8 4.43 3.92.62.27 1.1.43 1.48.55.62.2 1.19.17 1.64.1.5-.07 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3z"/>
+      </symbol>
+      <!-- Strelice i navigacija -->
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/>
+      </symbol>
+      <!-- Kvačica -->
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <polyline fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="20 6 9 17 4 12"/>
+      </symbol>
+      <!-- Lokacija / Pin -->
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.5-7-11.5a7 7 0 1 1 14 0c0 5-7 11.5-7 11.5z"/>
+        <circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <!-- Sat / Radno vreme -->
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <polyline points="12 7 12 12 15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <!-- Tehnički lenjir i uglomer (Inženjering) -->
+      <symbol id="icon-ruler" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l14 14H5zm4-6l-2-2m4 4l-2-2m4 4l-2-2m4 4l-2-2"/>
+      </symbol>
+      <!-- Dokument / Nacrt -->
+      <symbol id="icon-blueprint" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 8h10M7 12h10M7 16h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <!-- Lupa i merenje (Due Diligence) -->
+      <symbol id="icon-search-check" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="m8 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <!-- Konstrukcija / Zgrada -->
+      <symbol id="icon-building-struct" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M9 13h6M9 17h6"/>
+      </symbol>
+      <!-- Predmer / Kalkulacija -->
+      <symbol id="icon-calc" viewBox="0 0 24 24">
+        <rect x="4" y="2" width="16" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <line x1="8" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="2"/>
+        <line x1="16" y1="14" x2="16" y2="18" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <!-- Koordinacija / Štit -->
+      <symbol id="icon-shield-check" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <polyline points="9 12 11 14 15 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <!-- Info kružić -->
+      <symbol id="icon-info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <line x1="12" y1="16" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="12" y1="8" x2="12.01" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ========================================================================
+       1. HEADER (Wordmark, linkovi, Pozovite dugme, Mobilni meni)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="#top" class="brand" aria-label="DI PLANS, početna strana">
+        <div class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+            <line x1="12" y1="22" x2="12" y2="12"/>
+            <line x1="22" y1="8.5" x2="12" y2="12"/>
+            <line x1="2" y1="8.5" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" data-brand>DI PLANS</span>
+          <span class="brand-subtitle">Inženjersko savetovanje</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigacija -->
+      <nav class="nav-desktop" aria-label="Glavna navigacija">
+        <a href="#usluge">Usluge</a>
+        <a href="#kako-radimo">Kako radimo</a>
+        <a href="#priprema">Priprema upita</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Direktno pozovite dugme -->
+        <a href="tel:+381640000000" class="btn btn-primary btn-sm header-call-btn" data-tel>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+          <span>Pozovite</span>
+        </a>
+
+        <!-- Mobilni meni toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Otvori navigacioni meni">
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobilni Drawer preko celog ekrana -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobilni meni">
+    <nav class="mobile-nav-list" aria-label="Mobilna navigacija">
+      <a href="#usluge" class="mobile-nav-link">
+        <span>Usluge</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+      </a>
+      <a href="#kako-radimo" class="mobile-nav-link">
+        <span>Kako radimo</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+      </a>
+      <a href="#priprema" class="mobile-nav-link">
+        <span>Priprema pre kontakta</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+      </a>
+      <a href="#faq" class="mobile-nav-link">
+        <span>Česta pitanja (FAQ)</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+      </a>
+      <a href="#kontakt" class="mobile-nav-link">
+        <span>Kontakt &amp; Upit</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+      </a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <a href="tel:+381640000000" class="btn btn-primary btn-block" data-tel>
+        <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+        <span>Pozovite odmah</span>
+      </a>
+      <a href="#kontakt" class="btn btn-secondary btn-block mobile-nav-link">
+        <span>Pošaljite strukturirani upit</span>
+      </a>
+
+      <div class="mobile-drawer-contacts">
+        <div class="mobile-drawer-contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+          <span data-mail-text>diplans.ns@gmail.com</span>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg>
+          <span data-city>Novi Sad, Srbija</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="glavni-sadrzaj">
+    <!-- ======================================================================
+         2. HERO SEKCIJA (Inženjersko savetovanje, CTA, SVG vizuel, Red poverenja)
+         ====================================================================== -->
+    <section class="hero-section bg-blueprint-grid" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Tekstualni i CTA deo -->
+          <div class="hero-content reveal">
+            <div class="section-tag">
+              <span>Inženjersko &amp; tehničko savetovanje · Građevina i nekretnine</span>
+            </div>
+
+            <h1 class="hero-headline" id="hero-title">
+              Jasne tehničke odluke pre gradnje, kupovine ili adaptacije.
+            </h1>
+
+            <p class="hero-subheadline">
+              Nezavisno inženjersko vođenje, pregled dokumentacije i stručna procena objekta — bez lutanja, nepredviđenih troškova i beskonačnog dopisivanja u porukama.
+            </p>
+
+            <!-- Primarni CTA -->
+            <div class="hero-cta-group">
+              <a href="tel:+381640000000" class="btn btn-primary" data-tel>
+                <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+                <span>Pozovite direktno</span>
+              </a>
+              <a href="#kontakt" class="btn btn-secondary">
+                <span>Pošaljite strukturirani upit</span>
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+              </a>
+            </div>
+
+            <!-- Brze poruke sa unapred pripremljenim šablonom -->
+            <div class="hero-quick-channels">
+              <span class="hero-quick-label">Direktna poruka:</span>
+              <a href="https://wa.me/381640000000" target="_blank" rel="noopener" class="hero-channel-pill btn-wa" data-wa aria-label="Pošaljite unapred pripremljenu WhatsApp poruku">
+                <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                <span>WhatsApp šablon</span>
+              </a>
+              <a href="viber://chat?number=%2B381640000000" class="hero-channel-pill btn-viber" data-viber aria-label="Pošaljite Viber poruku">
+                <svg class="icon" aria-hidden="true"><use href="#icon-viber"/></svg>
+                <span>Viber šablon</span>
+              </a>
+            </div>
+
+            <!-- Red poverenja (3 sažete stavke bez izmišljenih cifara ili nepostojećih garancija) -->
+            <div class="trust-bar">
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg><use href="#icon-ruler"/></svg>
+                </div>
+                <div>
+                  <h3>Precizna priprema</h3>
+                  <p>Definisane potrebe i spisak podloga pre prvog razgovora.</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg><use href="#icon-shield-check"/></svg>
+                </div>
+                <div>
+                  <h3>Nezavisan inženjer</h3>
+                  <p>Stručni stav u Vašem interesu, bez vezivanja za izvođače radova.</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg><use href="#icon-search-check"/></svg>
+                </div>
+                <div>
+                  <h3>Konkretan odgovor</h3>
+                  <p>Strukturisani uvid i jasan sledeći korak, bez praznih fraza.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero vizuel: Izometrijski tehnički žičani model (Inline SVG, kotne linije, koordinate) -->
+          <div class="hero-visual reveal" style="animation-delay: 0.15s;">
+            <div class="hero-visual-card">
+              <div class="hero-visual-header">
+                <div class="hero-visual-badge">
+                  <span>TEHNIČKI MODEL DI-01</span>
+                </div>
+                <div>KOTA: +3.20m · RAZMERA 1:50</div>
+              </div>
+
+              <!-- Izometrijski arhitektonski nacrt -->
+              <svg class="hero-schematic-svg" viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tehnički izometrijski žičani prikaz građevinskog objekta sa kotnim linijama">
+                <!-- Tehnička pozadinska mreža -->
+                <g class="schematic-grid">
+                  <path d="M50 70 L550 70 M50 140 L550 140 M50 210 L550 210 M50 280 L550 280 M50 350 L550 350"/>
+                  <path d="M100 30 L100 390 M200 30 L200 390 M300 30 L300 390 M400 30 L400 390 M500 30 L500 390"/>
+                </g>
+
+                <!-- Koordinatne ose -->
+                <g class="schematic-axis">
+                  <line x1="300" y1="210" x2="100" y2="310"/>
+                  <line x1="300" y1="210" x2="500" y2="310"/>
+                  <line x1="300" y1="210" x2="300" y2="60"/>
+                </g>
+
+                <!-- Osnovna nosiva struktura - donja ploča -->
+                <polygon points="300,280 470,200 300,130 130,200" class="schematic-main"/>
+                <polygon points="300,295 470,215 300,145 130,215" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+
+                <!-- Vertikalni nosivi stubovi -->
+                <line x1="130" y1="200" x2="130" y2="120" class="schematic-accent"/>
+                <line x1="300" y1="280" x2="300" y2="195" class="schematic-accent"/>
+                <line x1="470" y1="200" x2="470" y2="120" class="schematic-accent"/>
+                <line x1="300" y1="130" x2="300" y2="70" stroke="rgba(201,166,107,0.4)" stroke-dasharray="3 3"/>
+
+                <!-- Međuspratna ploča i konzola -->
+                <polygon points="300,195 470,120 300,50 130,120" class="schematic-main"/>
+                
+                <!-- Krovni volumen / kubus -->
+                <polygon points="300,130 420,75 300,25 180,75" stroke="#F4F4F2" stroke-width="1.5" fill="rgba(201,166,107,0.06)"/>
+                <line x1="180" y1="75" x2="180" y2="120" stroke="#F4F4F2" stroke-width="1.5"/>
+                <line x1="300" y1="130" x2="300" y2="195" stroke="#F4F4F2" stroke-width="1.5"/>
+                <line x1="420" y1="75" x2="420" y2="120" stroke="#F4F4F2" stroke-width="1.5"/>
+
+                <!-- Kotne linije (Dimension lines) sa preciznim završecima -->
+                <!-- Širina levo -->
+                <g class="schematic-dim">
+                  <line x1="110" y1="210" x2="280" y2="295"/>
+                  <line x1="105" y1="207" x2="115" y2="213"/>
+                  <line x1="275" y1="292" x2="285" y2="298"/>
+                </g>
+                <text x="175" y="270" class="schematic-text-brass" transform="rotate(27, 175, 270)">14.80 m</text>
+
+                <!-- Dužina desno -->
+                <g class="schematic-dim">
+                  <line x1="320" y1="295" x2="490" y2="210"/>
+                  <line x1="315" y1="298" x2="325" y2="292"/>
+                  <line x1="485" y1="213" x2="495" y2="207"/>
+                </g>
+                <text x="410" y="270" class="schematic-text-brass" transform="rotate(-27, 410, 270)">18.50 m</text>
+
+                <!-- Vertikalna visinska kota -->
+                <g class="schematic-dim">
+                  <line x1="510" y1="200" x2="510" y2="120"/>
+                  <line x1="505" y1="200" x2="515" y2="200"/>
+                  <line x1="505" y1="120" x2="515" y2="120"/>
+                </g>
+                <text x="522" y="165" class="schematic-text-brass">h = 3.40 m</text>
+
+                <!-- Inspekcijski čvorovi sa tehničkim oznakama -->
+                <circle cx="300" cy="195" r="4" fill="#C9A66B"/>
+                <circle cx="300" cy="195" r="8" stroke="#C9A66B" stroke-width="1" stroke-opacity="0.5"/>
+                <text x="315" y="198" class="schematic-text">ČVOR N-01 (NOSIVA STRUKTURA)</text>
+
+                <circle cx="130" cy="120" r="3.5" fill="#C9A66B"/>
+                <text x="60" y="112" class="schematic-text">PROVERA DILATACIJE</text>
+
+                <circle cx="420" cy="75" r="3.5" fill="#C9A66B"/>
+                <text x="430" y="70" class="schematic-text">HIDROIZOLACIJA</text>
+
+                <!-- Koordinatna tehnička oznaka -->
+                <rect x="30" y="360" width="160" height="26" rx="3" fill="#121216" stroke="rgba(255,255,255,0.1)"/>
+                <text x="40" y="377" class="schematic-text" style="font-size: 10px;">GEO-REF: 45°15'N 19°50'E</text>
+              </svg>
+
+              <div class="hero-visual-footer">
+                <span>DI PLANS · PREGLED I VERIFIKACIJA</span>
+                <span>STATUS: SPREMNO ZA PROVERU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. USLUGE (6 kartica sa detaljnim opisom, za koga je, šta se dobija)
+         ====================================================================== -->
+    <section class="section" id="usluge" aria-labelledby="usluge-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span>Stručne oblasti rada</span>
+          </div>
+          <h2 class="section-title" id="usluge-title">
+            Detaljan prikaz inženjerskih i tehničkih usluga
+          </h2>
+          <p class="section-desc">
+            <!-- POTVRDITI SA KLIJENTOM: Usluge su sastavljene na osnovu standarda inženjerske prakse za savetovanje pre gradnje i kupovine -->
+            Jasno definisani obimi rada za svaku fazu investicije. Kliknite na detalje kartice za uvid u proces i direktno zakazivanje.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Usluga 01 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 01 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">01 / SAVETOVANJE</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-ruler"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Tehničko savetovanje pri gradnji i adaptaciji</h3>
+            <p class="service-summary">
+              Stručno inženjersko vođenje od prve ideje do pripreme radova. Pomažemo Vam da izbegnete skupa prepravljanja i tehnički neodrživa rešenja.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-1">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-1">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za investitore, vlasnike kuća, stanova ili poslovnih objekata koji planiraju gradnju ili veću rekonstrukciju.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Inženjersku analizu izvodljivosti, preciziran redosled faza radova, definisanje kritičnih tačaka i izbor optimalnih materijala.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Konsultacija na osnovu Vaših skica ili planova, sagledavanje tehničkih parametara i formiranje pisanih preporuka.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Tehničko savetovanje pri gradnji i adaptaciji">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Usluga 02 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 02 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">02 / DOKUMENTACIJA</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-blueprint"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Pregled i analiza tehničke dokumentacije</h3>
+            <p class="service-summary">
+              Nezavisna inženjerska revizija projekata, elaborata i dozvola pre početka radova ili potpisivanja ugovora sa izvođačima.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-2">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-2">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za naručioce koji već poseduju projektantsku dokumentaciju i žele nezavisnu proveru pre ulaganja sredstava.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Uočavanje tehničkih rupa, neusklađenosti između arhitekture i instalacija, kao i spisak stavki koje u projektu nedostaju.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Dostavljate dokumentaciju u elektronskom formatu, vršimo inženjersku analizu i dostavljamo sažet izveštaj sa primedbama.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Pregled i analiza tehničke dokumentacije">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Usluga 03 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 03 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">03 / DUE DILIGENCE</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-search-check"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Tehnička provera pre kupovine nekretnine</h3>
+            <p class="service-summary">
+              Detaljan inženjerski pregled stana, kuće ili lokala pre kupoprodaje. Otkrivamo skrivene mane, vlagu, elektro i vodovodne nedostatke.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-3">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-3">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za kupce nepokretnosti u starogradnji ili novogradnji koji ne žele iznenađenja nakon isplate novca.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Objektivan uvid u stanje instalacija, stolarije, hidroizolacije i procenu neophodnih ulaganja u sanaciju.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Zajednički ili samostalan izlazak inženjera na lokaciju, kontrola instrumentima i pismeni sažetak zatečenog stanja.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Tehnička provera pre kupovine nekretnine">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Usluga 04 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 04 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">04 / DIJAGNOSTIKA</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-building-struct"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Procena stanja postojećeg objekta i konstrukcije</h3>
+            <p class="service-summary">
+              Definisanje uzroka pukotina, sleganja temelja, vlage ili oštećenja krovne konstrukcije uz predlog adekvatnih mera sanacije.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-4">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-4">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za vlasnike objekata koji primećuju naprsline, deformacije elemenata ili probleme sa podzemnim vodama.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Inženjersku dijagnozu da li je oštećenje konstruktivnog ili estetskog karaktera, sa smernicama za hitnost sanacije.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Uviđaj na terenu, fotografisanje kritičnih zona, analiza statičkog ponašanja i tehničko mišljenje o sanaciji.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Procena stanja postojećeg objekta i konstrukcije">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Usluga 05 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 05 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">05 / BUDŽET</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-calc"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Predmer radova i kontrola troškova</h3>
+            <p class="service-summary">
+              Izrada i provera predmera i predračuna radova. Sprečavamo uvećanje troškova tokom gradnje kroz precizne normative i specifikacije.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-5">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-5">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za investitore koji žele jasan finansijski okvir pre sklapanja ugovora i izvođačkih ponuda.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Strukturisan popis radova po pozicijama, uporednu tabelu ponuda izvođača i kontrolu realnih tržišnih cena materijala.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Merenje na terenu ili obračun iz projekta, kreiranje specifikacije količina i provera pristiglih ponuda majstora.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Predmer radova i kontrola troškova">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Usluga 06 -->
+          <!-- POTVRDITI SA KLIJENTOM: Usluga 06 -->
+          <article class="service-card reveal">
+            <div class="service-card-top">
+              <span class="service-index">06 / KONTROLA</span>
+              <div class="service-icon" aria-hidden="true">
+                <svg><use href="#icon-shield-check"/></svg>
+              </div>
+            </div>
+            <h3 class="service-title">Inženjerska koordinacija i kontrola izvođača</h3>
+            <p class="service-summary">
+              Nezavisan inženjerski nadzor nad izvođenjem radova. Kontrolišemo kvalitet ugradnje, poštovanje projekta i dogovorene rokove.
+            </p>
+            <button type="button" class="service-toggle-btn" aria-expanded="false" aria-controls="service-detail-6">
+              <span>Prikaži detalje usluge</span>
+              <svg class="service-toggle-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="service-details" id="service-detail-6">
+              <div class="service-detail-block">
+                <span class="service-detail-label">Za koga je namenjeno:</span>
+                <p class="service-detail-text">Za investitore koji nemaju vremena ili stručnosti da svakodnevno rešavaju tehničke probleme na gradilištu.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Šta dobijate:</span>
+                <p class="service-detail-text">Mir i sigurnost da su radovi izvedeni po propisima, uz redovne izveštaje sa fotografijama i merenjima.</p>
+              </div>
+              <div class="service-detail-block">
+                <span class="service-detail-label">Kako teče proces:</span>
+                <p class="service-detail-text">Redovne i vanredne kontrole ključnih faza (armiranje, betoniranje, instalacije, hidroizolacija) uz pisani zapisnik.</p>
+              </div>
+              <button type="button" class="btn btn-primary service-inquire-btn" data-service-select="Inženjerska koordinacija i kontrola izvođača">
+                <span>Zatražite ovu uslugu</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. KAKO RADIMO & ŠTA PRIPREMITI PRE KONTAKTA (Rešenje za problem dopisivanja)
+         ====================================================================== -->
+    <section class="section" id="kako-radimo" aria-labelledby="kako-radimo-title">
+      <div class="container">
+        <!-- 4 Koraka saradnje -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span>Metodologija rada</span>
+          </div>
+          <h2 class="section-title" id="kako-radimo-title">
+            Jasna 4 koraka saradnje bez gubljenja vremena
+          </h2>
+          <p class="section-desc">
+            Standardizovan proces omogućava da odmah dobijete tehnički odgovor umesto beskonačnog dopisivanja u porukama.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <!-- Korak 01 -->
+          <div class="step-card reveal">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Strukturirani prvi upit</h3>
+            <p class="step-desc">
+              Šaljete osnovne parametre objekta ili pozivate sa pripremljenim podacima. Odmah znamo kontekst i štedimo Vaše vreme.
+            </p>
+          </div>
+
+          <!-- Korak 02 -->
+          <div class="step-card reveal">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Analiza podloga</h3>
+            <p class="step-desc">
+              Pregledamo dostupnu dokumentaciju, osnove ili fotografije stanja pre bilo kakvog nepotrebnog izlaska na teren.
+            </p>
+          </div>
+
+          <!-- Korak 03 -->
+          <div class="step-card reveal">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Konsultacija ili uviđaj</h3>
+            <p class="step-desc">
+              Fokusiran inženjerski razgovor ili detaljan pregled na lokaciji sa merenjima i identifikacijom ključnih tačaka.
+            </p>
+          </div>
+
+          <!-- Korak 04 -->
+          <div class="step-card reveal">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Tehnički izveštaj</h3>
+            <p class="step-desc">
+              Dobijate konkretan sažetak sa inženjerskim zaključcima, mapiranim rizicima i preciznim sledećim koracima.
+            </p>
+          </div>
+        </div>
+
+        <!-- Šta pripremiti pre kontakta (Ključno za klijenta: sprečava dopisivanje) -->
+        <div class="prep-container reveal" id="priprema">
+          <div class="prep-header">
+            <div class="prep-badge">
+              <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-blueprint"/></svg>
+              <span>Vodič za klijenta</span>
+            </div>
+            <h3 class="prep-title">Šta pripremiti pre nego što nas kontaktirate?</h3>
+            <p class="prep-subtitle">
+              Kada imate pripremljene ove stavke, na prvom pozivu ili u prvom odgovoru dobijate konkretne inženjerske procene, a ne nova potpitanja:
+            </p>
+          </div>
+
+          <div class="prep-list">
+            <div class="prep-item">
+              <div class="prep-item-icon" aria-hidden="true">
+                <svg><use href="#icon-check"/></svg>
+              </div>
+              <div>
+                <strong>1. Osnovni podaci o objektu i lokaciji</strong>
+                <p>Grad/opština, tip objekta (kuća, stan, lokal) i približna kvadratura ili spratnost.</p>
+              </div>
+            </div>
+
+            <div class="prep-item">
+              <div class="prep-item-icon" aria-hidden="true">
+                <svg><use href="#icon-check"/></svg>
+              </div>
+              <div>
+                <strong>2. Postojeća dokumentacija (ukoliko postoji)</strong>
+                <p>Osnova etaže, projekat, građevinska dozvola, izvod iz katastra ili bar gruba skica prostora.</p>
+              </div>
+            </div>
+
+            <div class="prep-item">
+              <div class="prep-item-icon" aria-hidden="true">
+                <svg><use href="#icon-check"/></svg>
+              </div>
+              <div>
+                <strong>3. Trenutni status i cilj</strong>
+                <p>Da li je reč o proveri pre kupovine, planiranju adaptacije, početku gradnje ili rešavanju uočenog problema?</p>
+              </div>
+            </div>
+
+            <div class="prep-item">
+              <div class="prep-item-icon" aria-hidden="true">
+                <svg><use href="#icon-check"/></svg>
+              </div>
+              <div>
+                <strong>4. Fotografije ili video zapisi</strong>
+                <p>Za postojeće objekte: 3-5 jasnih fotografija kritičnih mesta (pukotine, vlaga, krov, instalacije).</p>
+              </div>
+            </div>
+
+            <div class="prep-item prep-item-full">
+              <div class="prep-item-icon" aria-hidden="true">
+                <svg><use href="#icon-check"/></svg>
+              </div>
+              <div>
+                <strong>5. Željeni vremenski okvir</strong>
+                <p>Kada planirate početak radova, odnosno u kom roku Vam je potreban izlazak na teren ili pismeni uvid.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prep-note">
+            <svg class="icon" aria-hidden="true"><use href="#icon-info"/></svg>
+            <div class="prep-note-text">
+              <strong>Nemate kompletnu dokumentaciju?</strong> Nema problema. Pošaljite nam ono čime trenutno raspolažete, pa ćemo na prvom razgovoru tačno definisati koje podloge je neophodno pribaviti.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. FAQ (Često postavljana pitanja: cena, rok, šta mi treba, teren)
+         ====================================================================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span>Česta pitanja &amp; odgovori</span>
+          </div>
+          <h2 class="section-title" id="faq-title">
+            Najčešća pitanja pre započinjanja saradnje
+          </h2>
+          <p class="section-desc">
+            <!-- POTVRDITI SA KLIJENTOM: Odgovori na najčešće nedoumice radi eliminacije suvišnog dopisivanja -->
+            Odgovori na pitanja koja najčešće postavljaju investitori i kupci nekretnina pre prvog kontakta.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <!-- Pitanje 1 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 01 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>Koliko košta inženjersko savetovanje i od čega zavisi cena?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-1">
+              Cena inženjerskih usluga se formira transparentno na osnovu obima posla, vrste i kvadrature objekta, lokacije i nivoa potrebne dokumentacije. Za osnovne konsultacije i pregled dokumentacije formira se fiksni honorar po predmetu, dok se za izlazak na teren i vođenje radova definiše jasan pisani predračun pre početka bilo kakvih aktivnosti.
+            </div>
+          </div>
+
+          <!-- Pitanje 2 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 02 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>U kom roku možete izaći na teren ili dati stručno mišljenje?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-2">
+              Nakon što primimo Vaš strukturirani upit i osnovne podatke o objektu, termin za izlazak na teren se obično usklađuje u roku od 24 do 48 radnih sati. Preliminarno inženjersko mišljenje na bazi dostavljene dokumentacije dobijate u najkraćem mogućem roku po pregledu podloga.
+            </div>
+          </div>
+
+          <!-- Pitanje 3 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 03 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>Koja dokumentacija mi je neophodna pre nego što Vas kontaktiram?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-3">
+              Za prvi kontakt dovoljni su lokacija, namena objekta i kratak opis problema ili cilja. Ukoliko posedujete osnovu stana, građevinski projekat, izvod iz katastra ili fotografije, to značajno ubrzava analizu, ali nedostatak papira nije prepreka za prvi razgovor.
+            </div>
+          </div>
+
+          <!-- Pitanje 4 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 04 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>Da li radite izlazak na teren van Novog Sada?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-4">
+              Da. Iako je sedište u Novom Sadu, izlazak na teren i tehnički nadzor vršimo po dogovoru na teritoriji Vojvodine, Beograda i ostalih delova Srbije. Za lokacije van Novog Sada troškovi puta i izlaska se unapred transparentno definišu u ponudi.
+            </div>
+          </div>
+
+          <!-- Pitanje 5 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 05 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <span>Koja je razlika između Vašeg inženjerskog saveta i mišljenja samog izvođača radova?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-5">
+              Izvođač često ima komercijalni interes da predloži rešenja koja su za njega najbrža ili najprofitabilnija. DI PLANS nastupa isključivo kao nezavisan inženjer koji štiti interese investitora — procenjujemo stvarne potrebe objekta, proveravamo cene i ne dozvoljavamo nepotrebno rasipanje Vašeg budžeta.
+            </div>
+          </div>
+
+          <!-- Pitanje 6 -->
+          <!-- POTVRDITI SA KLIJENTOM: FAQ 06 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-6">
+              <span>Da li dobijam pisani tehnički izveštaj nakon pregleda ili konsultacija?</span>
+              <svg class="faq-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-ans-6">
+              Da. Za sve ugovorene tehničke preglede i analize izrađujemo strukturiran pisani zaključak sa fotodokumentacijom, popisom uočenih nedostataka, procenom rizika i preporučenim merama za sanaciju ili nastavak radova.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. KONTAKT & STRUKTURIRANI UPIT (Rešenje glavnog problema klijenta)
+         ====================================================================== -->
+    <section class="section contact-section" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span>Direktan kontakt &amp; Upit</span>
+          </div>
+          <h2 class="section-title" id="kontakt-title">
+            Pošaljite strukturirani upit ili pozovite direktno
+          </h2>
+          <p class="section-desc">
+            Izaberite način kontakta koji Vam najviše odgovara. Popunjavanjem ove forme automatski pripremate podatke za brz i precizan odgovor bez suvišnih poruka.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Leva kolona: Brzi kanali (Telefon, WhatsApp, Viber, Email, Podaci) -->
+          <div class="contact-info-col reveal">
+            <div class="contact-quick-box">
+              <h3 class="contact-quick-title">Direktna komunikacija</h3>
+              <p class="contact-quick-desc">
+                Ukoliko Vam je potreban hitan dogovor ili želite odmah da popričate sa inženjerom, izaberite kanal:
+              </p>
+
+              <div class="contact-buttons-stack">
+                <!-- Direktno pozovi -->
+                <a href="tel:+381640000000" class="direct-channel-btn" data-tel>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+                  <div class="direct-channel-info">
+                    <span class="direct-channel-name">Pozovite telefonom</span>
+                    <!-- POTVRDITI SA KLIJENTOM: prikaz broja -->
+                    <span class="direct-channel-sub" data-tel-text>+381 64 000 0000</span>
+                  </div>
+                </a>
+
+                <!-- WhatsApp sa pripremljenim šablonom -->
+                <a href="https://wa.me/381640000000" target="_blank" rel="noopener" class="direct-channel-btn is-wa" data-wa>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                  <div class="direct-channel-info">
+                    <span class="direct-channel-name">WhatsApp poruka</span>
+                    <span class="direct-channel-sub">Otvori pripremljeni šablon</span>
+                  </div>
+                </a>
+
+                <!-- Viber sa pripremljenim šablonom -->
+                <a href="viber://chat?number=%2B381640000000" class="direct-channel-btn is-viber" data-viber>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-viber"/></svg>
+                  <div class="direct-channel-info">
+                    <span class="direct-channel-name">Viber poruka</span>
+                    <span class="direct-channel-sub">Direktan kontakt preko Vibera</span>
+                  </div>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:diplans.ns@gmail.com" class="direct-channel-btn" data-mail>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+                  <div class="direct-channel-info">
+                    <span class="direct-channel-name">Email korespodencija</span>
+                    <span class="direct-channel-sub" data-mail-text>diplans.ns@gmail.com</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Informacije o radu i lokaciji -->
+            <!-- POTVRDITI SA KLIJENTOM: Radno vreme i adresa -->
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg>
+                <div>
+                  <strong>Sedište i teritorija</strong>
+                  <span data-address>Novi Sad (teren po dogovoru na teritoriji cele Srbije)</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg>
+                <div>
+                  <strong>Radno vreme</strong>
+                  <span data-hours>Ponedeljak – Petak: 08:00 – 17:00</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-info"/></svg>
+                <div>
+                  <strong>Vreme odgovora</strong>
+                  <span>Na strukturirane upite odgovaramo u roku od najviše 24h tokom radnih dana.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desna kolona: Strukturirana kontakt forma -->
+          <div class="form-card reveal">
+            <div class="form-header">
+              <h3 class="form-title">Strukturirani upit za inženjersko savetovanje</h3>
+              <p class="form-subtitle">Molimo Vas da popunite osnovne parametre kako bismo se pripremili pre odgovora.</p>
+            </div>
+
+            <form id="inquiryForm" novalidate>
+              <div class="form-grid">
+                <!-- Ime i prezime + Telefon -->
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="field-ime">Vaše Ime i Prezime <span class="required">*</span></label>
+                    <input type="text" id="field-ime" name="ime" class="form-input" placeholder="npr. Marko Petrović" required autocomplete="name">
+                    <span class="form-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-telefon">Broj telefona <span class="required">*</span></label>
+                    <input type="tel" id="field-telefon" name="telefon" class="form-input" placeholder="npr. 064 123 4567" required autocomplete="tel">
+                    <span class="form-error"></span>
+                  </div>
+                </div>
+
+                <!-- Email + Lokacija -->
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="field-email">Email adresa <span class="required">*</span></label>
+                    <input type="email" id="field-email" name="email" class="form-input" placeholder="npr. vasa.adresa@email.com" required autocomplete="email">
+                    <span class="form-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-lokacija">Lokacija objekta <span class="required">*</span></label>
+                    <input type="text" id="field-lokacija" name="lokacija" class="form-input" placeholder="npr. Novi Sad - Grbavica" required>
+                    <span class="form-error"></span>
+                  </div>
+                </div>
+
+                <!-- Vrsta objekta (Dropdown) -->
+                <div class="form-group">
+                  <label class="form-label" for="field-tip">Vrsta objekta <span class="required">*</span></label>
+                  <select id="field-tip" name="tip_objekta" class="form-select" required>
+                    <option value="" disabled selected>Izaberite vrstu objekta...</option>
+                    <option value="Stan u novogradnji">Stan u novogradnji</option>
+                    <option value="Stan u starogradnji">Stan u starogradnji</option>
+                    <option value="Porodična kuća / vila">Porodična kuća / vila</option>
+                    <option value="Poslovni prostor / lokal">Poslovni prostor / lokal</option>
+                    <option value="Industrijski / skladišni objekat">Industrijski / skladišni objekat</option>
+                    <option value="Građevinsko zemljište / parcela">Građevinsko zemljište / parcela</option>
+                    <option value="Drugo">Druga vrsta objekta</option>
+                  </select>
+                  <span class="form-error"></span>
+                </div>
+
+                <!-- Faza objekta (Radio opcije) -->
+                <div class="form-group">
+                  <span class="form-label">Trenutna faza objekta</span>
+                  <div class="pill-grid">
+                    <label class="pill-option">
+                      <input type="radio" name="faza" value="Ideja i planiranje" checked>
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Ideja i planiranje</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="faza" value="Pregled pre kupovine">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Pregled pre kupovine</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="faza" value="Pred izvođenje radova">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Pred izvođenje radova</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="faza" value="Radovi u toku">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Radovi u toku</span>
+                      </span>
+                    </label>
+                    <label class="pill-option pill-option-full">
+                      <input type="radio" name="faza" value="Postojeći objekat (problem/sanacija)">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Postojeći objekat (uočen problem ili sanacija)</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Šta je potrebno (Multi-select izbor) -->
+                <div class="form-group">
+                  <span class="form-label">Šta Vam je potrebno? (Izaberite jednu ili više stavki)</span>
+                  <div class="pill-grid">
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Tehničko savetovanje pri gradnji i adaptaciji">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Tehničko savetovanje</span>
+                      </span>
+                    </label>
+
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Pregled i analiza tehničke dokumentacije">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Pregled dokumentacije</span>
+                      </span>
+                    </label>
+
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Tehnička provera pre kupovine nekretnine">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Provera pre kupovine</span>
+                      </span>
+                    </label>
+
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Procena stanja postojećeg objekta i konstrukcije">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Dijagnostika oštećenja</span>
+                      </span>
+                    </label>
+
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Predmer radova i kontrola troškova">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Predmer i troškovi</span>
+                      </span>
+                    </label>
+
+                    <label class="pill-option">
+                      <input type="checkbox" name="usluge" value="Inženjerska koordinacija i kontrola izvođača">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>
+                        <span>Kontrola izvođača</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Kratak opis zahteva -->
+                <div class="form-group">
+                  <label class="form-label" for="field-opis">Kratak opis zahteva i specifične napomene</label>
+                  <textarea id="field-opis" name="opis" class="form-textarea" placeholder="Navedite okvirnu kvadraturu, uočene probleme, imate li dokumentaciju i kada Vam odgovara razgovor..."></textarea>
+                </div>
+
+                <!-- Željeni način kontakta -->
+                <div class="form-group">
+                  <span class="form-label">Kako želite da stupimo u kontakt sa Vama?</span>
+                  <div class="pill-grid">
+                    <label class="pill-option">
+                      <input type="radio" name="nacin_kontakta" value="Telefonski poziv" checked>
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+                        <span>Telefonski poziv</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="nacin_kontakta" value="WhatsApp">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                        <span>WhatsApp poruka</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="nacin_kontakta" value="Viber">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-viber"/></svg>
+                        <span>Viber poruka</span>
+                      </span>
+                    </label>
+                    <label class="pill-option">
+                      <input type="radio" name="nacin_kontakta" value="Email">
+                      <span class="pill-box">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+                        <span>Email poruka</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Saglasnost -->
+                <div class="form-group">
+                  <label class="consent-wrapper">
+                    <input type="checkbox" name="saglasnost" required>
+                    <span class="consent-text">
+                      Saglasan/na sam da DI PLANS koristi unete podatke isključivo u svrhu odgovora na ovaj upit i organizovanja inženjerskog savetovanja. <span class="required">*</span>
+                    </span>
+                  </label>
+                  <span class="form-error"></span>
+                </div>
+              </div>
+
+              <!-- Form Submit & Direct Chat Generator -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-block">
+                  <span>Pošaljite strukturirani upit</span>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+                </button>
+
+                <div class="form-chat-shortcuts">
+                  <span class="form-chat-label">Ili pošaljite uneto direktno u chat:</span>
+                  <div class="form-chat-btns">
+                    <a href="https://wa.me/381640000000" target="_blank" rel="noopener" class="btn btn-sm btn-channel btn-wa" data-wa title="Pošalji unete podatke preko WhatsApp-a">
+                      <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                      <span>WhatsApp</span>
+                    </a>
+                    <a href="viber://chat?number=%2B381640000000" class="btn btn-sm btn-channel btn-viber" data-viber title="Pošalji unete podatke preko Vibera">
+                      <svg class="icon" aria-hidden="true"><use href="#icon-viber"/></svg>
+                      <span>Viber</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Povratna informacija o uspešnom slanju -->
+              <div class="form-status-alert" id="formStatusAlert" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand kolona -->
+        <div class="footer-brand">
+          <a href="#top" class="brand" aria-label="DI PLANS, vrh stranice">
+            <div class="brand-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+                <line x1="12" y1="22" x2="12" y2="12"/>
+                <line x1="22" y1="8.5" x2="12" y2="12"/>
+                <line x1="2" y1="8.5" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name" data-brand>DI PLANS</span>
+              <span class="brand-subtitle">Inženjersko savetovanje</span>
+            </div>
+          </a>
+          <p>
+            Inženjersko i tehničko savetovanje, procena stanja objekata i kontrola dokumentacije u građevinarstvu i prometu nekretnina.
+          </p>
+        </div>
+
+        <!-- Brzi linkovi -->
+        <div>
+          <h4 class="footer-heading">Navigacija</h4>
+          <ul class="footer-links">
+            <li><a href="#usluge">Inženjerske usluge</a></li>
+            <li><a href="#kako-radimo">Metodologija rada</a></li>
+            <li><a href="#priprema">Šta pripremiti pre kontakta</a></li>
+            <li><a href="#faq">Česta pitanja (FAQ)</a></li>
+            <li><a href="#kontakt">Kontakt &amp; upit</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt info -->
+        <!-- POTVRDITI SA KLIJENTOM: Svi kontakt podaci su podložni potvrdi -->
+        <div>
+          <h4 class="footer-heading">Kontakt podaci</h4>
+          <div class="footer-contact-item">
+            <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+            <a href="mailto:diplans.ns@gmail.com" data-mail data-mail-text>diplans.ns@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+            <a href="tel:+381640000000" data-tel data-tel-text>+381 64 000 0000</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg>
+            <span data-city>Novi Sad, Srbija</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg>
+            <span data-hours>Pon – Pet: 08:00 – 17:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> <strong data-brand>DI PLANS</strong>. Sva prava zadržana.
+        </div>
+        <div class="footer-disclaimer">
+          <!-- POTVRDITI SA KLIJENTOM: Pravna napomena -->
+          Napomena: Informacije na sajtu imaju informativni i savetodavni karakter. Konkretna tehnička i inženjerska rešenja se formiraju isključivo nakon neposrednog uvida u tehničku dokumentaciju i stanje na objektu.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       STICKY MOBILNA TRAKA (Pozovite i Poruka nakon prvog skrola)
+       ======================================================================== -->
+  <aside class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Brze akcije za kontakt">
+    <a href="tel:+381640000000" class="btn btn-primary mobile-sticky-btn" data-tel>
+      <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+      <span>Pozovite</span>
+    </a>
+    <a href="#kontakt" class="btn btn-secondary mobile-sticky-btn">
+      <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+      <span>Pošaljite upit</span>
+    </a>
+  </aside>
+
+  <!-- Glavna skripta -->
+  <script src="js/main.js"></script>
+</body>
+</html>
