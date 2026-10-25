@@ -94,5 +94,4 @@ If these prototypes inspire your projects or save you development time and you w
 Every donation means a lot and helps me maintain and build new open-source projects. Thank you!
 
 ---
-
-_Created and maintained by [Milan Petkovski](https://github.com/milan-petkovski) &bull; [Milan Web Portal](https://milanwebportal.com)_
+<p align="center">Made with ❤️ by <b>Milan Web Portal</b></p>
