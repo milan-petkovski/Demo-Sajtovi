@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Završi porudžbinu | 3D Stolarski Šabloni</title>
+<meta name="description" content="Unesi podatke za dostavu i završi porudžbinu. Plaćanje pouzećem.">
+<meta property="og:title" content="Završi porudžbinu | 3D Stolarski Šabloni">
+<meta property="og:description" content="Brza porudžbina, plaćanje pouzećem.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Checkout"}</script>
+</head>
+<body data-page="checkout">
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head on-dark"><div class="wrap"><p class="crumbs"><a href="prodavnica.html">Prodavnica</a> / Porudžbina</p><h1>Završi porudžbinu</h1></div></section>
+<section class="section" style="padding-top:clamp(28px,5vw,48px)"><div class="wrap" id="checkout">
+  <div class="checkout-grid">
+    <form id="checkout-form" novalidate>
+      <div class="alert">Ovo je demo prodavnica. Porudžbina se ne šalje, a podaci kartice se nikada ne prikupljaju.</div>
+      <h2 style="font-size:1.4rem">Podaci za dostavu</h2>
+      <div class="form-row">
+        <div class="field"><label for="c-ime">Ime i prezime</label><input id="c-ime" name="ime" autocomplete="name" data-req="1"><span class="err">Upiši ime i prezime.</span></div>
+        <div class="field"><label for="c-tel">Telefon</label><input id="c-tel" name="telefon" type="tel" autocomplete="tel" data-req="phone"><span class="err">Upiši ispravan broj telefona.</span></div>
+      </div>
+      <div class="field"><label for="c-mail">Email</label><input id="c-mail" name="email" type="email" autocomplete="email" data-req="1"><span class="err">Upiši ispravan email.</span></div>
+      <div class="form-row">
+        <div class="field"><label for="c-adr">Adresa</label><input id="c-adr" name="adresa" autocomplete="street-address" data-req="1"><span class="err">Upiši adresu.</span></div>
+        <div class="field"><label for="c-grad">Grad</label><input id="c-grad" name="grad" autocomplete="address-level2" data-req="1"><span class="err">Upiši grad.</span></div>
+      </div>
+      <h2 style="font-size:1.4rem;margin-top:12px">Način plaćanja</h2>
+      <label class="pay-opt"><input type="radio" name="pay" value="pouzece" checked><span><strong>Pouzećem</strong><br><span class="note">Plaćaš kuriru pri preuzimanju.</span></span></label>
+      <label class="pay-opt"><input type="radio" name="pay" value="kartica"><span><strong>Kartica</strong><span class="demo-tag">DEMO</span><br><span class="note">Online plaćanje nije aktivno u demou.</span></span></label>
+      <div id="card-box" class="alert" hidden>Plaćanje karticom je samo vizuelni prikaz. Bez unosa podataka kartice.</div>
+      <button class="btn btn-violet btn-block" type="submit" style="margin-top:12px">Potvrdi porudžbinu</button>
+    </form>
+    <aside class="summary" aria-label="Pregled porudžbine">
+      <h2 style="font-size:1.3rem">Tvoja porudžbina</h2>
+      <div id="sum-lines"></div>
+      <div class="totals" id="sum-totals" style="margin-top:16px"></div>
+    </aside>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

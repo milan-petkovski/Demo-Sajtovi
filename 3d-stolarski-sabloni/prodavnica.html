@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prodavnica | 3D Stolarski Šabloni</title>
+<meta name="description" content="Svi 3D štampani šabloni za stolare: ivice, okov, spojevi i dodaci. Poruči online, plaćanje pouzećem.">
+<meta property="og:title" content="Prodavnica | 3D Stolarski Šabloni">
+<meta property="og:description" content="Svi šabloni za stolare na jednom mestu.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Prodavnica 3D Stolarski Šabloni"}</script>
+</head>
+<body data-page="shop">
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head on-dark"><div class="wrap">
+  <p class="crumbs"><a href="index.html">Početna</a> / Prodavnica</p>
+  <h1>Prodavnica</h1>
+  <p class="lead">Izaberi šablon, veličinu i boju. Plaćanje pouzećem.</p>
+</div></section>
+<section class="section" style="padding-top:clamp(32px,6vw,56px)"><div class="wrap">
+  <div class="toolbar">
+    <div class="chips" id="chips" role="group" aria-label="Kategorije"></div>
+    <div class="sort"><label for="sort">Sortiraj</label>
+      <select id="sort"><option value="">Preporučeno</option><option value="asc">Cena: niža prvo</option><option value="desc">Cena: viša prvo</option></select>
+    </div>
+  </div>
+  <p class="note" id="count" aria-live="polite"></p>
+  <div class="grid c4" id="shop-grid"></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
